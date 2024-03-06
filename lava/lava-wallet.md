@@ -43,3 +43,8 @@ After entering your seed phrase:
 ```bash
 $current_lavad_binary keys show $ACCOUNT_NAME
 ```
+
+Next Step: [Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-provider-tls.md)
+
+[Back to Main](https://github.com/zachzwei/lava_docs)
+
