@@ -12,12 +12,10 @@
 
 ### Run with Docker using Lava ETH RPC
 
-#### Note:
+Note:
 
-```
-The steps below will run your node and download the snapshot from block 0. The sync will take a while to complete.
-Proceed with the instructions below on how to download a snapshot first before running your node.
-```
+`The steps below will run your node and download the snapshot from block 0. The sync will take a while to complete. Proceed with the instructions below on how to download a snapshot first before running your node. The port was changed to 6065 since Lava uses 6060 by default.`
+
 ==========
 
 To run Juno with Docker, use the following command. Make sure to create the `$HOME/juno` directory on your local machine before running the command.
@@ -25,11 +23,11 @@ To run Juno with Docker, use the following command. Make sure to create the `$HO
 ```
 docker run -d \
   --name juno \
-  -p 6060:6060 \
+  -p 6065:6065 \
   -v $HOME/juno:/var/lib/juno \
   nethermind/juno:latest \
   --http \
-  --http-port 6060 \
+  --http-port 6065 \
   --http-host 0.0.0.0 \
   --db-path /var/lib/juno \
   --eth-node <YOUR-ETH-NODE>
@@ -63,6 +61,10 @@ Use the provided snapshots to quickly sync your Juno node with the current state
 
 ### Run Juno Using Snapshot
 
+Note:
+
+`The instructions below will download a snapshot first before running your node. The port was changed to 6065 since Lava uses 6060 by default.`
+
 1. **Download Snapshot**
 
    Fetch the snapshot from the provided URL:
@@ -94,11 +96,11 @@ Use the provided snapshots to quickly sync your Juno node with the current state
    ```bash
    docker run -d \
      --name juno \
-     -p 6060:6060 \
+     -p 6065:6065 \
      -v $HOME/snapshots/juno_mainnet:/var/lib/juno \
      nethermind/juno:latest \
      --http \
-     --http-port 6060 \
+     --http-port 6065 \
      --http-host 0.0.0.0 \
      --db-path /var/lib/juno \
      --eth-node <YOUR-ETH-NODE>
