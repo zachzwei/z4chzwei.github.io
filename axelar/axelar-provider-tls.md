@@ -60,7 +60,7 @@ lavap rpcprovider axelar-provider.yml --from your_key_name_here --geolocation 1 
 
 Test the provider
 ```
-lavap test rpcprovider --from your_key_name_here --endpoints "strk.your-site:443,STRK"
+lavap test rpcprovider --from your_key_name_here --endpoints "axelar.your-site:443,AXELAR"
 ```
 
 Stake the Provider
