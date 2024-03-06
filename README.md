@@ -25,5 +25,5 @@ I merely copied and compiled these guide for personal use. I have no programming
 
 - #### [Node Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/axelar/axelar.md)
 
-- #### [Provider Setup](
+- #### [Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/axelar/axelar-provider-tls.md)
 
