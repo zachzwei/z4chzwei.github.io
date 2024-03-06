@@ -17,9 +17,13 @@ I merely copied and compiled these guide for personal use. I have no programming
 
 ## [Starknet](https://docs.starknet.io/documentation/)
 
-- #### [Starknet Node and Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/starknet/stark.md)
+- #### [Node Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/starknet/stark.md)
+
+- #### [Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/starknet/stark-provider-tls.md)
 
 ## [Axelar](https://docs.axelar.dev/)
 
-- #### [Axelar Node and Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/axelar/axelar.md)
+- #### [Node Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/axelar/axelar.md)
+
+- #### [Provider Setup](
 
