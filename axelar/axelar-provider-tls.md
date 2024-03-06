@@ -2,43 +2,60 @@
 
 The steps for creating a provider will be similar to the [Lava Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-provider-tls.md).
 
-Make sure to set specific parameters for STRK spec:
+You might need to create a new TLS Certificate for this new site.
 
-`strk_server` file
+Make sure to set specific parameters for AXELAR spec:
+
+`axelar_server` file
 ```
 server {
     listen 443 ssl http2;
-    server_name strk.z4ch.xyz;
+    server_name axelar.your-domain.com;
 
-    ssl_certificate /etc/letsencrypt/live/z4ch.xyz/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/z4ch.xyz/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/your-domain.com/privkey.pem;
     error_log /var/log/nginx/debug.log debug;
 
     location / {
-        proxy_pass http://127.0.0.1:2221;
-        grpc_pass 127.0.0.1:2221;
+        proxy_pass http://127.0.0.1:2225;
+        grpc_pass 127.0.0.1:2225;
     }
 }
 ```
 
-`strk-provider.yml` file
+`axelar-provider.yml` file
 ```
 endpoints:
-    - api-interface: jsonrpc
-      chain-id: STRK
+    - api-interface: tendermintrpc
+      chain-id: AXELAR
       network-address:
-        address: 127.0.0.1:2221
+        address: 127.0.0.1:2225
         disable-tls: true
       node-urls:
-        url: http://127.0.0.1:6065
+        - url: ws://127.0.0.1:17357/websocket
+        - url: http://127.0.0.1:17357
+    - api-interface: grpc
+      chain-id: AXELAR
+      network-address:
+        address: 127.0.0.1:2225
+        disable-tls: true
+      node-urls:
+        url: grpc.axelar.lava.build:443
+    - api-interface: rest
+      chain-id: AXELAR
+      network-address:
+        address: 127.0.0.1:2225
+        disable-tls: true
+      node-urls:
+        url: https://rest.axelar.lava.build
 ```
 
-And the commands will now be pointing to your `strk.your-domain`
+And the commands will now be pointing to your `axelar.your-domain`
 
-Start the `strk-provider`
+Start the `axelar-provider`
 
 ```
-lavap rpcprovider strk-provider.yml --from your_key_name_here --geolocation 1 --chain-id lava-testnet-2 --log_level debug
+lavap rpcprovider axelar-provider.yml --from your_key_name_here --geolocation 1 --chain-id lava-testnet-2 --log_level debug
 ```
 
 Test the provider
@@ -48,29 +65,16 @@ lavap test rpcprovider --from your_key_name_here --endpoints "strk.your-site:443
 
 Stake the Provider
 ```
-lavap tx pairing stake-provider STRK "50000000000ulava" "strk.your-site:443,1" 1 [validator] -y --from your_key_name_here --provider-moniker your-provider-moniker-1 --gas-adjustment "1.5" --gas "auto" --gas-prices "0.0001ulava" --chain-id lava-testnet-2 --delegate-limit 0ulava
+lavap tx pairing stake-provider AXELAR "50000000000ulava" "axelar.your-site:443,1" 1 [validator] -y --from your_key_name_here --provider-moniker your-provider-moniker-1 --gas-adjustment "1.5" --gas "auto" --gas-prices "0.0001ulava" --chain-id lava-testnet-2 --delegate-limit 0ulava
 ```
 
 Final test!
 ```
-lavap test rpcprovider --from your_key_name_here --endpoints "strk.your-site:443,STRK"
+lavap test rpcprovider --from your_key_name_here --endpoints "axelar.your-site:443,AXELAR"
 ```
 
-Congratulations, you are now a Starket RPC Provider!
+Congratulations, you are now a Axelar RPC Provider!
 
 
 ===============
-
-In case you are getting errors with your test.
-
-Check if port `6061` is in use/open
-```
-ss -na | grep :6061
-```
-
-If it is not in use, open port `6061`
-
-```
-sudo ufw allow 6061
-```
 
