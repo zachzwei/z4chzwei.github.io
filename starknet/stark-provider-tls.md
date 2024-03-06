@@ -1,7 +1,6 @@
 # Setting up a Provider
 
-The steps for creating a provider will be similar to this guide:
-https://github.com/zachzwei/lava_docs/blob/main/docs/provider/provider-tls.md
+The steps for creating a provider will be similar to this [Lava Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-provider-tls.md)
 
 Make sure to set specific parameters for STRK spec:
 
