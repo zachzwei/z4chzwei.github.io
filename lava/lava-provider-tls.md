@@ -328,6 +328,44 @@ lavap version
 ❗ If you have any further issues, do not hesitate to venture to our [discord](https://discord.com/invite/Tbk5NxTCdA) where you can get better assistance!
 
 
+Provider yml from Stake Village.
+
+```
+RPC=$(cat $HOME/.lava/config/config.toml | sed -n '/TCP or UNIX socket address for the RPC server to listen on/{n;p;}' | sed 's/.*://; s/".*//')
+GRPC=$(cat $HOME/.lava/config/app.toml | sed -n '/Address defines the gRPC server address to bind to/{n;p;}' | sed 's/.*://; s/".*//')
+API=$(cat $HOME/.lava/config/app.toml | sed -n '/Address defines the API server to listen on./{n;p;}' | sed 's/.*://; s/".*//')
+
+echo "RPC:"$RPC "GRPC:"$GRPC "API:"$API
+
+mkdir $HOME/config
+sudo tee << EOF >/dev/null $HOME/config/lavaprovider.yml
+endpoints:
+  - api-interface: tendermintrpc
+    chain-id: LAV1
+    network-address:
+      address: 127.0.0.1:2224
+      disable-tls: true
+    node-urls:
+      - url: ws://127.0.0.1:$RPC/websocket
+      - url: http://127.0.0.1:$RPC
+  - api-interface: grpc
+    chain-id: LAV1
+    network-address:
+      address: 127.0.0.1:2224
+      disable-tls: true
+    node-urls:
+      url: 127.0.0.1:$GRPC
+  - api-interface: rest
+    chain-id: LAV1
+    network-address:
+      address: 127.0.0.1:2224
+      disable-tls: true
+    node-urls:
+      url: http://127.0.0.1:$API
+EOF
+```
+
+
 
 [Back to Main](https://github.com/zachzwei/z4ch-nodes)
 
