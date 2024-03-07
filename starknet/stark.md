@@ -108,6 +108,8 @@ Note:
 
 After following these steps, Juno should be up and running on your machine, utilizing the provided snapshot.
 
+[Update Juno](https://juno.nethermind.io/updating_node)
+
 [Provider Setup](https://github.com/zachzwei/z4ch-nodes/edit/main/starknet/stark-provider-tls.md)
 
 [Main](https://github.com/zachzwei/z4ch-nodes)
