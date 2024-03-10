@@ -1,4 +1,8 @@
-Source: [https://stakevillage.net/en/axelar-mainnet/index.php](https://polkachu.com/installation/evmos)
+Sources: 
+
+[https://polkachu.com/installation/evmos](https://polkachu.com/installation/evmos)
+
+[https://stakevillage.net/en/evmos-mainnet/index.php](https://stakevillage.net/en/evmos-mainnet/index.php)
 
 ### Set Moniker
 
@@ -124,7 +128,9 @@ Note:
 
 `You can change value CUSTOM_PORT=169 To any other ports`
 
+```
 CUSTOM_PORT=169
+```
 
 ```
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}58\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}57\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}60\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}56\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}66\"%" $HOME/.evmosd/config/config.toml
