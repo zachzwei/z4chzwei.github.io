@@ -23,6 +23,8 @@ server {
 }
 ```
 
+❗The internal comms port `2225` can be changed to any open port on your network.
+
 `axelar-provider.yml` file
 ```
 endpoints:
@@ -50,6 +52,12 @@ endpoints:
         url: https://rest.axelar.lava.build
 ```
 
+* Note:
+  
+The urls for `grpc` and `rest` are [provided by Lava](https://docs.lavanet.xyz/public-rpc).
+If you are running your own Lava node then you can find the following information on the `config.toml` and `app.toml` files located at `./axelar/config` folder.
+
+
 And the commands will now be pointing to your `axelar.your-domain`
 
 Start the `axelar-provider`
@@ -65,7 +73,7 @@ lavap test rpcprovider --from your_key_name_here --endpoints "axelar.your-site:4
 
 Stake the Provider
 ```
-lavap tx pairing stake-provider AXELAR "50000000000ulava" "axelar.your-site:443,1" 1 [validator] -y --from your_key_name_here --provider-moniker your-provider-moniker-1 --gas-adjustment "1.5" --gas "auto" --gas-prices "0.0001ulava" --chain-id lava-testnet-2 --delegate-limit 0ulava
+lavap tx pairing stake-provider AXELAR "50000000000ulava" "axelar.your-site:443,1" 1 [validator_address] --from your_key_name_here --provider-moniker your-provider-moniker-1 --gas-adjustment "1.5" --gas "auto" --gas-prices "0.0001ulava" --chain-id lava-testnet-2 --delegate-limit 0ulava
 ```
 
 Final test!
