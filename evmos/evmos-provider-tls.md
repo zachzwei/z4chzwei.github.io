@@ -4,13 +4,13 @@ The steps for creating a provider will be similar to the [Lava Provider Setup](h
 
 You might need to create a new TLS Certificate for this new site.
 
-Make sure to set specific parameters for AXELAR spec:
+Make sure to set specific parameters for EVMOS spec:
 
 `evmos_server` file
 ```
 server {
     listen 443 ssl http2;
-    server_name axelar.your-domain.com;
+    server_name evmos.your-domain.com;
 
     ssl_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/your-domain.com/privkey.pem;
@@ -65,7 +65,7 @@ The urls for `grpc` and `rest` are [provided by Lava](https://docs.lavanet.xyz/e
 If you are running your own Lava node then you can find the following information on the `config.toml` and `app.toml` files located at `./evmosd/config` folder.
 
 
-And the commands will now be pointing to your `axelar.your-domain`
+And the commands will now be pointing to your `evmos.your-domain`
 
 Start the `evmos-provider`
 
