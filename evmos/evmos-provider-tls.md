@@ -93,3 +93,4 @@ Congratulations, you are now an Evmos RPC Provider!
 
 ===============
 
+[Main](https://github.com/zachzwei/z4ch-nodes/blob/main/README.md)
