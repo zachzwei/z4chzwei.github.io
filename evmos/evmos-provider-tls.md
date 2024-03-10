@@ -61,7 +61,7 @@ endpoints:
 
 * Note:
   
-The urls for `grpc` and `rest` are [provided by Lava](https://docs.lavanet.xyz/evmos-dev).
+The urls for `grpc`,`rest` and `jsonrpc` are [provided by Lava](https://docs.lavanet.xyz/evmos-dev).
 If you are running your own Lava node then you can find the following information on the `config.toml` and `app.toml` files located at `./evmosd/config` folder.
 
 
