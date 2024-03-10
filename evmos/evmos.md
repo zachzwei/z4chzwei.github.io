@@ -151,3 +151,7 @@ curl -o - -L https://snapshots.polkachu.com/snapshots/evmos/evmos_19479810.tar.l
 ```
 sudo service evmos start && sudo journalctl -fu evmos
 ```
+
+Next: [Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/evmos/evmos-provider-tls.md)
+
+[Main](https://github.com/zachzwei/z4ch-nodes)
