@@ -210,6 +210,9 @@ You are now running a Node in the Lava network 🎉🥳!
 
 Next Step: [Wallet Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-wallet.md)
 
+
+Alternative guide by [Stake Village](https://stakevillage.net/en/lava-testnet2/index.php)
+
 [Back to Main](https://github.com/zachzwei/z4ch-nodes)
 
 
