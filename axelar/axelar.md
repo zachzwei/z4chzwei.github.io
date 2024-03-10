@@ -144,6 +144,6 @@ curl -L https://snapshots.stakevillage.net/snapshots/axelar-dojo-1/axelar-dojo-1
 sudo systemctl start axelard && sudo journalctl -u axelard -f --no-hostname -o cat
 ```
 
-Next: [Provider Setup](axelar/axelar-provider-tls.md)
+Next: [Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/axelar/axelar-provider-tls.md)
 
 [Main](https://github.com/zachzwei/z4ch-nodes/blob/main/README.md)
