@@ -1,7 +1,18 @@
+## Install all Binaries 🛠️  
+
+Enter the following commands:
+
+```
+git clone https://github.com/lavanet/lava.git
+cd lava
+make install-all
+```
+
+✅ Run `lavad version && lavap version` to ensure you've gotten the [latest releases](https://github.com/lavanet/lava/releases)!
 
 
-# Manual Node setup with Cosmovisor
-## Prerequisites
+## Manual Node setup with Cosmovisor
+### Prerequisites
 
 1. Verify [hardware requirements](reqs) are met
 2. Install package dependencies
