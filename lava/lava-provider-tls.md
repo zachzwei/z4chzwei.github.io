@@ -2,9 +2,11 @@
 
 # Provider TLS Setup Guide
 
-:::caution
-All providers on `lava-testnet-2` must use a domain name and TLS (1.3). You must have a domain name to continue. If you have not already, please take a moment to purchase one! You can find cheap top-level domains [here](https://www.namecheap.com/) or [here](https://tld-list.com/).
-:::
+
+All providers on `lava-testnet-2` must use a domain name and TLS (1.3). 
+You must have a domain name to continue. If you have not already, please take a moment to purchase one! 
+You can find cheap top-level domains [here](https://www.namecheap.com/) or [here](https://tld-list.com/).
+
 
 ## 📊 Diagram
 
@@ -148,11 +150,10 @@ In most cases, after creating a configuration file in accessible sites, you need
 ```
 sudo ln -s /etc/nginx/sites-available/lava_server /etc/nginx/sites-enabled/lava_server
 ```
-:::caution
 
 The above examples use ports `443` for external listening and `2223` / `2224` for internal comms, respectively. Using ports other than `443` for external listening means that some users will not be able to connect to your provider. This can result in less rewards and poorer quality of service. For internal listening, be aware that some ports on your OS may be used for internal communication and should be avoided. 
 
-:::
+❗The internal comms port can be changed to any open port on your network.
 
 <br />
 
@@ -223,6 +224,12 @@ endpoints:
 ```
 
 Once we've created these files we can move onto starting the processes!
+
+* Note:
+  
+The urls for `grpc` and `rest` are [provided by Lava](https://docs.lavanet.xyz/public-rpc).
+If you are running your own Lava node then you can find the following information on the `config.toml` and `app.toml` files located at `./lava/config` folder.
+
 <br />
 
 ### 🏁 Start the Provider Process(es)
@@ -239,9 +246,9 @@ Some notes:
 * `--chain-id` may or may not be necessary, depending upon your setup, but we can default to `--lava-testnet-2`
 * `--node` may or may not be necessary
 
-:::caution
-The syntax on your `.yml` files must be precise. Misplaced or invisible characters or inconsistent indentation can cause errors.
-:::
+
+❗The syntax on your `.yml` files must be precise. Misplaced or invisible characters or inconsistent indentation can cause errors.
+
 
 <br />
 
@@ -271,6 +278,7 @@ lavap test rpcprovider --from your_key_name_here --endpoints "your-site:443,LAV1
 
 ```
 
+❗ Make sure the tests are all passed before you stake your tokens.
 
 ### 🔗‍💥 Stake the Provider on Chain
 
@@ -326,45 +334,6 @@ lavap version
 
 
 ❗ If you have any further issues, do not hesitate to venture to our [discord](https://discord.com/invite/Tbk5NxTCdA) where you can get better assistance!
-
-
-Provider yml from Stake Village.
-
-```
-RPC=$(cat $HOME/.lava/config/config.toml | sed -n '/TCP or UNIX socket address for the RPC server to listen on/{n;p;}' | sed 's/.*://; s/".*//')
-GRPC=$(cat $HOME/.lava/config/app.toml | sed -n '/Address defines the gRPC server address to bind to/{n;p;}' | sed 's/.*://; s/".*//')
-API=$(cat $HOME/.lava/config/app.toml | sed -n '/Address defines the API server to listen on./{n;p;}' | sed 's/.*://; s/".*//')
-
-echo "RPC:"$RPC "GRPC:"$GRPC "API:"$API
-
-mkdir $HOME/config
-sudo tee << EOF >/dev/null $HOME/config/lavaprovider.yml
-endpoints:
-  - api-interface: tendermintrpc
-    chain-id: LAV1
-    network-address:
-      address: 127.0.0.1:2224
-      disable-tls: true
-    node-urls:
-      - url: ws://127.0.0.1:$RPC/websocket
-      - url: http://127.0.0.1:$RPC
-  - api-interface: grpc
-    chain-id: LAV1
-    network-address:
-      address: 127.0.0.1:2224
-      disable-tls: true
-    node-urls:
-      url: 127.0.0.1:$GRPC
-  - api-interface: rest
-    chain-id: LAV1
-    network-address:
-      address: 127.0.0.1:2224
-      disable-tls: true
-    node-urls:
-      url: http://127.0.0.1:$API
-EOF
-```
-
 
 
 [Back to Main](https://github.com/zachzwei/z4ch-nodes)
