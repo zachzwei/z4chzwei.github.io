@@ -86,3 +86,4 @@ Congratulations, you are now a Axelar RPC Provider!
 
 ===============
 
+[Main](https://github.com/zachzwei/z4ch-nodes/blob/main/README.md)
