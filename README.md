@@ -9,7 +9,7 @@ Hopefully it helps you to get started with setting up your own node. Cheers!`
 ### [Lava](https://docs.lavanet.xyz/about/)
 
 
-- #### [Node Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-node-manual-cosmovisor.md)
+- #### [Node Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-node-setup.md)
 
 - #### [Wallet Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-wallet.md)
 
