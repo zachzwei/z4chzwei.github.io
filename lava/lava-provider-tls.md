@@ -230,6 +230,23 @@ Once we've created these files we can move onto starting the processes!
 The urls for `grpc` and `rest` are [provided by Lava](https://docs.lavanet.xyz/public-rpc).
 If you are running your own Lava node then you can find the following information on the `config.toml` and `app.toml` files located at `./lava/config` folder.
 
+### Where to find ports?
+
+* Tendermint RPC
+
+<img width="533" alt="image" src="https://github.com/zachzwei/z4ch-nodes/assets/35627271/ea9fb74d-cd93-46de-af01-06a22df55291">
+
+* GRPC
+  
+<img width="587" alt="image" src="https://github.com/zachzwei/z4ch-nodes/assets/35627271/2e348821-005f-4892-8808-f162d5d297f9">
+
+* Rest (API)
+
+<img width="589" alt="image" src="https://github.com/zachzwei/z4ch-nodes/assets/35627271/fdc357a1-54a9-4dd7-b64e-bea7ec7725ec">
+
+
+
+
 <br />
 
 ### 🏁 Start the Provider Process(es)
