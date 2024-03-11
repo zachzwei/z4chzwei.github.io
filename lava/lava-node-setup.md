@@ -4,7 +4,7 @@
 ### Setup validator name
 Change it to anything you like.
 ```
-MONIKER="StakeVillage_guide"
+MONIKER="my_node"
 ```
 
 ### Install dependencies
