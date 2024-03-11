@@ -1,5 +1,5 @@
 
-Lava leverages the Cosmos SDK's bank and account modules for seamless integration with existing Cosmos wallets.
+### Lava leverages the Cosmos SDK's bank and account modules for seamless integration with existing Cosmos wallets.
 
 **Recommendation**: After setting up your wallet, it's crucial to test its functionality. Utilize the [faucet](/faucet#discord-faucet) to acquire testnet tokens. Then, execute a transaction by transferring these tokens to another account and back.
 
