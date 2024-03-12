@@ -158,6 +158,30 @@ curl -L https://snapshots.stakevillage.net/snapshots/lava-testnet-2/snapshot_lat
 [[ -f $HOME/.lava/data/upgrade-info.json ]] && cp $HOME/.lava/data/upgrade-info.json $HOME/.lava/cosmovisor/genesis/upgrade-info.json
 ```
 
+### Verify port configurations
+
+* Tendermint RPC
+  
+Navigate to `/.lava/config` and open `config.toml` file. Take note of the URL and Port.
+
+<img width="467" alt="image" src="https://github.com/zachzwei/z4ch-nodes/assets/35627271/62c6eebf-2d1d-47dd-8445-fb0864868903">
+
+* Rest (API)
+
+Navigate to `/.lava/config` and open `app.toml` file. Take note of the URL and Port. Make sure it is set to `enable = true`.
+
+<img width="589" alt="image" src="https://github.com/zachzwei/z4ch-nodes/assets/35627271/f774a2dc-dabc-45b5-a27f-ff41773aa2f1">
+
+
+* gRPC
+
+Navigate to `/.lava/config` and open `app.toml` file. Take note of the URL and Port. Make sure both gRPC and gRPC-web is set to `enable = true`.
+
+<img width="651" alt="image" src="https://github.com/zachzwei/z4ch-nodes/assets/35627271/66ec023a-67fc-4fe4-a1b0-5bb9aef426ea">
+
+
+
+
 ### Start service and check the logs
 ```
 sudo systemctl start lavad && sudo journalctl -u lavad -f --no-hostname -o cat
