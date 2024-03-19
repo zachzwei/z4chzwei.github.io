@@ -15,6 +15,8 @@ Hopefully it helps you to get started with setting up your own node. Cheers!`
 
 - #### [Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-provider-tls.md)
 
+- #### [Useful Commands](https://github.com/zachzwei/z4chzwei.github.io/blob/main/lava/lava-useful-commands.md)
+
 
 ### [Axelar](https://docs.axelar.dev/)
 
