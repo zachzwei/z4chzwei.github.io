@@ -27,7 +27,7 @@ Hopefully it helps you to get started with setting up your own node. Cheers!`
 
 ### [Evmos](https://docs.evmos.org/)
 
-- #### [Node Setup](Evmos-Mainnet/evmos-node-setup.md
+- #### [Node Setup](Evmos-Mainnet/evmos-node-setup.md)
 
 - #### [Provider Setup](Evmos-Mainnet/evmos-provider-tls.md)
 
