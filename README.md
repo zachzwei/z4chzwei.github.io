@@ -9,36 +9,36 @@ Hopefully it helps you to get started with setting up your own node. Cheers!`
 ### [Lava](https://docs.lavanet.xyz/about/)
 
 
-- #### [Node Setup](Lava-Testnet/lava-node-setup.md)
+- #### [Node Setup](Lava/lava-node-setup.md)
 
-- #### [Wallet Setup](Lava-Testnet/lava-node-wallet.md)
+- #### [Wallet Setup](Lava/lava-node-wallet.md)
 
-- #### [Provider Setup](Lava-Testnet/lava-provider-tls.md)
+- #### [Provider Setup](Lavalava-provider-tls.md)
 
-- #### [Useful Commands](Lava-Testnet/lava-useful-commands.md)
+- #### [Useful Commands](Lava/lava-useful-commands.md)
 
 
 ### [Axelar](https://docs.axelar.dev/)
 
-- #### [Node Setup](Axelar-Mainnet/axelar-node-setup.md)
+- #### [Node Setup](Axelar/axelar-node-setup.md)
 
-- #### [Provider Setup](Axelar-Mainnet/axelar-provider-tls.md)
+- #### [Provider Setup](Axelar/axelar-provider-tls.md)
 
 
 ### [Evmos](https://docs.evmos.org/)
 
-- #### [Node Setup](Evmos-Mainnet/evmos-node-setup.md)
+- #### [Node Setup](Evmos/evmos-node-setup.md)
 
-- #### [Provider Setup](Evmos-Mainnet/evmos-provider-tls.md)
+- #### [Provider Setup](Evmos/evmos-provider-tls.md)
 
 
 
 ### [Starknet](https://docs.starknet.io/documentation/)
 
 
-- #### [Node Setup](Starknet-Mainnet/stark-node-setup.md)
+- #### [Node Setup](Starknet/stark-node-setup.md)
 
-- #### [Provider Setup](Starknet-Mainnet/stark-provider-tls.md)
+- #### [Provider Setup](Starknet/stark-provider-tls.md)
 
 
 
