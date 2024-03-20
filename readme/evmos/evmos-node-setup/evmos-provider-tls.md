@@ -1,12 +1,13 @@
 # Evmos Provider Setup
 
-The steps for creating a provider will be similar to the [Lava Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-provider-tls.md).
+The steps for creating a provider will be similar to the [Lava Provider Setup](../../lava/lava-node-setup/lava-provider-tls.md).
 
 You might need to create a new TLS Certificate for this new site.
 
 Make sure to set specific parameters for EVMOS spec:
 
 `evmos_server` file
+
 ```
 server {
     listen 443 ssl http2;
@@ -26,6 +27,7 @@ server {
 ❗The internal comms port `2226` can be changed to any open port on your network.
 
 `evmos-provider.yml` file
+
 ```
 endpoints:
     - api-interface: tendermintrpc
@@ -60,10 +62,8 @@ endpoints:
 ```
 
 * Note:
-  
-The urls for `grpc`,`rest` and `jsonrpc` are [provided by Lava](https://docs.lavanet.xyz/evmos-dev).
-If you are running your own Lava node then you can find the following information on the `config.toml` and `app.toml` files located at `./evmosd/config` folder.
 
+The urls for `grpc`,`rest` and `jsonrpc` are [provided by Lava](https://docs.lavanet.xyz/evmos-dev). If you are running your own Lava node then you can find the following information on the `config.toml` and `app.toml` files located at `./evmosd/config` folder.
 
 And the commands will now be pointing to your `evmos.your-domain`
 
@@ -74,23 +74,25 @@ lavap rpcprovider evmos-provider.yml --from your_key_name_here --geolocation 1 -
 ```
 
 Test the provider
+
 ```
 lavap test rpcprovider --from your_key_name_here --endpoints "evmos.your-site:443,EVMOS"
 ```
 
 Stake the Provider
+
 ```
 lavap tx pairing stake-provider EVMOS "50000000000ulava" "evmos.your-site:443,1" 1 [validator_address] --from your_key_name_here --provider-moniker your-provider-moniker-1 --gas-adjustment "1.5" --gas "auto" --gas-prices "0.0001ulava" --chain-id lava-testnet-2 --delegate-limit 0ulava
 ```
 
 Final test!
+
 ```
 lavap test rpcprovider --from your_key_name_here --endpoints "evmos.your-site:443,EVMOS"
 ```
 
 Congratulations, you are now an Evmos RPC Provider!
 
-
-===============
+\===============
 
 [Main](https://github.com/zachzwei/z4ch-nodes/blob/main/README.md)

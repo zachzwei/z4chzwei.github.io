@@ -1,10 +1,11 @@
 # Starknet Provider Setup
 
-The steps for creating a provider will be similar to the [Lava Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-provider-tls.md).
+The steps for creating a provider will be similar to the [Lava Provider Setup](../../lava/lava-node-setup/lava-provider-tls.md).
 
 Make sure to set specific parameters for STRK spec:
 
 `strk_server` file
+
 ```
 server {
     listen 443 ssl http2;
@@ -22,6 +23,7 @@ server {
 ```
 
 `strk-provider.yml` file
+
 ```
 endpoints:
     - api-interface: jsonrpc
@@ -42,28 +44,31 @@ lavap rpcprovider strk-provider.yml --from your_key_name_here --geolocation 1 --
 ```
 
 Test the provider
+
 ```
 lavap test rpcprovider --from your_key_name_here --endpoints "strk.your-site:443,STRK"
 ```
 
 Stake the Provider
+
 ```
 lavap tx pairing stake-provider STRK "50000000000ulava" "strk.your-site:443,1" 1 [validator] -y --from your_key_name_here --provider-moniker your-provider-moniker-1 --gas-adjustment "1.5" --gas "auto" --gas-prices "0.0001ulava" --chain-id lava-testnet-2 --delegate-limit 0ulava
 ```
 
 Final test!
+
 ```
 lavap test rpcprovider --from your_key_name_here --endpoints "strk.your-site:443,STRK"
 ```
 
 Congratulations, you are now a Starket RPC Provider!
 
-
-===============
+\===============
 
 In case you are getting errors with your test.
 
 Check if port `6061` is in use/open
+
 ```
 ss -na | grep :6061
 ```
@@ -73,4 +78,3 @@ If it is not in use, open port `6061`
 ```
 sudo ufw allow 6061
 ```
-

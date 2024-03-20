@@ -1,7 +1,6 @@
 # Axelar Node Setup
 
-
-Source: https://stakevillage.net/en/axelar-mainnet/index.php
+Source: [https://stakevillage.net/en/axelar-mainnet/index.php](https://stakevillage.net/en/axelar-mainnet/index.php)
 
 ### Set Moniker
 
@@ -10,6 +9,7 @@ MONIKER="my-node"
 ```
 
 ### Install dependencies
+
 Update system and install build tools
 
 ```
@@ -39,12 +39,14 @@ git clone https://github.com/axelarnetwork/axelar-core.git
 cd axelar-core
 git checkout v0.34.1
 ```
+
 ```
 go mod edit -replace github.com/tendermint/tm-db=github.com/notional-labs/tm-db@v0.6.8-pebble
 go mod tidy
 go mod edit -replace github.com/cometbft/cometbft-db=github.com/notional-labs/cometbft-db@pebble
 go mod tidy
 ```
+
 ```
 go build -tags pebbledb -ldflags "-w -s -X github.com/cosmos/cosmos-sdk/types.DBBackend=pebbledb \
 -X github.com/cosmos/cosmos-sdk/version.Version=$(git describe --tags)-pebbledb \
@@ -69,6 +71,7 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 ```
+
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable axelard
@@ -108,6 +111,7 @@ pruning_keep_recent="50000"
 pruning_keep_every="0"
 pruning_interval="19"
 ```
+
 ```
 sed -i "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.axelar/config/app.toml
 sed -i "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.axelar/config/app.toml
@@ -124,11 +128,12 @@ sed -i "s/^app-db-backend *=.*/app-db-backend = \"$db_backend\"/" $HOME/.axelar/
 ```
 
 ### Set custom ports
-Note: 
+
+Note:
 
 `You can change value CUSTOM_PORT=173 To any other ports`
 
-CUSTOM_PORT=173
+CUSTOM\_PORT=173
 
 ```
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}58\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}57\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}60\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}56\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}66\"%" $HOME/.axelar/config/config.toml
@@ -146,7 +151,3 @@ curl -L https://snapshots.stakevillage.net/snapshots/axelar-dojo-1/axelar-dojo-1
 ```
 sudo systemctl start axelard && sudo journalctl -u axelard -f --no-hostname -o cat
 ```
-
-Next: [Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/axelar/axelar-provider-tls.md)
-
-[Main](https://github.com/zachzwei/z4ch-nodes/blob/main/README.md)
