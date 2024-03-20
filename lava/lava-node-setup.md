@@ -1,4 +1,4 @@
-## Lava Node Setup guide by Stake Village
+# Lava Node Setup
 
 ([source](https://stakevillage.net/en/lava-testnet2/index.php))
 ### Setup validator name

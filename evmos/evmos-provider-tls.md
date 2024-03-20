@@ -1,4 +1,4 @@
-# Setting up a Provider
+# Evmos Provider Setup
 
 The steps for creating a provider will be similar to the [Lava Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-provider-tls.md).
 

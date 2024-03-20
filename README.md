@@ -11,7 +11,7 @@ Hopefully it helps you to get started with setting up your own node. Cheers!`
 
 - #### [Node Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-node-setup.md)
 
-- #### [Wallet Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-wallet.md)
+- #### [Wallet Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-node-wallet.md)
 
 - #### [Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/lava/lava-provider-tls.md)
 
@@ -20,14 +20,14 @@ Hopefully it helps you to get started with setting up your own node. Cheers!`
 
 ### [Axelar](https://docs.axelar.dev/)
 
-- #### [Node Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/axelar/axelar.md)
+- #### [Node Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/axelar/axelar-node-setup.md)
 
 - #### [Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/axelar/axelar-provider-tls.md)
 
 
 ### [Evmos](https://docs.evmos.org/)
 
-- #### [Node Setup](evmos/evmos.md)
+- #### [Node Setup](evmos/evmos-node-setup.md)
 
 - #### [Provider Setup](evmos/evmos-provider-tls.md)
 
@@ -36,7 +36,7 @@ Hopefully it helps you to get started with setting up your own node. Cheers!`
 ### [Starknet](https://docs.starknet.io/documentation/)
 
 
-- #### [Node Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/starknet/stark.md)
+- #### [Node Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/starknet/stark-node-setup.md)
 
 - #### [Provider Setup](https://github.com/zachzwei/z4ch-nodes/blob/main/starknet/stark-provider-tls.md)
 

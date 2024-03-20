@@ -1,4 +1,4 @@
-# Setting up an Axelar Node
+# Axelar Node Setup
 
 
 Source: https://stakevillage.net/en/axelar-mainnet/index.php

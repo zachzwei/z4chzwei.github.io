@@ -1,3 +1,4 @@
+# Lave Wallet Setup
 
 ### Lava leverages the Cosmos SDK's bank and account modules for seamless integration with existing Cosmos wallets.
 

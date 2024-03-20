@@ -1,6 +1,4 @@
-
-
-# Provider TLS Setup Guide
+# Lava Provider Setup
 
 
 All providers on `lava-testnet-2` must use a domain name and TLS (1.3). 

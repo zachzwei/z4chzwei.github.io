@@ -1,4 +1,4 @@
-## ⚙️ Installation
+# Starknet Node Setup
 
 ### Prerequisites
 
