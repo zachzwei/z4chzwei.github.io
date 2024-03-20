@@ -48,3 +48,8 @@ Check relay payments
 ```
 lavap test events 200 --event lava_relay_payment --from z4ch2
 ```
+**********
+Check free space. Need [NCDU](https://ostechnix.com/check-disk-space-usage-linux-using-ncdu/) installed.
+```
+ncdu -x /
+```
