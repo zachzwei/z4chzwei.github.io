@@ -20,3 +20,5 @@
 * [Inscribers](inscribers/README.md)
   * [Doginals](inscribers/doginals.md)
   * [Bellscriptions](inscribers/bellscriptions.md)
+* [Miners](miners/README.md)
+  * [Nimble Network](miners/nimble-network.md)
