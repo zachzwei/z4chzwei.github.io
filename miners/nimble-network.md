@@ -50,7 +50,7 @@ make install
 ```
 cd
 cd go/bin
-nimble-networkd keys add <wallet_name>
+./nimble-networkd keys add <wallet_name>
 ```
 
 Type a passphrase, retype it.\
