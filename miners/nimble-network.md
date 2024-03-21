@@ -92,6 +92,21 @@ make run addr=<wallet_address>
 You can stop the miner by pressing CTRL+C\
 To resume mining, re-run the command.
 
+
+
+### Troubleshooting
+
+Having an older version of GO will cause errors in building the wallet and miner.\
+Uninstall GO by running these commands one at a time.
+
+```
+sudo apt-get remove golang-go
+```
+
+```
+sudo apt-get remove --auto-remove golang-go
+```
+
 \===========
 
 You are now mining NIM!
