@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Nodes + Providers](README.md)
-  * [Node and RPC Provider setup for LavaNet](nodes-+-providers/readme.md)
+  * [Read Me First](nodes-+-providers/readme.md)
   * [Lava](nodes-+-providers/lava/README.md)
     * [Lava Node Setup](nodes-+-providers/lava/lava-node-setup/README.md)
       * [Lave Wallet Setup](nodes-+-providers/lava/lava-node-setup/lava-node-wallet.md)
