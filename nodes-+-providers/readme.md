@@ -1,4 +1,8 @@
-# Node and RPC Provider setup for LavaNet
+---
+description: A quick guide on setting up Nodes and Providers for LavaNet
+---
+
+# Read Me First
 
 ## Proceed at your own risk.
 
@@ -8,7 +12,7 @@
 
 * [**Node Setup**](lava/lava-node-setup/)
 * [**Wallet Setup**](lava/lava-node-setup/lava-node-wallet.md)
-* [**Provider Setup**](../../Lavalava-provider-tls.md)
+* [**Provider Setup**](../Lavalava-provider-tls.md)
 * [**Useful Commands**](lava/lava-useful-commands.md)
 
 ### [Axelar](https://docs.axelar.dev/)
