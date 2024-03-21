@@ -12,7 +12,12 @@ Source: [https://github.com/nimble-technology/nimble-wiki](https://github.com/ni
 
 These instructions are targeted towards those who have a bit of command line experience with Linux.
 
-You can rent a Cloud GPU running Ubuntu 22.04 by using this link: [https://cloud.vast.ai/?ref\_id=94252](https://cloud.vast.ai/?ref\_id=94252)
+
+
+You can rent a Cloud GPU running Ubuntu 22.04 by using this link: [https://cloud.vast.ai/?ref\_id=94252](https://cloud.vast.ai/?ref\_id=94252)\
+Set storage size to at least 250GB and use the following configuration:
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### Install GO
 
@@ -46,6 +51,8 @@ make install
 ```
 
 ### Generate a Nimble Wallet
+
+Navigate to the folder where the wallet was installed. Use the following commands.
 
 ```
 cd
@@ -96,8 +103,9 @@ To resume mining, re-run the command.
 
 ### Troubleshooting
 
-Having an older version of GO will cause errors in building the wallet and miner.\
-Uninstall GO by running these commands one at a time.
+* Build Errors\
+  Having an older version of GO will cause errors in building the wallet and miner.\
+  Uninstall GO by running these commands one at a time.
 
 ```
 sudo apt-get remove golang-go
