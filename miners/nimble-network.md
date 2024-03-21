@@ -8,9 +8,9 @@ description: >-
 
 ## Mining Nimble on Ubuntu
 
+Source: [https://github.com/nimble-technology/nimble-wiki](https://github.com/nimble-technology/nimble-wiki)
 
-
-These instructions are targetted towards those who have a bit of command line experience with Linux.
+These instructions are targeted towards those who have a bit of command line experience with Linux.
 
 You can rent a Cloud GPU running Ubuntu 22.04 by using this link: [https://cloud.vast.ai/?ref\_id=94252](https://cloud.vast.ai/?ref\_id=94252)
 
@@ -111,5 +111,6 @@ sudo apt-get remove --auto-remove golang-go
 
 You are now mining NIM!
 
-For assistance, Join Nimble Discord server - [https://discord.gg/nimble](https://discord.gg/nimble)
+For assistance, Join Nimble Discord server - [https://discord.gg/nimble](https://discord.gg/nimble)\
+Official website - [https://www.nimble.technology](https://www.nimble.technology/)
 
