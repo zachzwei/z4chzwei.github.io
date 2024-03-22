@@ -14,7 +14,7 @@ These instructions are targeted towards those who have a bit of command line exp
 
 
 
-You can rent a Cloud GPU running Ubuntu 22.04 by using this link: [https://cloud.vast.ai/?ref\_id=94252](https://cloud.vast.ai/?ref\_id=94252)\
+You can rent a Cloud GPU running Ubuntu 22.04 by using this link: [https://cloud.vast.ai](https://cloud.vast.ai/?ref\_id=94252\&template\_id=f69a685c54b1edb75f510a0abb6db807)\
 Set storage size to at least 250GB and use the following configuration:
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
