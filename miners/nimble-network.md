@@ -21,6 +21,28 @@ Set storage size to at least 250GB and use the following configuration:
 
 Update: Check out my step by step [guide](https://x.com/ZachZwei/status/1771400654633992235) from renting a GPU to running the miner (with screenshots).
 
+### Install Tmux
+
+Using [Tmux](https://github.com/tmux/tmux/wiki) will ensure that your session will always run on your machine. To install it (if its not pre-loaded), just run the command:
+
+```
+sudo apt install tmux
+```
+
+Next, run Tmux to begin setting up your Nimble Wallet and Miner.
+
+```
+tmux
+```
+
+If you get disconnected from your instance. Just type:
+
+```
+tmux a
+```
+
+As long as the instance is not restarted, you can always go back to your session with this command.
+
 ### Install GO
 
 Get the link of the latest version here: [https://go.dev/dl/](https://go.dev/dl/) or just copy the commands below.
