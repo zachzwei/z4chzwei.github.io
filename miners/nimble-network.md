@@ -19,6 +19,8 @@ Set storage size to at least 250GB and use the following configuration:
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
+Update: Check out my step by step [guide](https://x.com/ZachZwei/status/1771400654633992235) from renting a GPU to running the miner (with screenshots).
+
 ### Install GO
 
 Get the link of the latest version here: [https://go.dev/dl/](https://go.dev/dl/) or just copy the commands below.
