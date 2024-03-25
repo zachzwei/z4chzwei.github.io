@@ -139,6 +139,14 @@ sudo apt-get remove golang-go
 sudo apt-get remove --auto-remove golang-go
 ```
 
+* Update Miner\
+  There has been some tasks that are not being completed successfully. Update your miner as soon as possible. \
+  Press CTRL + C to stop your miner. Run `git pull` to get the latest version of the miner.\
+  Continue mining by running the `make run addr=<wallet_address>`\
+
+
+
+
 \===========
 
 You are now mining NIM!
