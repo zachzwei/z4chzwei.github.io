@@ -1,5 +1,5 @@
 ---
-description: A minter and protocol for inscriptions on Bells.
+description: A minter and protocol for inscriptions on Bells forked from Ordinals Wallet.
 ---
 
 # Bellscriptions
