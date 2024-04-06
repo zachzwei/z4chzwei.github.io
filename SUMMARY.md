@@ -22,3 +22,4 @@
   * [Bellscriptions](inscribers/bellscriptions.md)
 * [Miners](miners/README.md)
   * [Nimble Network](miners/nimble-network.md)
+  * [Ore Supply](miners/ore-supply.md)
