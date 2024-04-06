@@ -84,7 +84,7 @@ Double check the pubkey and confirm if that is the correct address you are resto
 Run the following command:
 
 ```
-cargo install ore-cli=
+cargo install ore-cli
 ```
 
 <figure><img src="../.gitbook/assets/image (5).png" alt="" width="516"><figcaption></figcaption></figure>
@@ -101,7 +101,7 @@ Take note of the HTTP Provider link.
 
 ### Create an ORE Miner script
 
-In this example, I created [http://ore.sh](https://t.co/8IEiySBpJA)&#x20;
+In this example, I created `ore.sh`
 
 ```
 nano ore.sh
