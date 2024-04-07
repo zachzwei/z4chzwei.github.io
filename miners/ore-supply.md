@@ -12,7 +12,9 @@ Not Financial Advise. Educational purposes only.&#x20;
 
 Tested on a 20-Core CPU server with Ubuntu 22.04.
 
-Official site: https://ore.supply
+Official site: [https://ore.supply](https://ore.supply)
+
+
 
 ### Requirements
 
@@ -179,3 +181,9 @@ ore --keypair <KEYPAIR> claim <AMOUNT> --rpc <RPC> --priority-fee <FEE>
 ```
 
 <figure><img src="../.gitbook/assets/image (9).png" alt="" width="426"><figcaption></figcaption></figure>
+
+### Sources
+
+[https://ore.supply/download](https://ore.supply/download)\
+[https://crates.io/crates/ore-cli](https://crates.io/crates/ore-cli)\
+[https://twitter.com/HardhatChad](https://twitter.com/HardhatChad)
