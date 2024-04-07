@@ -111,10 +111,6 @@ Run "apt-get install nano" if it is not available.&#x20;
 
 Copy and paste the following template on the file.&#x20;
 
-Modify the values for RPC, KEYPAIR, FEE and CORES.
-
-Save the file.
-
 ```
 until bash -c "ore \
     --rpc <RPC> \
@@ -127,7 +123,21 @@ until bash -c "ore \
 done
 ```
 
-<figure><img src="../.gitbook/assets/image (7).png" alt="" width="371"><figcaption><p>Example of ORE Miner script</p></figcaption></figure>
+Check your CPU thread count by running this command:
+
+```
+egrep '^processor' /proc/cpuinfo | sort -u | wc -l
+```
+
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+
+
+
+<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+
+Modify the values for RPC, KEYPAIR, FEE and CORES.
+
+Save the file.
 
 Run the following command to make the script executable:
 
