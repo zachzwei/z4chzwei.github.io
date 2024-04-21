@@ -8,7 +8,7 @@ description: Welcome to z4ch nodes. Stay a while and read on!
 
 Hey there, I am **z4ch** AKA **ZachZwei**.&#x20;
 
-I am a crypto enthusiast with more than 10 years experience in the field of Customer Service primarily in Technical support. My exposure into crypto started around the 2017. I was as a Customer Support Lead / Community Manager at [Trust Wallet](https://trustwallet.com/) from 2019 to 2022. Some of my notable works was designing their ticketing system and the [Trust Wallet Community](https://community.trustwallet.com/) knowledge base. \
+I am a crypto enthusiast with more than 10 years experience in the field of Customer Service primarily in Technical Support. My exposure into crypto started around 2017. I worked as a Customer Support Lead / Community Manager at [Trust Wallet](https://trustwallet.com/) from 2019 to 2022. Some of my notable works was designing their ticketing system and the [Trust Wallet Community](https://community.trustwallet.com/) knowledge base. \
 \
 I am no developer, and have no coding background. I am a technician and I figure stuff out. I like creating easy to follow guides and faqs for the average joe.
 
