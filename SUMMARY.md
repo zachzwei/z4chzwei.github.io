@@ -1,7 +1,7 @@
 # Table of contents
 
-* [Nodes + Providers](README.md)
-  * [Read Me First](nodes-+-providers/readme.md)
+* [Read Me First](README.md)
+* [Nodes + Providers](<README (1).md>)
   * [Lava](nodes-+-providers/lava/README.md)
     * [Lava Node Setup](nodes-+-providers/lava/lava-node-setup/README.md)
       * [Lave Wallet Setup](nodes-+-providers/lava/lava-node-setup/lava-node-wallet.md)
@@ -22,4 +22,4 @@
   * [Bellscriptions](inscribers/bellscriptions.md)
 * [Miners](miners/README.md)
   * [Nimble Network](miners/nimble-network.md)
-  * [Ore Supply](miners/ore-supply.md)
+  * [Ore Supply (Do Not Use)](miners/ore-supply-do-not-use.md)
