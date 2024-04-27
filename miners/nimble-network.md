@@ -177,7 +177,7 @@ sudo apt-get remove --auto-remove golang-go
 
 \===========
 
-You are now mining NIM!
+You are now mining $NIM!
 
 For assistance, Join Nimble Discord server - [https://discord.gg/nimble](https://discord.gg/nimble)\
 Official website - [https://www.nimble.technology](https://www.nimble.technology/)
