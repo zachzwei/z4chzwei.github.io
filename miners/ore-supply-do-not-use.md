@@ -4,7 +4,7 @@ description: >-
   phone.
 ---
 
-# Ore Supply
+# Ore Supply (Do Not Use)
 
 ### Disclaimer!&#x20;
 
@@ -33,11 +33,11 @@ curl https://sh.rustup.rs -sSf | sh
 
 &#x20;Choose option 1 for the standard install.
 
-<figure><img src="../.gitbook/assets/image.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Copy the PATH environment specified after the install.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt="" width="509"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="509"><figcaption></figcaption></figure>
 
 ### Install Solana CLI
 
@@ -51,7 +51,7 @@ sh -c "$(curl -sSfL https://release.solana.com/v1.18.4/install)"
 
 Afterwards, copy the specified PATH and run it to finish the install.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 #### Generate a wallet
 
@@ -61,7 +61,7 @@ Run the following command:
 solana-keygen new
 ```
 
-<figure><img src="../.gitbook/assets/image (3).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 This will generate a new keypair and save it on the `.config` directory.&#x20;
 

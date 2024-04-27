@@ -14,10 +14,10 @@ These instructions are targeted towards those who have a bit of command line exp
 
 
 
-You can rent a Cloud GPU running Ubuntu 22.04 by using this link: [https://cloud.vast.ai](https://cloud.vast.ai/?ref\_id=94252\&template\_id=f69a685c54b1edb75f510a0abb6db807)\
+You can rent a Cloud GPU running Ubuntu 22.04 by using this link: [https://cloud.vast.ai](https://cloud.vast.ai/?ref\_id=94252\&creator\_id=94252\&name=nvidia%2Fcuda%3A12.4.1-devel-ubuntu22.04)\
 Set storage size to at least 250GB and use the following configuration:
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 Update: Check out my step by step [guide](https://x.com/ZachZwei/status/1771400654633992235) from renting a GPU to running the miner (with screenshots).
 
@@ -45,7 +45,21 @@ As long as the instance is not restarted, you can always go back to your session
 
 ### Install GO
 
-Get the link of the latest version here: [https://go.dev/dl/](https://go.dev/dl/) or just copy the commands below.
+Before you proceed, check first if Go is installed. Run the following command:
+
+```
+go version
+```
+
+
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+If you get the prompt above, that means Go 1.22.1 is installed. This is the minimum version required. &#x20;
+
+If you have a lower version or if its not installed then proceed with the next step.
+
+Copy the commands below and run it on your Terminal.
 
 ```
 sudo apt update
@@ -76,6 +90,10 @@ make install
 
 ### Generate a Nimble Wallet
 
+Note: &#x20;
+
+(This step is necessary to generate a Nimble address. If you already a master and miner wallets, then you can just skip this step.)
+
 Navigate to the folder where the wallet was installed. Use the following commands.
 
 ```
@@ -85,7 +103,17 @@ cd go/bin
 ```
 
 Type a passphrase, retype it.\
-A `nimblexxxx` address will be generated after following the necessary prompts. Save your address and the seed phrase in a secure place.
+A `nimblexxxx` address will be generated after following the necessary prompts. Save your address and the seed phrase in a secure place. &#x20;
+
+#### Master Wallet (Important)
+
+Generate at least 2 addresses. &#x20;
+
+One of which will be used as your Master Wallet, then other a Miner wallet. &#x20;
+
+Join Nimble Discord to register your addresses: [https://discord.gg/nimble](https://discord.gg/nimble)
+
+<figure><img src="../.gitbook/assets/image (2).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Setup Nimble Miner
 
@@ -96,7 +124,7 @@ sudo apt update
 sudo apt install python3-venv
 ```
 
-Build the miner
+Go back to your Terminal and start building the miner.
 
 ```
 cd
