@@ -33,11 +33,11 @@ curl https://sh.rustup.rs -sSf | sh
 
 &#x20;Choose option 1 for the standard install.
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Copy the PATH environment specified after the install.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt="" width="509"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="509"><figcaption></figcaption></figure>
 
 ### Install Solana CLI
 
@@ -51,7 +51,7 @@ sh -c "$(curl -sSfL https://release.solana.com/v1.18.4/install)"
 
 Afterwards, copy the specified PATH and run it to finish the install.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 #### Generate a wallet
 
@@ -61,7 +61,7 @@ Run the following command:
 solana-keygen new
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 This will generate a new keypair and save it on the `.config` directory.&#x20;
 
@@ -77,7 +77,7 @@ If you already have an existing wallet, you can recover that by using the follow
 solana-keygen recover
 ```
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Double check the pubkey and confirm if that is the correct address you are restoring.
 
@@ -89,7 +89,7 @@ Run the following command:
 cargo install ore-cli
 ```
 
-<figure><img src="../.gitbook/assets/image (5) (1).png" alt="" width="516"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt="" width="516"><figcaption></figcaption></figure>
 
 ### Create a Solana Endpoint (RPC)
 
@@ -99,7 +99,7 @@ You can create a Free RPC to test. Once all credits are used up, you can purchas
 
 Take note of the HTTP Provider link.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt="" width="439"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt="" width="439"><figcaption></figcaption></figure>
 
 ### Create an ORE Miner script
 

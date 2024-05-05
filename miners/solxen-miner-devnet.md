@@ -36,7 +36,7 @@ Run the following command:
 solana-keygen new
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 This will generate a new keypair and save it on the `.config` directory.&#x20;
 
@@ -50,7 +50,7 @@ Make sure that you are requesting **Devnet** tokens.
 
 If you have a GitHub account, you can request more tokens.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ### Install SolXEN miner
 
@@ -104,7 +104,7 @@ Replace the ETH address with your own. This is where you will get your XN Airdro
 node ./client/miner.js mine --address <ETH address> -fee 1
 ```
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 The command will submit a transaction and will attempt to find a `420` or a `42069` hash.
 
@@ -116,7 +116,7 @@ node ./client/miner.js mine --address <ETH address> -fee 1 -r 1000
 
 This will continuously run the miner until the number of attempts runs out.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can check the transactions here: [https://explorer.solana.com/?cluster=devnet](https://explorer.solana.com/?cluster=devnet)
 
