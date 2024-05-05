@@ -35,7 +35,7 @@ go version
 
 ### Download Miner
 
-Choose the file that corresponds to that machine that you are using.\
+Choose the file that corresponds to the machine that you are using.\
 Go here: [https://github.com/mmc-98/solxen-tx/releases](https://github.com/mmc-98/solxen-tx/releases)
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
