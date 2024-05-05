@@ -23,3 +23,4 @@
 * [Miners](miners/README.md)
   * [Nimble Network](miners/nimble-network.md)
   * [Ore Supply (Do Not Use)](miners/ore-supply-do-not-use.md)
+  * [SolXEN Miner (DevNet)](miners/solxen-miner-devnet.md)
