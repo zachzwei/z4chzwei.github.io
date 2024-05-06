@@ -76,9 +76,11 @@ You can get it from Phantom.
 
 \
 Replace `ToAddr:` to your own ETH address.\
-Change Program ID to:  `F8yUTgMN6E96QYhVVY9UVkKzKrDjpHLqrQ7bPCoqaJHz`
+Change Program ID to:  Dx7zjkWZbUStmhjo8BrhbprtQCcMByJgCTEC6TLgkH8n
 
 Save file.
+
+Note: SolXEN mining is still in development, so there might be changes that are being done to the contract. Always check if you are running the latest Program ID.
 
 
 
