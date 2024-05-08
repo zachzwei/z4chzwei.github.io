@@ -160,8 +160,29 @@ You will need to refresh the Nginx server:
 sudo systemctl restart nginx
 ```
 
-\
+### &#x20;✅ Secure NGINX With Let’s Encrypt&#x20;
 
+Steps were taken here:&#x20;
+
+[https://www.kamatera.com/knowledgebase/how-to-secure-nginx-with-lets-encrypt/](https://www.kamatera.com/knowledgebase/how-to-secure-nginx-with-lets-encrypt/)
+
+Run the following commands:
+
+```
+sudo certbot --nginx -d <your-site>
+```
+
+Test auto renewal
+
+```
+sudo certbot renew --dry-run
+```
+
+Visit your site on HTTPS to check. Open a browser and then type `https://your-site.com`
+
+If it shows a padlock or something like this then you are good to go.
+
+<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>HTTPS enabled</p></figcaption></figure>
 
 ### ⚙️ Create the Provider Configuration
 
