@@ -98,7 +98,18 @@ sudo systemctl stop lavad
 sudo systemctl restart lavad
 ```
 
+Upgrade provider
 
+```
+cd $HOME
+rm -rf lava
+git clone https://github.com/lavanet/lava.git
+cd lava
+git checkout <check newest release>
+
+export LAVA_BINARY=lavap
+make install
+```
 
 Check free space. Need [NCDU](https://ostechnix.com/check-disk-space-usage-linux-using-ncdu/) installed.
 
