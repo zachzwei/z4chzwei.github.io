@@ -182,7 +182,7 @@ Visit your site on HTTPS to check. Open a browser and then type `https://your-si
 
 If it shows a padlock or something like this then you are good to go.
 
-<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>HTTPS enabled</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption><p>HTTPS enabled</p></figcaption></figure>
 
 ### ⚙️ Create the Provider Configuration
 

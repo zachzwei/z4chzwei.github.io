@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Read Me First](README.md)
-* [Nodes + Providers](<README (1).md>)
+* [Nodes + Providers](nodes-+-providers/README.md)
   * [Lava](nodes-+-providers/lava/README.md)
     * [Lava Node Setup](nodes-+-providers/lava/lava-node-setup/README.md)
       * [Lave Wallet Setup](nodes-+-providers/lava/lava-node-setup/lava-node-wallet.md)

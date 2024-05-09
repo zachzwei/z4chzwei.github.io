@@ -36,7 +36,7 @@ Run the following command:
 solana-keygen new
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18).png" alt="" width="563"><figcaption></figcaption></figure>
 
 This will generate a new keypair and save it on the `.config` directory.&#x20;
 
@@ -104,7 +104,7 @@ Replace the ETH address with your own. This is where you will get your XN Airdro
 tsx ./client/miner.js mine --address <ETH address> -fee 1
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 The command will submit a transaction and will attempt to find a `420` or a `42069` hash.
 
@@ -116,17 +116,17 @@ node ./client/miner.js mine --address <ETH address> -fee 1 -r 1000
 
 This will continuously run the miner until the number of attempts runs out.
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 You can check the transactions here: [https://explorer.solana.com/?cluster=devnet](https://explorer.solana.com/?cluster=devnet)
 
 Just search for your address and then tap on a transaction to review it.
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 Check your SolXEN tokens by going to the Tokens tab of the explorer.
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 Update Miner
 
