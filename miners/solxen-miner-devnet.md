@@ -101,7 +101,7 @@ In my case, the miner was located at `/.config/solana`.&#x20;
 Replace the ETH address with your own. This is where you will get your XN Airdrop once that is released.
 
 ```
-node ./client/miner.js mine --address <ETH address> -fee 1
+tsx ./client/miner.js mine --address <ETH address> -fee 1
 ```
 
 <figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
