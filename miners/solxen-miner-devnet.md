@@ -10,7 +10,7 @@ Not Financial Advise. Educational purposes only.&#x20;
 
 This is running purely on [Solana DevNet](https://explorer.solana.com/?cluster=devnet).
 
-Tested on a 20-Core CPU server with Ubuntu 22.04.
+Tested on a bare metal server with Ubuntu 22.04.
 
 Official site: [https://github.com/FairCrypto/sol-xen](https://github.com/FairCrypto/sol-xen)
 
@@ -52,7 +52,7 @@ If you have a GitHub account, you can request more tokens.
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-### Install SolXEN miner
+### Install Nodejs
 
 You need to have latest `node.js` installed before you proceed. Run the following command.
 
@@ -62,6 +62,8 @@ sudo apt-get install -y nodejs
 ```
 
 Check if the install was successful by typing `node --version`.
+
+### Install SolXen miner
 
 Next, clone the SolXEN repository:
 
