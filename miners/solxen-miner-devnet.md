@@ -73,7 +73,6 @@ cd sol-xen
 Run the following commands to initialize the miner:
 
 ```
-npm install
 npm i
 npm i -g tsx
 ```
@@ -98,35 +97,30 @@ In my case, the miner was located at `/.config/solana`.&#x20;
 
 ### Run SolXEN miner
 
-Replace the ETH address with your own. This is where you will get your XN Airdrop once that is released.
+Run the following command to start mining SolXen.\
+Please take note of the following variables:
+
+\--runs \<number> - represents the number of times the miner will retry the command
+
+\--address \<ETH address> - this ETH address is where you will receive future XN airdrop
+
+\-f \<number> - priority fee setting
 
 ```
-tsx ./client/miner.js mine --address <ETH address> -fee 1
+node client/miner.js mine --runs 1000 --address <ETH address> -f 100
 ```
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-The command will submit a transaction and will attempt to find a `420` or a `42069` hash.
+You can check the mined SolXen balance here: [https://explorer.solana.com/?cluster=devnet](https://explorer.solana.com/?cluster=devnet)
 
-To run the miner multiple times, just add a `-r` at the end and specify the number of runs.
 
-```
-node ./client/miner.js mine --address <ETH address> -fee 1 -r 1000
-```
 
-This will continuously run the miner until the number of attempts runs out.
-
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
-
-You can check the transactions here: [https://explorer.solana.com/?cluster=devnet](https://explorer.solana.com/?cluster=devnet)
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Just search for your address and then tap on a transaction to review it.
 
-<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
-
-Check your SolXEN tokens by going to the Tokens tab of the explorer.
-
-<figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Update Miner
 

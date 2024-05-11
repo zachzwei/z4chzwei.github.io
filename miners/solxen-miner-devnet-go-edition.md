@@ -38,7 +38,7 @@ go version
 Choose the file that corresponds to the machine that you are using.\
 Go here: [https://github.com/mmc-98/solxen-tx/releases](https://github.com/mmc-98/solxen-tx/releases)
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 In my case, I am running the miner on a Linux Server.
 
@@ -66,7 +66,7 @@ chmod +x solxen-tx
 nano solxen-tx.yaml    
 ```
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Put your Private Key from your Solana Wallet (Use a burner).&#x20;
 
