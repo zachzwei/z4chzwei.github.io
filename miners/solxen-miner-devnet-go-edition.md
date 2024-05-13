@@ -38,20 +38,24 @@ go version
 Choose the file that corresponds to the machine that you are using.\
 Go here: [https://github.com/mmc-98/solxen-tx/releases](https://github.com/mmc-98/solxen-tx/releases)
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+As of writing the most current version is `deltaAlpha8`.
 
-In my case, I am running the miner on a Linux Server.
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-Run the following command:
+Since I am running a bare metal Linux Server, I need to get the following file:\
+[solxen-tx-deltaAlpha8-linux-amd64.tar.gz](https://github.com/mmc-98/solxen-tx/releases/download/deltaAlpha8/solxen-tx-deltaAlpha8-linux-amd64.tar.gz)
+
+\
+Run the following command to download it:
 
 ```
-wget https://github.com/mmc-98/solxen-tx/releases/download/v0.03/solxen-tx-v0.03-linux-amd64.tar.gz
+wget https://github.com/mmc-98/solxen-tx/releases/download/deltaAlpha8/solxen-tx-deltaAlpha8-linux-amd64.tar.gz
 ```
 
 Extract the miner:
 
 ```
-tar -vxzf solxen-tx-v0.03-linux-amd64.tar.gz
+tar -vxzf solxen-tx-deltaAlpha8-linux-amd64.tar.gz
 ```
 
 Make it executable:
@@ -66,21 +70,15 @@ chmod +x solxen-tx
 nano solxen-tx.yaml    
 ```
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+This new version requires your Mnemonic instead of a Private Key. You can use wallets generated from Phantom. \
+Make sure to change the ToAddr to your own ETH address. You can also change the Url for the RPC.\
 
-Put your Private Key from your Solana Wallet (Use a burner).&#x20;
 
-You can get it from Phantom.
-
-<figure><img src="../.gitbook/assets/image (5).png" alt="" width="281"><figcaption></figcaption></figure>
-
-\
-Replace `ToAddr:` to your own ETH address.\
-Change Program ID to:  Dx7zjkWZbUStmhjo8BrhbprtQCcMByJgCTEC6TLgkH8n
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Save file.
 
-Note: SolXEN mining is still in development, so there might be changes that are being done to the contract. Always check if you are running the latest Program ID.
+
 
 
 
