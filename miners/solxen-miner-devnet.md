@@ -99,6 +99,18 @@ In my case, the miner was located at `/.config/solana`.&#x20;
 
 ### Run SolXEN miner
 
+Make sure that you are on the SolXen `delta` branch. To check run the following commands.
+
+```
+git stash
+git checkout delta
+git pull
+```
+
+You should see something like this:
+
+<figure><img src="../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+
 Run the following command to start mining SolXen.\
 Please take note of the following variables:
 
@@ -124,7 +136,7 @@ Just search for your address and then tap on a transaction to review it.
 
 <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-Update Miner
+### Update Miner
 
 Since the miner is still being developed, there will be constant updates that will be released.\
 Run the following commands to update the miner. Then run the miner again to continue.
