@@ -4,6 +4,15 @@ description: Shaking up rusty Solana
 
 # SolXEN Miner (DevNet)
 
+**:::warning**\
+**This is an old version of SolXEN. Please use the newest release.**\
+[**SolXen Miner Epsilon**](https://app.gitbook.com/o/E08w38oXQLg77QaPG6IS/s/1zYuAvy414Nd31flJdHr/\~/changes/46/miners/solxen-miner-xolana-epsilon)\
+**:::**
+
+
+
+
+
 **Disclaimer!**&#x20;
 
 Not Financial Advise. Educational purposes only.&#x20;
