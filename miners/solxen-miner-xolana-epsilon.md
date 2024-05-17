@@ -53,7 +53,7 @@ solana-keygen new --derivation-path --no-passphrase -o ~/.config/solana/id2.json
 solana-keygen new --derivation-path --no-passphrase -o ~/.config/solana/id3.json
 ```
 
-You now have 4 Solana wallets namely, id0.json, id1.json, id2.json and id2.json that are located at the `/.config/solana/` folder.\
+You now have 4 Solana wallets namely, id0.json, id1.json, id2.json and id3.json that are located at the `/.config/solana/` folder.\
 
 
 ### Get SOL Xolana Tokens
