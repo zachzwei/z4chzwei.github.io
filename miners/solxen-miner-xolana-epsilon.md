@@ -140,7 +140,7 @@ Notice that the id0.json file is being used here and --kind 0 is set for this mi
 ```
 export USER_WALLET=../.config/solana/id0.json # change the path if necessary
 
-while true; do cargo run --package sol-xen-client -- --address 0x970Ce544847B0E314eA357e609A0C0cA4D9fD823 --command mine --kind 0 --fee 1; sleep 10; done
+while true; do cargo run --package sol-xen-client -- --address <ETH address> --command mine --kind 0 --fee 1; sleep 10; done
 ```
 
 Notice that the id1.json file is being used here and --kind 1 is set for this miner.
@@ -148,7 +148,7 @@ Notice that the id1.json file is being used here and --kind 1 is set for this mi
 ```
 export USER_WALLET=../.config/solana/id1.json # change the path if necessary
 
-while true; do cargo run --package sol-xen-client -- --address 0x970Ce544847B0E314eA357e609A0C0cA4D9fD823 --command mine --kind 1 --fee 1; sleep 10; done
+while true; do cargo run --package sol-xen-client -- --address <ETH address> --command mine --kind 1 --fee 1; sleep 10; done
 ```
 
 Notice that the id2.json file is being used here and --kind 2 is set for this miner.
@@ -156,7 +156,7 @@ Notice that the id2.json file is being used here and --kind 2 is set for this mi
 ```
 export USER_WALLET=../.config/solana/id2.json # change the path if necessary
 
-while true; do cargo run --package sol-xen-client -- --address 0x970Ce544847B0E314eA357e609A0C0cA4D9fD823 --command mine --kind 2 --fee 1; sleep 10; done
+while true; do cargo run --package sol-xen-client -- --address <ETH address> --command mine --kind 2 --fee 1; sleep 10; done
 ```
 
 Notice that the id3.json file is being used here and --kind 3 is set for this miner.
@@ -164,7 +164,7 @@ Notice that the id3.json file is being used here and --kind 3 is set for this mi
 ```
 export USER_WALLET=../.config/solana/id3.json # change the path if necessary
 
-while true; do cargo run --package sol-xen-client -- --address 0x970Ce544847B0E314eA357e609A0C0cA4D9fD823 --command mine --kind 3 --fee 1; sleep 10; done
+while true; do cargo run --package sol-xen-client -- --address <ETH address> --command mine --kind 3 --fee 1; sleep 10; done
 ```
 
 This is how it would look like if you are using tmux to run 4 separate sessions.
@@ -178,25 +178,25 @@ The token needs to be minted manually. Open up a new terminal and run the follow
 ```
 export USER_WALLET=../.config/solana/id0.json # change the path if necessary
 
-cargo run --package sol-xen-client -- --address 0x970Ce544847B0E314eA357e609A0C0cA4D9fD823 --command mint --kind 0
+cargo run --package sol-xen-client -- --address <ETH address> --command mint --kind 0
 ```
 
 ```
 export USER_WALLET=../.config/solana/id1.json # change the path if necessary
 
-cargo run --package sol-xen-client -- --address 0x970Ce544847B0E314eA357e609A0C0cA4D9fD823 --command mint --kind 1
+cargo run --package sol-xen-client -- --address <ETH address> --command mint --kind 1
 ```
 
 ```
 export USER_WALLET=../.config/solana/id2.json # change the path if necessary
 
-cargo run --package sol-xen-client -- --address 0x970Ce544847B0E314eA357e609A0C0cA4D9fD823 --command mint --kind 2
+cargo run --package sol-xen-client -- --address <ETH address> --command mint --kind 2
 ```
 
 ```
 export USER_WALLET=../.config/solana/id3.json # change the path if necessary
 
-cargo run --package sol-xen-client -- --address 0x970Ce544847B0E314eA357e609A0C0cA4D9fD823 --command mint --kind 3
+cargo run --package sol-xen-client -- --address <ETH address> --command mint --kind 3
 ```
 
 <figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
