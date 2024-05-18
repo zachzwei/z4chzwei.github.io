@@ -231,6 +231,12 @@ spl-token accounts
 
 <figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
+Check your current miner rank here: [https://solxen.io/leaderboard](https://solxen.io/leaderboard)
+
+<figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+
+
+
 Congratulations, you are now mining SolXEN Epsilon.\
 Thanks to [xen\_artist](https://twitter.com/xen\_artist) for his [guide](https://x1.wiki/solxen/).
 
