@@ -111,7 +111,7 @@ git clone https://github.com/zachzwei/doginals.git
 
 ```
 cd doginals
-npm install
+npm i
 ```
 
 After all dependencies are solved, you can configure the environment:
@@ -136,31 +136,67 @@ You can get the current fee per kb from [here](https://blockchair.com/).
 
 Before proceeding, please make sure your node is fully synced. Have fun!
 
-### Managing wallet balance
+## Creating a New Core Wallet
 
-Generate a new `.wallet.json` file:
+We will now create a new wallet on your Dogecoin node. Navigate to the install folder where you have extracted the files.
+
+```
+cd dogecoin-1.14.7
+cd bin
+```
+
+Genereate new address with this command:
+
+```
+./dogecoin-cli getnewaddress <wallet name>
+```
+
+Example: `./dogecoin-cli getnewaddress z4ch`
+
+Next, get the Private Key of this new address
+
+```
+./dogecoin-cli dumpprivkey <dogecoin address>
+```
+
+Example: `./dogecoin-cli dumpprivkey DCJPoswVPpctoaBSBcapVfkPPMwhFT7PPV`
+
+Take note of the Private Key of the address. We will use this on the next step.
+
+### Create Doginal Wallet
+
+Navigate to the Doginals folder:
+
+```
+cd
+cd doginals
+```
+
+Generate the .wallet.json file:
 
 ```
 node . wallet new
 ```
 
-Then send DOGE to the address displayed. Once sent, sync your wallet:
+Modify .wallet.json file:
+
+```
+nano .walet.json
+```
+
+Replace the DOGE Address and Private Key on this file and then save it.
+
+You can now send some DOGE to this new address.
+
+### Sync Balance with Core
+
+Run the following command on your Doginals folder:
 
 ```
 node . wallet sync
 ```
 
-If you are minting a lot, you can split up your UTXOs:
-
-```
-node . wallet split <count>
-```
-
-When you are done minting, send the funds back:
-
-```
-node . wallet send <address> <optional amount>
-```
+If your balance is shown, then you can proceed with minting some Doginals.
 
 \==========
 
