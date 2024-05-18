@@ -121,11 +121,11 @@ Paste the following and the save file. Make sure to set the correct path for you
 USER_WALLET=../.config/solana/id0.json
 ANCHOR_PROVIDER_URL=http://69.10.34.226:8899
 PROGRAM_ID=Dx7zjkWZbUStmhjo8BrhbprtQCcMByJgCTEC6TLgkH8n
-PROGRAM_ID_MINTER=3JSyo6R489DcXedDYQUY7XbGXsmCz4mQH7sWeK5VE8vA
+PROGRAM_ID_MINTER=2nHCigQaERP2gUJVqeMXz1D6xrCr6RYLY8UptQUNGbHg
 DEBUG=*
 ```
 
-In my case, the miner was located at `/.config/solana`.&#x20;
+Save the file.
 
 ### Run SolXEN miner
 
