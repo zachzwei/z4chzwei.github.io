@@ -14,7 +14,11 @@ Tested on a bare metal server with Ubuntu 22.04.
 
 Source: [https://github.com/FairCrypto/sol-xen](https://github.com/FairCrypto/sol-xen)
 
-This miner is designed to utilize all Solana threads which was not possible on Devnet (also Mainnet) Solana.\
+This miner is designed to utilize all Solana threads which was not possible on Devnet (also Mainnet) Solana.
+
+Join Telegram to always get the latest version of this experimental miner.\
+Currently the latest version is using:\
+PROGRAM\_ID\_MINTER=8HTvrqZT1JP279DMLT5SfNfGHxUeznem4Bh7zy92sWWx\
 
 
 <figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
@@ -121,7 +125,7 @@ Paste the following and the save file. Make sure to set the correct path for you
 USER_WALLET=../.config/solana/id0.json
 ANCHOR_PROVIDER_URL=http://69.10.34.226:8899
 PROGRAM_ID=Dx7zjkWZbUStmhjo8BrhbprtQCcMByJgCTEC6TLgkH8n
-PROGRAM_ID_MINTER=2nHCigQaERP2gUJVqeMXz1D6xrCr6RYLY8UptQUNGbHg
+PROGRAM_ID_MINTER=8HTvrqZT1JP279DMLT5SfNfGHxUeznem4Bh7zy92sWWx
 DEBUG=*
 ```
 
