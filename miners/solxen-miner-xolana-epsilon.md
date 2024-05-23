@@ -19,9 +19,13 @@ This miner is designed to utilize all Solana threads which was not possible on D
 Join Telegram to always get the latest version of this experimental miner.\
 Currently the latest version is using:\
 PROGRAM\_ID\_MINTER=8HTvrqZT1JP279DMLT5SfNfGHxUeznem4Bh7zy92sWWx\
+\
+This guide has 2 versions of the miner, name Node.js (Simple) and Rust (Advanced). You can install all requirements needed if you want. Let's begin.\
 
 
 <figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+
+## Requirements
 
 ### Install Solana CLI
 
@@ -35,7 +39,7 @@ sh -c "$(curl -sSfL https://release.solana.com/v1.18.4/install)"
 
 
 
-### Generate wallets
+#### Generate wallets
 
 Run the following command:
 
@@ -60,7 +64,7 @@ solana-keygen new --derivation-path --no-passphrase -o ~/.config/solana/id3.json
 You now have 4 Solana wallets namely, id0.json, id1.json, id2.json and id3.json that are located at the `/.config/solana/` folder.\
 
 
-### Get SOL Xolana Tokens
+#### Get SOL Xolana Tokens
 
 Switch to the Xolana Testnet by running this command.
 
@@ -80,7 +84,20 @@ Example:&#x20;
 
 Do the same command for the other wallets, id1.json, id2.json and id2.json.
 
-### Install Rust
+### Install Nodejs (Simple miner) <a href="#install-nodejs" id="install-nodejs"></a>
+
+You need to have latest `node.js` installed before you proceed. Run the following command.
+
+Copy
+
+```
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+```
+
+Check if the install was successful by typing `node --version`.
+
+### Install Rust (Advanced miner)
 
 ```
 cd
@@ -101,7 +118,7 @@ rustup update
 
 
 
-### Install SolXen miner
+### Clone SolXen miner
 
 Clone the SolXEN repository:
 
@@ -111,7 +128,7 @@ cd sol-xen
 git checkout epsilon
 ```
 
-### Configure miner
+#### Configure miner
 
 Create a `.env` file:
 
@@ -122,8 +139,8 @@ nano .env
 Paste the following and the save file. Make sure to set the correct path for your SOL wallet
 
 ```
-USER_WALLET=../.config/solana/id0.json
-ANCHOR_PROVIDER_URL=http://69.10.34.226:8899
+USER_WALLET_PATH=../.config/solana/        
+ANCHOR_PROVIDER_URL=http://45.250.254.197:8899
 PROGRAM_ID=Dx7zjkWZbUStmhjo8BrhbprtQCcMByJgCTEC6TLgkH8n
 PROGRAM_ID_MINTER=8HTvrqZT1JP279DMLT5SfNfGHxUeznem4Bh7zy92sWWx
 DEBUG=*
@@ -131,7 +148,31 @@ DEBUG=*
 
 Save the file.
 
-### Run SolXEN miner
+### Run SolXEN miner (Simple)
+
+This allows you to mine SolXEN on a single session. It will utilize all 4 wallets created.
+
+After installing Node.js, run:
+
+```
+npm i
+```
+
+Run miner:
+
+```
+node ./client/multiminer.js mine --address <ETH Address> --fee 1 --delay 1 --units 1150000 --autoMint 1000
+```
+
+Make sure to set your own ETH address.
+
+Congratulations, you are now mining SolXen.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+
+
+### Run SolXEN miner (Advanced)
 
 These commands need to be run individually on each separate terminal or session (via tmux).
 
@@ -175,7 +216,7 @@ This is how it would look like if you are using tmux to run 4 separate sessions.
 
 <figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
-### Mint SolXEN token
+#### Mint SolXEN token (for Advanced miner)
 
 The token needs to be minted manually. Open up a new terminal and run the following commands individually for every wallet id and --kind instance. Make sure to set the same ETH address as your miners.
 
@@ -205,7 +246,7 @@ cargo run --package sol-xen-client -- --address <ETH address> --command mint --k
 
 <figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 
-### Check Token Balance
+#### Check Token Balance (for Advanced miner)
 
 Finally, to check how many tokens have been mined, you need to run these commands individually to see the token balance for each miner.
 
@@ -234,6 +275,8 @@ spl-token accounts
 ```
 
 <figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+
+### Check Leaderboard
 
 Check your current miner rank here: [https://solxen.io/leaderboard](https://solxen.io/leaderboard)
 
