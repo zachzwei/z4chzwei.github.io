@@ -139,8 +139,8 @@ nano .env
 Paste the following and the save file. Make sure to set the correct path for your SOL wallet
 
 ```
-USER_WALLET_PATH=../.config/solana/        
-ANCHOR_PROVIDER_URL=http://45.250.254.197:8899
+USER_WALLET_PATH=../.config/solana/
+ANCHOR_PROVIDER_URL=http://69.10.34.226:8899
 PROGRAM_ID=Dx7zjkWZbUStmhjo8BrhbprtQCcMByJgCTEC6TLgkH8n
 PROGRAM_ID_MINTER=8HTvrqZT1JP279DMLT5SfNfGHxUeznem4Bh7zy92sWWx
 DEBUG=*
