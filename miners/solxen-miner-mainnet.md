@@ -282,8 +282,17 @@ If you have done that correctly, you will be able to restore your address and al
 
 <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
+Note:\
+The screenshot above shows there are 2 SolXEN tokens. The first token was not transferrable, and thus cannot be trade. Make sure you are running the updated miner. To do so, simple stop your miner and run the following command:
 
+```
+git pull
+```
 
-Thanks to [xen\_artist](https://twitter.com/xen\_artist) for his [guide](https://x1.wiki/solxen/).
+Then run your miner again.
 
-Join SoLXEN Telegram: [https://t.me/+rrWU85yki-k3MzRj](https://t.me/+rrWU85yki-k3MzRj)
+## References
+
+* Thanks to [xen\_artist](https://twitter.com/xen\_artist) for his [guide](https://x1.wiki/solxen/).
+* Join SoLXEN Telegram: [https://t.me/+rrWU85yki-k3MzRj](https://t.me/+rrWU85yki-k3MzRj)
+* Follow [https://x.com/mrJackLevin](https://x.com/mrJackLevin) on X
