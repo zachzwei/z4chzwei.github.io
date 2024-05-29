@@ -2,30 +2,28 @@
 description: Shaking up rusty Solana
 ---
 
-# SolXEN Miner (Xolana) Epsilon
+# SolXEN Miner (Mainnet)
 
-**Disclaimer!**&#x20;
+## **Disclaimer!**&#x20;
 
 Not Financial Advise. Educational purposes only.&#x20;
 
-This is running on a Solana Fork [Xolana](https://github.com/jacklevin74/xolana).
-
-Tested on a bare metal server with Ubuntu 22.04.
-
 Source: [https://github.com/FairCrypto/sol-xen](https://github.com/FairCrypto/sol-xen)
 
-This miner is designed to utilize all Solana threads which was not possible on Devnet (also Mainnet) Solana.
-
-Join Telegram to always get the latest version of this experimental miner.\
-Currently the latest version is using:\
-PROGRAM\_ID\_MINTER=8HTvrqZT1JP279DMLT5SfNfGHxUeznem4Bh7zy92sWWx\
-\
-This guide has 2 versions of the miner, name Node.js (Simple) and Rust (Advanced). You can install all requirements needed if you want. Let's begin.\
+This miner is designed to utilize all Solana threads which was not possible on Devnet (also Mainnet) Solana. This guide has 2 versions of the miner, namely Node.js (Simple) and Rust (Advanced). You can install all requirements needed if you want.&#x20;
 
 
-<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 
-## Requirements
+This is now the live SolXEN on Solana Mainnet-Beta.\
+Token Contract: [EEqrab5tdnVdZv7a4AUAvGehDAtM8gWd7szwfyYbmGkM](https://solscan.io/token/EEqrab5tdnVdZv7a4AUAvGehDAtM8gWd7szwfyYbmGkM)
+
+Trade on Raydium: [https://raydium.io/swap/?inputMint=sol\&outputMint=EEqrab5tdnVdZv7a4AUAvGehDAtM8gWd7szwfyYbmGkM](https://raydium.io/swap/?inputMint=sol\&outputMint=EEqrab5tdnVdZv7a4AUAvGehDAtM8gWd7szwfyYbmGkM)
+
+
+
+
+
+## Create SOL Wallets
 
 ### Install Solana CLI
 
@@ -37,11 +35,17 @@ Run the following command:
 sh -c "$(curl -sSfL https://release.solana.com/v1.18.4/install)"
 ```
 
+Make sure that you are connecting to Solana Mainnet:
 
+```
+solana config set --url https://api.mainnet-beta.solana.com
+```
 
-#### Generate wallets
+### Generate wallets
 
 Run the following command:
+
+**Remember to backup your seed phrase. If you lose this, you will lose access to your wallet.**
 
 ```
 solana-keygen new --derivation-path --no-passphrase -o ~/.config/solana/id0.json
@@ -64,25 +68,15 @@ solana-keygen new --derivation-path --no-passphrase -o ~/.config/solana/id3.json
 You now have 4 Solana wallets namely, id0.json, id1.json, id2.json and id3.json that are located at the `/.config/solana/` folder.\
 
 
-#### Get SOL Xolana Tokens
+**Remember to backup your seed phrase. If you lose this, you will lose access to your wallet.**
 
-Switch to the Xolana Testnet by running this command.
+### Fund your SOL addresses
 
-```
-solana config set -u http://69.10.34.226:8899
-```
+Buy or Get Solana from exchanges. There is no free airdrops.
 
-Next, run the following commands to airdrop 100 SOL to each wallet.
+## Choose a Miner
 
-```
-solana airdrop 100 <pubkey of id0.json>
-```
-
-Example:&#x20;
-
-`solana airdrop 100 2KgowxogBrGqRcgXQEmqFvC3PGtCu66qERNJevYW8Ajh`
-
-Do the same command for the other wallets, id1.json, id2.json and id2.json.
+You can run a Simple miner or an Advanced miner. The only difference is that a Simple miner will can be run on a single terminal utilizing all 4 wallets. Unlike with an Advanced miner where you need to individuall run separate miners for each wallet. You can install all pre-requisites below or just choose which ever miner you want to run.
 
 ### Install Nodejs (Simple miner) <a href="#install-nodejs" id="install-nodejs"></a>
 
@@ -116,7 +110,7 @@ Update Rust
 rustup update
 ```
 
-
+## Setup SolXEN Miner
 
 ### Clone SolXen miner
 
@@ -125,10 +119,9 @@ Clone the SolXEN repository:
 ```
 git clone https://github.com/FairCrypto/sol-xen.git
 cd sol-xen
-git checkout epsilon
 ```
 
-#### Configure miner
+### Configure miner
 
 Create a `.env` file:
 
@@ -136,19 +129,23 @@ Create a `.env` file:
 nano .env
 ```
 
-Paste the following and the save file. Make sure to set the correct path for your SOL wallet
+Paste the following and the save file. Make sure to set the correct path for your SOL wallet.
 
 ```
 USER_WALLET_PATH=../.config/solana/
-ANCHOR_PROVIDER_URL=http://69.10.34.226:8899
-PROGRAM_ID=Dx7zjkWZbUStmhjo8BrhbprtQCcMByJgCTEC6TLgkH8n
-PROGRAM_ID_MINTER=8HTvrqZT1JP279DMLT5SfNfGHxUeznem4Bh7zy92sWWx
-DEBUG=*
+ANCHOR_PROVIDER_URL=https://api.mainnet-beta.solana.com
 ```
 
 Save the file.
 
-### Run SolXEN miner (Simple)
+#### Note:
+
+Since this is the mainnet version, you will be competing with other transactions being submitted on the Solana network. The RPC provided below "https://api.mainnet-beta.solana.com" is a public (free) Solana RPC. You can sign up to paid ones if you want to get a dedicated RPC for your miner.\
+Check here: [https://x1.wiki/#solxen-tools](https://x1.wiki/#solxen-tools)
+
+## Run SolXEN miner
+
+### SolXEM miner (Easy Miner)
 
 This allows you to mine SolXEN on a single session. It will utilize all 4 wallets created.
 
@@ -161,14 +158,19 @@ npm i
 Run miner:
 
 ```
-node ./client/multiminer.js mine --address <ETH Address> --fee 1 --delay 1 --units 1150000 --autoMint 1000
+node ./client/multiminer.js mine --address <ETH Address> --fee 100000 --delay 1 --units 1150000 --autoMint 1000
 ```
 
 Make sure to set your own ETH address.
 
 Congratulations, you are now mining SolXen.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+Note:
+
+The --fee setting tells your miner what priority fee you want to use. You can always check the recommended values here:\
+[https://www.quicknode.com/gas-tracker/solana](https://www.quicknode.com/gas-tracker/solana)
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -185,7 +187,7 @@ Notice that the id0.json file is being used here and --kind 0 is set for this mi
 ```
 export USER_WALLET=../.config/solana/id0.json # change the path if necessary
 
-while true; do cargo run --package sol-xen-client -- --address <ETH address> --command mine --kind 0 --fee 1; sleep 10; done
+while true; do cargo run --package sol-xen-client -- --address <ETH address> --command mine --kind 0 --fee 100000; sleep 10; done
 ```
 
 Notice that the id1.json file is being used here and --kind 1 is set for this miner.
@@ -193,7 +195,7 @@ Notice that the id1.json file is being used here and --kind 1 is set for this mi
 ```
 export USER_WALLET=../.config/solana/id1.json # change the path if necessary
 
-while true; do cargo run --package sol-xen-client -- --address <ETH address> --command mine --kind 1 --fee 1; sleep 10; done
+while true; do cargo run --package sol-xen-client -- --address <ETH address> --command mine --kind 1 --fee 100000; sleep 10; done
 ```
 
 Notice that the id2.json file is being used here and --kind 2 is set for this miner.
@@ -201,7 +203,7 @@ Notice that the id2.json file is being used here and --kind 2 is set for this mi
 ```
 export USER_WALLET=../.config/solana/id2.json # change the path if necessary
 
-while true; do cargo run --package sol-xen-client -- --address <ETH address> --command mine --kind 2 --fee 1; sleep 10; done
+while true; do cargo run --package sol-xen-client -- --address <ETH address> --command mine --kind 2 --fee 100000; sleep 10; done
 ```
 
 Notice that the id3.json file is being used here and --kind 3 is set for this miner.
@@ -209,7 +211,7 @@ Notice that the id3.json file is being used here and --kind 3 is set for this mi
 ```
 export USER_WALLET=../.config/solana/id3.json # change the path if necessary
 
-while true; do cargo run --package sol-xen-client -- --address <ETH address> --command mine --kind 3 --fee 1; sleep 10; done
+while true; do cargo run --package sol-xen-client -- --address <ETH address> --command mine --kind 3 --fee 100000; sleep 10; done
 ```
 
 This is how it would look like if you are using tmux to run 4 separate sessions.
@@ -246,45 +248,42 @@ cargo run --package sol-xen-client -- --address <ETH address> --command mint --k
 
 <figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 
-#### Check Token Balance (for Advanced miner)
-
-Finally, to check how many tokens have been mined, you need to run these commands individually to see the token balance for each miner.
-
-```
-solana config set --keypair ~/.config/solana/id0.json
-
-spl-token accounts
-```
-
-```
-solana config set --keypair ~/.config/solana/id1.json
-
-spl-token accounts
-```
-
-```
-solana config set --keypair ~/.config/solana/id2.json
-
-spl-token accounts
-```
-
-```
-solana config set --keypair ~/.config/solana/id3.json
-
-spl-token accounts
-```
-
-<figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
-
-### Check Leaderboard
+## Check Leaderboard
 
 Check your current miner rank here: [https://solxen.io/leaderboard](https://solxen.io/leaderboard)
 
 <figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 
+## Check Balance on Phantom
+
+To view your SolXEN balance, you need to import your address to [Phantom](https://phantom.app/download).&#x20;
+
+Navigate to your Solana config directory.
+
+Then type:
+
+```
+cat idx.json
+```
+
+Replace "x" with the wallet id that you want to get the keypair.
+
+You will see a set of numbers separated by commas.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+Copy the entire contents of the idx.json file including the \[ ]. Paste it on the Import Private Key screen of Phantom to restore the wallet.
 
 
-Congratulations, you are now mining SolXEN Epsilon.\
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+If you have done that correctly, you will be able to restore your address and all balances will be shown.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+
+
 Thanks to [xen\_artist](https://twitter.com/xen\_artist) for his [guide](https://x1.wiki/solxen/).
 
 Join SoLXEN Telegram: [https://t.me/+rrWU85yki-k3MzRj](https://t.me/+rrWU85yki-k3MzRj)
