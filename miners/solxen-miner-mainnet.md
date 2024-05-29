@@ -158,7 +158,7 @@ npm i
 Run miner:
 
 ```
-node ./client/multiminer.js mine --address <ETH Address> --fee 100000 --delay 1 --units 1150000 --autoMint 1000
+node ./client/multiminer.js mine --address <ETH Address> --f 10000 --delay 1 --units 1150000 --autoMint 1000
 ```
 
 Make sure to set your own ETH address.
@@ -167,7 +167,7 @@ Congratulations, you are now mining SolXen.
 
 Note:
 
-The --fee setting tells your miner what priority fee you want to use. You can always check the recommended values here:\
+The "--f" setting tells your miner what priority fee you want to use. You can always check the recommended values here:\
 [https://www.quicknode.com/gas-tracker/solana](https://www.quicknode.com/gas-tracker/solana)
 
 <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
