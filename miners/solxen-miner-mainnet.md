@@ -170,7 +170,7 @@ Note:
 The "--f" setting tells your miner what priority fee you want to use. You can always check the recommended values here:\
 [https://www.quicknode.com/gas-tracker/solana](https://www.quicknode.com/gas-tracker/solana)
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -270,17 +270,17 @@ Replace "x" with the wallet id that you want to get the keypair.
 
 You will see a set of numbers separated by commas.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Copy the entire contents of the idx.json file including the \[ ]. Paste it on the Import Private Key screen of Phantom to restore the wallet.
 
 
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 If you have done that correctly, you will be able to restore your address and all balances will be shown.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Note:\
 The screenshot above shows there are 2 SolXEN tokens. The first token was not transferrable, and thus cannot be trade. Make sure you are running the updated miner. To do so, simple stop your miner and run the following command:

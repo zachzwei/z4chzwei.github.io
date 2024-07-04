@@ -40,7 +40,7 @@ Go here: [https://github.com/mmc-98/solxen-tx/releases](https://github.com/mmc-9
 
 As of writing the most current version is `deltaAlpha8`.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Since I am running a bare metal Linux Server, I need to get the following file:\
 [solxen-tx-deltaAlpha8-linux-amd64.tar.gz](https://github.com/mmc-98/solxen-tx/releases/download/deltaAlpha8/solxen-tx-deltaAlpha8-linux-amd64.tar.gz)
@@ -74,7 +74,7 @@ This new version requires your Mnemonic instead of a Private Key. You can use wa
 Make sure to change the ToAddr to your own ETH address. You can also change the Url for the RPC.\
 
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Save file.
 
@@ -90,7 +90,7 @@ Make sure that you are requesting **Devnet** tokens.
 
 If you have a GitHub account, you can request more tokens.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -100,7 +100,7 @@ If you have a GitHub account, you can request more tokens.
 ./solxen-tx
 ```
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Congratulations, you are now mining SolXEN.
 

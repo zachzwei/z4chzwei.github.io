@@ -17,7 +17,7 @@
   * [Axelar](nodes-+-providers/axelar/README.md)
     * [Axelar Node Setup](nodes-+-providers/axelar/axelar-node-setup/README.md)
       * [Axelar Provider Setup](nodes-+-providers/axelar/axelar-node-setup/axelar-provider-tls.md)
-  * [Xolana](nodes-+-providers/xolana.md)
+  * [Xolana Validator Guide](nodes-+-providers/xolana-validator-guide.md)
 * [Inscribers](inscribers/README.md)
   * [Doginals](inscribers/doginals.md)
   * [Bellscriptions](inscribers/bellscriptions.md)

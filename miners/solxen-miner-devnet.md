@@ -59,7 +59,7 @@ Make sure that you are requesting **Devnet** tokens.
 
 If you have a GitHub account, you can request more tokens.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Install Nodejs
 
@@ -133,17 +133,17 @@ Please take note of the following variables:
 node client/miner.js mine --runs 1000 --address <ETH address> -f 100
 ```
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can check the mined SolXen balance here: [https://explorer.solana.com/?cluster=devnet](https://explorer.solana.com/?cluster=devnet)
 
 
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Just search for your address and then tap on a transaction to review it.
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Update Miner
 
