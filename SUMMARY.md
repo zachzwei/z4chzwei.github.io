@@ -14,7 +14,5 @@
   * [Bellscriptions](inscribers/bellscriptions.md)
 * [Miners](miners/README.md)
   * [Nimble Network](miners/nimble-network.md)
-  * [Ore Supply (Do Not Use)](miners/ore-supply-do-not-use.md)
-  * [SolXEN Miner (DevNet)](miners/solxen-miner-devnet.md)
   * [SolXEN Miner (Mainnet)](miners/solxen-miner-mainnet.md)
-  * [SolXEN Miner (DevNet) Go Edition](miners/solxen-miner-devnet-go-edition.md)
+  * [XENBlocks XNM Miner](miners/xenblocks-xnm-miner.md)
