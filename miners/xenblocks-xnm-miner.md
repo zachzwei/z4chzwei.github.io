@@ -36,8 +36,12 @@ n10 means that there is a dev fee of 1% sent to the creator of xenblockminer, [w
 
 * Hit Enter to run the miner. Profit!
 
-<figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+The miner will be downloaded and will be run with the specified settings.
+
+<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 
 Congratulations, you are now mining XNM.
+
+<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
 Join XENBlocks Telegram here: [https://t.me/+x6000bzbsHg2ZDNj](https://t.me/+x6000bzbsHg2ZDNj)
