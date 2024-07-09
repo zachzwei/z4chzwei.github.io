@@ -18,7 +18,7 @@ Use my Vast link (optional) to rent a machine that can mine XNM. Click [here](ht
 
 ## How to mine XNM
 
-* Copy and Paste the following to a terminall session:
+* Copy and Paste the following to a terminal session:
 
 ```
 #!/bin/bash
@@ -43,5 +43,21 @@ The miner will be downloaded and will be run with the specified settings.
 Congratulations, you are now mining XNM.
 
 <figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+
+
+
+## AutoRun Miner (Optional)
+
+You can create an onstart.sh file on your root directory that will autorun the miner if your machine reboots.
+
+Just copy the commands above and then type the following on your terminal:
+
+```
+nano onstart.sh
+```
+
+Then paste your commands. Save file. That is it.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 Join XENBlocks Telegram here: [https://t.me/+x6000bzbsHg2ZDNj](https://t.me/+x6000bzbsHg2ZDNj)
