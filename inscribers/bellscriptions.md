@@ -12,22 +12,30 @@ Use this wallet for inscribing only! Always inscribe from this wallet to a diffe
 
 This guide requires a bit of coding knowledge and running Ubuntu on your local machine or a rented one. To use this, you'll need to use your terminal to setup a Bellscoin node, clone this repo and install Node.js on your computer.
 
-### Setup Bellscoin node
+## Setup Bellscoin node
 
-**Get Nintondo Core Wallet**
+**Get Nintondo Core Wallet (v3)**
 
 On your Terminal, type the following commands:
 
 ```
 cd
-wget https://github.com/Nintondo/bellscoin/releases/download/2.0.0/bells-2.0.0-x86_64-linux-gnu.tar.gz
-tar -xvzf bells-2.0.0-x86_64-linux-gnu.tar.gz
+wget https://github.com/Nintondo/bellscoinV3/releases/download/v3.0.0-rc1/bells-10f6c435087b-x86_64-linux-gnu.tar.gz
+tar -xvzf bells-10f6c435087b-x86_64-linux-gnu.tar.gz
+```
+
+**Rename Bells folder**
+
+**Will be much easier to navigate thru your folders.**
+
+```
+mv bells-10f6c435087b bells
 ```
 
 **Run Bellscoin node**
 
 ```
-cd bells-2.0.0
+cd bells
 cd bin
 ./bellsd -daemon
 ```
