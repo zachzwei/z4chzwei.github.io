@@ -191,7 +191,7 @@ Then airdrop 100 SOL to your main wallet.
 solana airdrop 100
 ```
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Run Read Only Node
 

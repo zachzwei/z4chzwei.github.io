@@ -1,6 +1,8 @@
 # Lava Node Setup
 
-([source](https://stakevillage.net/en/lava-testnet2/index.php))
+([source](https://services.kjnodes.com/mainnet/lava/installation/))
+
+This is an updated guide for Mainnet.
 
 ### Setup validator name
 
@@ -18,9 +20,9 @@ sudo apt -qy install curl git jq lz4 build-essential
 sudo apt -qy upgrade
 ```
 
-### Install GO
+#### Install GO
 
-Required is version `1.20.5`
+Required is at least version `1.20.5`
 
 ```
 sudo rm -rf /usr/local/go
@@ -41,7 +43,7 @@ cd $HOME
 rm -rf lava
 git clone https://github.com/lavanet/lava.git
 cd lava
-git checkout v0.35.0
+git checkout v2.2.0
 ```
 
 Build binaries
@@ -74,13 +76,14 @@ Download and install Cosmovisor
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```
 
-Create service
+Create service `lava.service` and enable it
 
 ```
-sudo tee /etc/systemd/system/lavad.service > /dev/null << EOF
+sudo tee /etc/systemd/system/lava.service > /dev/null << EOF
 [Unit]
-Description=Lava node service
+Description=lava node service
 After=network-online.target
+
 [Service]
 User=$USER
 ExecStart=$(which cosmovisor) run start
@@ -90,68 +93,48 @@ LimitNOFILE=65535
 Environment="DAEMON_HOME=$HOME/.lava"
 Environment="DAEMON_NAME=lavad"
 Environment="UNSAFE_SKIP_BACKUP=true"
+
 [Install]
 WantedBy=multi-user.target
 EOF
-```
-
-Enable service
-
-```
 sudo systemctl daemon-reload
-sudo systemctl enable lavad
+sudo systemctl enable lava.service
 ```
 
-### Initialize the node
-
-Set node configuration
+### Set node configuration
 
 ```
-lavad config chain-id lava-testnet-2
-lavad config keyring-backend test
-lavad config node tcp://localhost:26657
+lavad config chain-id lava-mainnet-1
+lavad config keyring-backend file
+lavad config node tcp://localhost:14457
 ```
 
-Initialize the node
+#### Initialize the node
 
 ```
-lavad init $MONIKER --chain-id lava-testnet-2
+lavad init $MONIKER --chain-id lava-mainnet-1
 ```
 
-Download genesis and addrbook
+#### Download genesis and addrbook
 
 ```
-curl -Ls http://snapshots.stakevillage.net/snapshots/lava-testnet-2/genesis.json > $HOME/.lava/config/genesis.json
+curl -Ls https://snapshots.kjnodes.com/lava/genesis.json > $HOME/.lava/config/genesis.json
+curl -Ls https://snapshots.kjnodes.com/lava/addrbook.json > $HOME/.lava/config/addrbook.json
 ```
 
-Add seeds
+#### Add seeds
 
 ```
-sed -i -e "s|^seeds *=.*|seeds = \"3a445bfdbe2d0c8ee82461633aa3af31bc2b4dc0@testnet2-seed-node.lavanet.xyz:26656,e593c7a9ca61f5616119d6beb5bd8ef5dd28d62d@testnet2-seed-node2.lavanet.xyz:26656\"|" $HOME/.lava/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@lava.rpc.kjnodes.com:14459\"|" $HOME/.lava/config/config.toml
 ```
 
-Set minimum gas price
+#### Set minimum gas price
 
 ```
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0001ulava\"|" $HOME/.lava/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.000000001ulava\"|" $HOME/.lava/config/app.toml
 ```
 
-Settings
-
-```
-sed -i -e "s|^timeout_commit *=.*|timeout_commit = \"30s\"|" $HOME/.lava/config/config.toml
-sed -i -e "s|^timeout_propose *=.*|timeout_propose = \"1s\"|" $HOME/.lava/config/config.toml
-sed -i -e "s|^timeout_precommit *=.*|timeout_precommit = \"1s\"|" $HOME/.lava/config/config.toml
-
-sed -i -e "s|^timeout_precommit_delta *=.*|timeout_precommit_delta = \"500ms\"|" $HOME/.lava/config/config.toml
-sed -i -e "s|^timeout_prevote *=.*|timeout_prevote = \"1s\"|" $HOME/.lava/config/app.toml
-
-sed -i -e "s|^timeout_prevote_delta *=.*|timeout_prevote_delta = \"500ms\"|" $HOME/.lava/config/config.toml
-sed -i -e "s|^timeout_propose_delta *=.*|timeout_propose_delta = \"500ms\"|" $HOME/.lava/config/config.toml
-sed -i -e "s|^skip_timeout_commit *=.*|skip_timeout_commit = false|" $HOME/.lava/config/config.toml
-```
-
-Set pruning
+#### Set pruning
 
 ```
 sed -i \
@@ -162,39 +145,46 @@ sed -i \
   $HOME/.lava/config/app.toml
 ```
 
-### Download genesis
+#### Set custom ports
 
 ```
-curl -Ls http://snapshots.stakevillage.net/snapshots/lava-testnet-2/genesis.json > $HOME/.lava/config/genesis.json
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:14458\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:14457\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:14460\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:14456\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":14466\"%" $HOME/.lava/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14417\"%; s%^address = \":8080\"%address = \":14480\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:14490\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:14491\"%; s%:8545%:14445%; s%:8546%:14446%; s%:6065%:14465%" $HOME/.lava/config/app.toml
 ```
 
-### Set custom ports
-
-You can change value CUSTOM\_PORT=145 to any other ports
+#### Update chain-specific configuration <a href="#update-chain-specific-configuration" id="update-chain-specific-configuration"></a>
 
 ```
-CUSTOM_PORT=145
-```
-
-```
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}58\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}57\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}60\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}56\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}66\"%" $HOME/.lava/config/config.toml
-sed -i -e "s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:${CUSTOM_PORT}17\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}80\"%; s%^address = \"localhost:9090\"%address = \"localhost:${CUSTOM_PORT}90\"%; s%^address = \"localhost:9091\"%address = \"localhost:${CUSTOM_PORT}91\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:${CUSTOM_PORT}45\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:${CUSTOM_PORT}46\"%" $HOME/.lava/config/app.toml
-```
-
-Set config with new custom port
-
-```
-lavad config node tcp://localhost:${CUSTOM_PORT}57
+sed -i \
+  -e 's/timeout_commit = ".*"/timeout_commit = "30s"/g' \
+  -e 's/timeout_propose = ".*"/timeout_propose = "1s"/g' \
+  -e 's/timeout_precommit = ".*"/timeout_precommit = "1s"/g' \
+  -e 's/timeout_precommit_delta = ".*"/timeout_precommit_delta = "500ms"/g' \
+  -e 's/timeout_prevote = ".*"/timeout_prevote = "1s"/g' \
+  -e 's/timeout_prevote_delta = ".*"/timeout_prevote_delta = "500ms"/g' \
+  -e 's/timeout_propose_delta = ".*"/timeout_propose_delta = "500ms"/g' \
+  -e 's/skip_timeout_commit = ".*"/skip_timeout_commit = false/g' \
+  $HOME/.lava/config/config.toml
 ```
 
 ### Download latest chain snapshot
 
 ```
-curl -L https://snapshots.stakevillage.net/snapshots/lava-testnet-2/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.lava
+curl -L https://snapshots.kjnodes.com/lava/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.lava
 [[ -f $HOME/.lava/data/upgrade-info.json ]] && cp $HOME/.lava/data/upgrade-info.json $HOME/.lava/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Verify port configurations
+
+Make sure that the port numbers you will assign is not in use.
+
+Use this command to check.&#x20;
+
+```
+netstat -na | grep [port-number]
+```
+
+Replace `port-number` depending on what port you are trying to check.
 
 * Tendermint RPC
 
@@ -217,13 +207,21 @@ Navigate to `/.lava/config` and open `app.toml` file. Take note of the URL and P
 ### Start service and check the logs
 
 ```
-sudo systemctl start lavad && sudo journalctl -u lavad -f --no-hostname -o cat
+sudo systemctl start lava.service && sudo journalctl -u lava.service -f --no-hostname -o cat
 ```
 
-###
+### Check sync status
 
-Check sync status. If you get a result `false` that means node is fully synced.
+Open a new terminal window or session. If you get a result `false` that means node is fully synced.
 
 ```
 $HOME/.lava/cosmovisor/current/bin/lavad status | jq .SyncInfo.catching_up
 ```
+
+See more details about the sync using this command
+
+```
+lavad status 2>&1 | jq .SyncInfo
+```
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
