@@ -1,59 +1,26 @@
 # Lava Provider Setup
 
-All providers on `lava-testnet-2` must use a domain name and TLS (1.3). You must have a domain name to continue. If you have not already, please take a moment to purchase one! You can find cheap top-level domains [here](https://www.namecheap.com/) or [here](https://tld-list.com/).
+All providers on `lava-mainnet-1` must use a domain name and TLS (1.3). You must have a domain name to continue. If you have not already, please take a moment to purchase one! You can find cheap top-level domains [here](https://www.namecheap.com/) or [here](https://tld-list.com/).
 
-## 📋 Prerequisites
+### Setup Domain
 
-| Required Setup                    | ? |
-| --------------------------------- | - |
-| acquired a domain name            | ✅ |
-| `lavap` is installed & configured | ✅ |
-| account with `ulava` balance      | ✅ |
+#### Modify DNS settings
 
-### 🅰️ Change the A Record on your Domain
+The first step of establishing your Provider is to modify some of the DNS settings on the domain you purchased. In specific, you'll need to change the A Records on your domain.&#x20;
 
-The first step of establishing your Provider is to modify some of the DNS settings on the domain you purchased. In specific, you'll need to change the A Records on your domain. Changing your `A-Record` will create a subdomain that routes traffic to a specific provider process. Depending upon who you've purchased your domain through, A-Records may be visible under `Advanced DNS` or another label.
-
-<details>
-
-<summary>🖧 Multiple Records (Recommended)</summary>
-
-We recommend you create a separate `A-Record` for each one of the chains that you plan to support. This is more secure, as the default behavior is to refuse connection unless a consumer connects on the correct subdomain.
-
-For each chain you want to support, add an `A-Record` with the desired chain name as the `Host`, the `Value` will be your server IP. For example, if you wanted to support Ethereum & Lava Mainnets, Your DNS Settings should include the following :
-
-</details>
-
-<details>
-
-<summary>⚀ Single Record</summary>
-
-Alternatively, you can create one `A-Record` that captures traffic to all sub-domains. If you are supporting a large number of chains that frequently changes, doing this may somewhat simplify your process.
-
-</details>
-
-\
+![](../../../.gitbook/assets/image.png)\
 
 
-### 📂 Install Required Dependencies
+### Configure Nginx
 
-We will guide you on setting up and configuring Nginx to use a TLS certificate and handle connections to different provider processes. It is also possible to use alternative solutions for these two tasks, such as Caddy, Envoy or your preferred solution.
-
-Run the following commands to install the required packages:
+#### Install dependencies
 
 ```bash
 sudo apt update
 sudo apt install certbot net-tools nginx python3-certbot-nginx -y
 ```
 
-\
-
-
-### 📮 Generate Certificate
-
-Note: ✅ `your-site.com` refers to the Domain name that you purchased and configured.
-
-Next, we need to actually create the `TLS certificate` via the certifying authority. This process is automated by `certbot`.
+Generate Certificate
 
 Use `certbot` to create a certificate:
 
@@ -61,12 +28,7 @@ Use `certbot` to create a certificate:
 sudo certbot certonly -d your-site.com -d lava.your-site.com -d eth.your-site.com
 ```
 
-Note, you will need one `-d` flag for each subdomain you created as an `A-Record`. Even if you opted to create a Single Record, you still need to indicate a subdomain for each provider process you will run. We use the filler `you.xyz` as an example above.
-
-You may be met with several prompts. Use `nginx` or Nginx Web Server Plugin when asked.\
-
-
-### 💻 Validate Certificate
+#### Validate Certificate
 
 Note: ✅ `your-site.com` refers to the Domain name that you purchased and configured.
 
@@ -82,10 +44,7 @@ Keep track of your output. If your certificate generation was successful, it sho
 
 You'll need both `Certificate Path` and `Private Key Path` for your next step.
 
-\
-
-
-### 🗃️ Add an Nginx Config for Each Domain
+#### Add an Nginx Config for Each Domain
 
 Note: ✅ `your-site.com` refers to the Domain name that you purchased and configured.
 
@@ -116,8 +75,8 @@ server {
     error_log /var/log/nginx/debug.log debug;
 
     location / {
-        proxy_pass http://127.0.0.1:2224;
-        grpc_pass 127.0.0.1:2224;
+        proxy_pass http://127.0.0.1:26657;
+        grpc_pass 127.0.0.1:26657;
     }
 }
 ```
@@ -128,14 +87,7 @@ In most cases, after creating a configuration file in accessible sites, you need
 sudo ln -s /etc/nginx/sites-available/lava_server /etc/nginx/sites-enabled/lava_server
 ```
 
-The above examples use ports `443` for external listening and `2223` / `2224` for internal comms, respectively. Using ports other than `443` for external listening means that some users will not be able to connect to your provider. This can result in less rewards and poorer quality of service. For internal listening, be aware that some ports on your OS may be used for internal communication and should be avoided.
-
-❗The internal comms port can be changed to any open port on your network.
-
-\
-
-
-### 🧪 Test Nginx Configuration
+#### Test Nginx Configuration
 
 Now, ensure that your `nginx` setup is working! ✅
 
@@ -149,10 +101,7 @@ sudo nginx -t
 
 `nginx: configuration file /etc/nginx/nginx.conf test is successful`
 
-\
-
-
-### ♻️ Restart Nginx
+#### Restart Nginx
 
 You will need to refresh the Nginx server:
 
@@ -160,7 +109,7 @@ You will need to refresh the Nginx server:
 sudo systemctl restart nginx
 ```
 
-### &#x20;✅ Secure NGINX With Let’s Encrypt&#x20;
+#### Secure NGINX With Let’s Encrypt&#x20;
 
 Steps were taken here:&#x20;
 
@@ -184,53 +133,63 @@ If it shows a padlock or something like this then you are good to go.
 
 <figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption><p>HTTPS enabled</p></figcaption></figure>
 
-### ⚙️ Create the Provider Configuration
+### Install Lavap
 
-:::tip Need a template? A default `rpcprovider.yml` configuration is available in `~/lava/config` :::
-
-Per earlier advisement, we'll create one `.yml` per chain we plan to support. Each one of these `.yml` files will function as the configuration for a distinct provider process. In case of our example, we'll create a `lava-provider.yml` and a `eth-provider.yml`.
-
-Create the `lava-provider.yml` file
+Since you are already running a node, you just need to configure the `lavap` service.
 
 ```
-nano lava-provider.yml
+cd lava
+git checkout v2.2.2
+export LAVA_BINARY=lavap
+make install
 ```
 
-Copy and paste the text below. Save your `lava-provider.yml` file.
+This will install v2.2.2 of lavap.
+
+### Create the Provider Configuration
+
+Copy and run the following to generate a lavaprovider.yml file in your /config folder.
+
+The port numbers will be automatically added based on your node configuration. The RPC port will use 26657. You can change this to any port. Just make sure you use the same port you have configured for your domain.
 
 ```
+RPC=$(cat $HOME/.lava/config/config.toml | sed -n '/TCP or UNIX socket address for the RPC server to listen on/{n;p;}' | sed 's/.*://; s/".*//')
+GRPC=$(cat $HOME/.lava/config/app.toml | sed -n '/Address defines the gRPC server address to bind to/{n;p;}' | sed 's/.*://; s/".*//')
+API=$(cat $HOME/.lava/config/app.toml | sed -n '/Address defines the API server to listen on./{n;p;}' | sed 's/.*://; s/".*//')
+
+echo "RPC:"$RPC "GRPC:"$GRPC "API:"$API
+
+mkdir $HOME/config
+sudo tee << EOF >/dev/null $HOME/config/lavaprovider.yml
 endpoints:
-    - api-interface: tendermintrpc
-      chain-id: LAV1
-      network-address:
-        address: 127.0.0.1:2224
-        disable-tls: true
-      node-urls:
-        - url: ws://127.0.0.1:26657/websocket
-        - url: http://127.0.0.1:26657
-    - api-interface: grpc
-      chain-id: LAV1
-      network-address:
-        address: 127.0.0.1:2224
-        disable-tls: true
-      node-urls:
-        url: public-rpc-testnet2.lavanet.xyz:9090
-    - api-interface: rest
-      chain-id: LAV1
-      network-address:
-        address: 127.0.0.1:2224
-        disable-tls: true
-      node-urls:
-        url: https://rest-public-rpc.lavanet.xyz:443
+  - api-interface: tendermintrpc
+    chain-id: LAV1
+    network-address:
+      address: 0.0.0.0:26657
+      disable-tls: true
+    node-urls:
+      - url: ws://127.0.0.1:$RPC/websocket
+      - url: http://127.0.0.1:$RPC
+  - api-interface: grpc
+    chain-id: LAV1
+    network-address:
+      address: 0.0.0.0:26657
+      disable-tls: true
+    node-urls:
+      url: 127.0.0.1:$GRPC
+  - api-interface: rest
+    chain-id: LAV1
+    network-address:
+      address: 0.0.0.0:26657
+      disable-tls: true
+    node-urls:
+      url: http://127.0.0.1:$API
+EOF
 ```
 
-Once we've created these files we can move onto starting the processes!
+#### Where to find ports?
 
-* Note:
-
-The urls for `grpc` and `rest` are [provided by Lava](https://docs.lavanet.xyz/public-rpc). If you are running your own Lava node then you can find the following information on the `config.toml` and `app.toml` files located at `./lava/config` folder.
-
-### Where to find ports?
+You can find the following port numbers on the `config.toml` and `app.toml` files located at `./lava/config` folder.
 
 * Tendermint RPC
 
@@ -245,32 +204,60 @@ The urls for `grpc` and `rest` are [provided by Lava](https://docs.lavanet.xyz/p
 ![image](https://github.com/zachzwei/z4ch-nodes/assets/35627271/fdc357a1-54a9-4dd7-b64e-bea7ec7725ec)\
 
 
-### 🏁 Start the Provider Process(es)
-
-⏫ To start the Lava provider process
+### Create Lavap Service
 
 ```
-lavap rpcprovider lava-provider.yml --from your_key_name_here --geolocation 1 --chain-id lava-testnet-2 --log_level debug
+tee /etc/systemd/system/lavap.service > /dev/null << EOF
+[Unit]
+Description=Lava provider
+After=network-online.target
+
+[Service]
+User=$USER
+WorkingDirectory=$HOME/config
+ExecStart=$(which lavap) rpcprovider lavaprovider.yml --geolocation 2 --from "wallet-name" --chain-id lava-mainnet-1 --keyring-backend file
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+systemctl enable lavap
 ```
 
-Some notes:
+#### Note:
 
-* `--from` should be followed by the key name of your funded account that you will use to stake your provider
-* `--log_level debug` gives us verbose output so we can diagnose any issues that may arise
-* `--chain-id` may or may not be necessary, depending upon your setup, but we can default to `--lava-testnet-2`
-* `--node` may or may not be necessary
+Set the geolocation value depending on where your server is located.
 
-❗The syntax on your `.yml` files must be precise. Misplaced or invisible characters or inconsistent indentation can cause errors.
+```
+    GLS = 0; // Global-strict
+    USC = 1; // US-Center
+    EU = 2; // Europe
+    USE = 4; // US-East
+    USW = 8; // US-West
+    AF = 16; // Africa
+    AS = 32; // Asia
+    AU = 64;  // (Australia, includes NZ)
+    GL = 65535; // Global
+```
 
-\
+### Start the Provider
 
+To start the Lava provider process, run the following command
 
-### ☑️ Test the Provider Process!
+```
+sudo systemctl start lavap && sudo journalctl -u lavap -f --no-hostname -o cat
+```
+
+Test the Provider Process!
 
 Run the following command:
 
 ```
-lavap test rpcprovider --from your_key_name_here --endpoints "your-site:443,LAV1"
+lavap test rpcprovider --from your_key_name_here --endpoints "your-site:443,LAVA"
 ```
 
 🖳 Expected output:
@@ -293,33 +280,29 @@ lavap test rpcprovider --from your_key_name_here --endpoints "your-site:443,LAV1
 
 ❗ Make sure the tests are all passed before you stake your tokens.
 
-### 🔗‍💥 Stake the Provider on Chain
+### Stake the Provider on Chain
 
-Use a variation of the following command to stake on chain; the minimum stake is `50000000000ulava`
+Use a variation of the following command to stake on chain; the minimum stake is `5000000000ulava or 5,000 LAVA`
 
 ```bash
-lavap tx pairing stake-provider LAV1 "50000000000ulava" "lava.your-site:443,1" 1 [validator] -y --from your_key_name_here --provider-moniker your-provider-moniker-1 --gas-adjustment "1.5" --gas "auto" --gas-prices "0.0001ulava" --chain-id lava-testnet-2 --delegate-limit 0ulava
+MONIKER="Provider Name"
+DOMAIN="Provider Domain URL"
+PORT=443
+echo $MONIKER $DOMAIN $PORT
+lavap tx pairing stake-provider LAV1 "5000000000ulava" "$DOMAIN:$PORT,2" 2 [validator] --from wallet --provider-moniker "$MONIKER"  --delegate-limit "0ulava" --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
 ```
 
 Some notes:
 
-* `[validator]` you need to indicate a validator address, choose here: https://lava.explorers.guru/validators
+* `[validator]` you need to indicate a validator address, choose here: [https://lava.explorers.guru/validators](https://lava.explorers.guru/validators)
 * `--from` should be followed by the key name of your funded account that you will use to stake your provider
 * `--provider-moniker` will be the name of your provider
 
-### ☑️ Test the Providers again!
+#### Congratulations, your LAVA Provider is now up and running.
 
-```bash
-lavap test rpcprovider --from your_key_name_here --endpoints "lava.your-site:443,LAV1"
-```
 
-You can also get useful information on the setup using:
 
-```bash
-lavap q pairing account-info --from your_key_name
-```
-
-### ✅ Updating Lava Provider
+### Updating Lava Provider
 
 Since you are running `lavap` without `lavavisor` if there are updates necessary, you would have to manually run an update. Here are the steps to do so.
 
@@ -348,5 +331,21 @@ lavap version
 ```
 
 5. Run Test to confirm. Then if all test passed, run Provider process.
+
+### Addtiional Commands
+
+Modify Provider
+
+```
+lavad tx pairing modify-provider ${CHAIN}
+```
+
+Get Provider Details
+
+```
+lavap q pairing account-info --from your_key_name
+```
+
+
 
 ❗ If you have any further issues, do not hesitate to venture to our [discord](https://discord.com/invite/Tbk5NxTCdA) where you can get better assistance!

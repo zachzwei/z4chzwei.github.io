@@ -270,7 +270,7 @@ Replace "x" with the wallet id that you want to get the keypair.
 
 You will see a set of numbers separated by commas.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Copy the entire contents of the idx.json file including the \[ ]. Paste it on the Import Private Key screen of Phantom to restore the wallet.
 
