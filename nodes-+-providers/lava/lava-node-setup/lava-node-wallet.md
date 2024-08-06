@@ -1,12 +1,8 @@
 # Lave Wallet Setup
 
-### Lava leverages the Cosmos SDK's bank and account modules for seamless integration with existing Cosmos wallets.
+Warning!
 
-**Recommendation**: After setting up your wallet, it's crucial to test its functionality. Utilize the [faucet](../../../../faucet/#discord-faucet) to acquire testnet tokens. Then, execute a transaction by transferring these tokens to another account and back.
-
-## Choosing a Wallet
-
-Go here https://docs.lavanet.xyz/wallet and follow the guide for installing Keplr Wallet You can use that to receive your Lava Testnet tokens from Lava team.
+Make sure your node is fully synced before proceeding.
 
 ### Adding a Key (Wallet) to Node
 
@@ -31,7 +27,7 @@ $current_lavad_binary keys list
 
 Pencils out 📝 Your public address begins with lava@.
 
-#### Account Recovery
+### Restore a Wallet
 
 1. Recover an existing account using your mnemonic:
 
