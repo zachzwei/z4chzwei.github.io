@@ -37,7 +37,7 @@ lavad tx bank send <name_wallet> <address> 1000000ulava --fees 5000ulava -y
 Stake/Restake Provider
 
 ```
-lavap tx pairing stake-provider LAV1 "50000000000ulava" "lava.z4ch.xyz:443,2" 2 lava@valoper1jt9w26mpxxjsk63mvd4m2ynj0af09csl0sjyut --from z4ch2 --provider-moniker z4ch-lava2  --delegate-limit "0ulava" --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
+lavap tx pairing stake-provider LAVA "5000000000ulava" "lava.z4ch.xyz:443,2" 2 lava@valoper1jt9w26mpxxjsk63mvd4m2ynj0af09csl0sjyut --from z4ch2 --provider-moniker z4ch-lava2  --delegate-limit "0ulava" --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
 ```
 
 Redelagate tokens
@@ -51,13 +51,13 @@ lavad tx staking redelegate [old_val] [new_val] [amount_tokens]ulava --from [wal
 Freeze provider
 
 ```
-lavap tx pairing freeze LAV1 --from zach2 --reason "maintenance" --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
+lavap tx pairing freeze LAVA --from zach --reason "maintenance" --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
 ```
 
 Unfreeze provider
 
 ```
-lavap tx pairing unfreeze LAV1 --from z4ch2 --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
+lavap tx pairing unfreeze LAVA --from z4ch --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
 ```
 
 Check accounts (delegations/frozen)
