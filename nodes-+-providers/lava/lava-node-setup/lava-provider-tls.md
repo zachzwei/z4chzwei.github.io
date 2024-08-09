@@ -289,7 +289,7 @@ MONIKER="Provider Name"
 DOMAIN="Provider Domain URL"
 PORT=443
 echo $MONIKER $DOMAIN $PORT
-lavap tx pairing stake-provider LAV1 "5000000000ulava" "$DOMAIN:$PORT,2" 2 [validator] --from wallet --provider-moniker "$MONIKER"  --delegate-limit "0ulava" --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
+lavap tx pairing stake-provider LAVA "5000000000ulava" "$DOMAIN:$PORT,2" 2 [validator] --from [wallet_name] --provider-moniker "$MONIKER"  --delegate-limit "1000000000000ulava" --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
 ```
 
 Some notes:
@@ -337,13 +337,13 @@ lavap version
 Modify Provider
 
 ```
-lavad tx pairing modify-provider ${CHAIN}
+lavad tx pairing modify-provider LAVA
 ```
 
 Get Provider Details
 
 ```
-lavap q pairing account-info --from your_key_name
+lavap q pairing account-info --from [wallet_name]
 ```
 
 
