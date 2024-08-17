@@ -74,6 +74,12 @@ Check relay payments
 lavap test events 200 --event lava_relay_payment --from z4ch
 ```
 
+Get Provider Rewards
+
+```
+lavad tx dualstaking claim-rewards --from z4ch --gas-prices 1ulava --gas-adjustment 1.5 --gas auto -y
+```
+
 ***
 
 Test Provider
