@@ -346,6 +346,10 @@ Get Provider Details
 lavap q pairing account-info --from [wallet_name]
 ```
 
+Get Provider Rewards
 
+```
+lavad tx dualstaking claim-rewards --from z4ch --gas-prices 1ulava --gas-adjustment 1.5 --gas auto -y
+```
 
 ❗ If you have any further issues, do not hesitate to venture to our [discord](https://discord.com/invite/Tbk5NxTCdA) where you can get better assistance!
