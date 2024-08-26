@@ -17,7 +17,7 @@ These instructions are targeted towards those who have a bit of command line exp
 You can rent a Cloud GPU running Ubuntu 22.04 by using this link: [https://cloud.vast.ai](https://cloud.vast.ai/?ref\_id=94252\&creator\_id=94252\&name=nvidia%2Fcuda%3A12.4.1-devel-ubuntu22.04)\
 Set storage size to at least 250GB and use the following configuration:
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 Update: Check out my step by step [guide](https://x.com/ZachZwei/status/1771400654633992235) from renting a GPU to running the miner (with screenshots).
 
@@ -53,7 +53,7 @@ go version
 
 
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 If you get the prompt above, that means Go 1.22.1 is installed. This is the minimum version required. &#x20;
 
@@ -113,7 +113,7 @@ One of which will be used as your Master Wallet, then other a Miner wallet. &#x2
 
 Join Nimble Discord to register your addresses: [https://discord.gg/nimble](https://discord.gg/nimble)
 
-<figure><img src="../.gitbook/assets/image (14).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Setup Nimble Miner
 

@@ -8,7 +8,7 @@ All providers on `lava-mainnet-1` must use a domain name and TLS (1.3). You must
 
 The first step of establishing your Provider is to modify some of the DNS settings on the domain you purchased. In specific, you'll need to change the A Records on your domain.&#x20;
 
-![](../../../.gitbook/assets/image.png)\
+![](<../../../.gitbook/assets/image (19).png>)\
 
 
 ### Configure Nginx
