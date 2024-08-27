@@ -29,9 +29,11 @@ Once you create an account on ViaBTC, your mining rewards will automatically go 
 
 <figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
-Click on "Auto-Withdrawal Setting" to set an Address for the crypto that will be automatically sent to your own wallet. Auto withdrawal will only happen based on the limit that you set. For example, LTC rewards will be automatically withdrawn when it reaches 0.1 LTC.
+Click on "Auto-Withdrawal Setting" to set an Address for the crypto that will be automatically sent to your own wallet or to your CoinEX address. Auto withdrawal will only happen based on the limit that you set. For example, LTC rewards will be automatically withdrawn when it reaches 0.1 LTC.
 
 <figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (54).png" alt="" width="436"><figcaption></figcaption></figure>
 
 You can always withdraw it manually anytime.
 
