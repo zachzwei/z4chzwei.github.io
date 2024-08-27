@@ -10,32 +10,42 @@ The guide covers setting up an account, payment address and configuring your min
 
 ### Requirements
 
-\* An [f2pool](https://www.f2pool.com/) account or any mining pool that supports merge mining.\
+\* A [ViaBTC](https://www.viabtc.com/signup?refer=1777107) account or any mining pool that supports merge mining.\
 \* An ASIC cloud mining service like [Nicehash](https://www.nicehash.com/).\
 \* A crypto wallet that support LTC and DOGE ([Trust Wallet](https://trustwallet.com/)) and BEL ([Nintondo](https://nintondo.io/)).\
 \* BTC for funding your miner.
 
-### Create f2pool Account
+### Create ViaBTC Account
 
-Sign up to f2pool via this link: [https://www.f2pool.com/](https://www.f2pool.com/)
+Sign up to f2pool via this [link](https://www.viabtc.com/signup?refer=1777107). \
+Note:\
+This includes my referral ID.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
-### Set Payout Address
+### Set Automatic Withdrawal Address
 
-Go to Account Settings>Accounts. Select LTC and set all the payout address. For security reasons, the payouts will not be automatically enabled for at least 24H.
+Once you create an account on ViaBTC, your mining rewards will automatically go to the Assets section. Click on the "Assets" tab to view them.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
-Get Mining Pool Settings
+Click on "Auto-Withdrawal Setting" to set an Address for the crypto that will be automatically sent to your own wallet. Auto withdrawal will only happen based on the limit that you set. For example, LTC rewards will be automatically withdrawn when it reaches 0.1 LTC.
 
-Click on LTC on the upper right corner to view pool settings.
+<figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+You can always withdraw it manually anytime.
 
-Next, click on the Workers tab. Make sure to take note of the Pool URL, Worker Name and Password. You will be using this later. This is very important to make sure that your miner will be recognized by the pool.
+### Get Mining Pool Settings
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+Click on Pools to see the Miner Configuration screen.&#x20;
+
+<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+
+Note:
+
+Create a Miner ID in the based on your account name (example: z4ch or z4ch.workerID) and any password for it. WorkerID should consist of numbers and lowercase letters no longer than 64 characters.
+
+
 
 ### Create a NiceHash Account
 
@@ -59,13 +69,15 @@ Click on the Hashpower Marketplace, and select Scrypt.&#x20;
 
 <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-Choose between EU and USA locations. If you are going to use a mining pool that is located in the EU, then it would be best to choose a miner in the same location. Click on + New Order and fill up all the required details. This is where you need to set the information that you got from f2pool.
+Choose between EU and USA locations. If you are going to use a mining pool that is located in the EU, then it would be best to choose a miner in the same location. Click on + New Order and fill up all the required details. This is where you need to set the information that you got from [ViaBTC](https://www.viabtc.com/signup?refer=1777107).
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
 Test the pool. If everything checks out, you will be ready to place an order.
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+If you are encountering errors with the Pool difficulty, set it to d=500000
+
+<figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
 
 ### Place Mining Order
 
@@ -81,9 +93,7 @@ This will determine how much you are willing to pay for a TH/day. Choosing a hig
 
 Input how much BTC you are going to allocate for this order.
 
-
-
-<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
 
 Place the order and wait for the miners to pick it up. Since this is similar to an auction, the miners will prioritize orders that would entail them the maximum profit.
 
