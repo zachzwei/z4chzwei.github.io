@@ -17,7 +17,7 @@ The guide covers setting up an account, payment address and configuring your min
 
 ### Create ViaBTC Account
 
-Sign up to f2pool via this [link](https://www.viabtc.com/signup?refer=1777107). \
+Sign up to ViaBTC via this [link](https://www.viabtc.com/signup?refer=1777107). \
 Note:\
 This includes my referral ID.
 
@@ -101,11 +101,11 @@ Place the order and wait for the miners to pick it up. Since this is similar to 
 
 <figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
-Congratulations, you are now mining Litecoin including Dogecoin and Bellscoin. You can also monitor progress of your miner/worker on f2pool and see estimated rewards.
+Congratulations, you are now mining Litecoin including Dogecoin and Bellscoin. You can also monitor progress of your miner/worker on ViaBTC and see estimated rewards.
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-An estimate of miner rewards for LTC, DOGE and BEL
+An estimate of miner rewards for LTC, DOGE and BEL. Take this info with a grain of salt.
 
 <figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
