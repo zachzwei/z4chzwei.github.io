@@ -36,46 +36,39 @@ LFG\
 
 ### Bellscoin Articles
 
-#### Bellscoin Investment Thesis <a href="#id-78d0" id="id-78d0"></a>
-
-[\
-](https://scryptsystemblockboy.medium.com/?source=post\_page-----46bbb4afe789--------------------------------)by [ScryptSupremacy](https://x.com/ScryptSupremacy)
+* Bellscoin Investment Thesis by [ScryptSupremacy](https://x.com/ScryptSupremacy)
 
 {% embed url="https://scryptsystemblockboy.medium.com/bellscoin-investment-thesis-46bbb4afe789" %}
 
-#### Bellscoin: A Memecoin,L1 with Potential Based on Proven Success Factors
-
-by [keto\_studio](https://x.com/keto\_studio)
+* Bellscoin: A Memecoin,L1 with Potential Based on Proven Success Factors by [keto\_studio](https://x.com/keto\_studio)
 
 {% embed url="https://x.com/keto_studio/status/1826130125685141614" %}
 
-#### **How to Inscribe Belinals on the Bellscoin Blockchain** <a href="#id-0979" id="id-0979"></a>
-
-**by** [**DrBeltoshi**](https://x.com/DrBeltoshi)
+* **How to Inscribe Belinals on the Bellscoin Blockchain by** [**DrBeltoshi**](https://x.com/DrBeltoshi)
 
 {% embed url="https://medium.com/@beltoshinakamoto/how-to-inscribe-belinals-on-the-bellscoin-blockchain-fc309b4a41ec" %}
 
-The Bellscoin Blog&#x20;
-
-by [BellsChain](https://x.com/BellsChain)
+* The Bellscoin Blog by [BellsChain](https://x.com/BellsChain)
 
 {% embed url="https://medium.com/@bellscoin" %}
 
 ### Bellscoin Videos
 
-#### What is Bellscoin? by [litecoinunderground](https://www.youtube.com/@litecoinunderground)
+* What is Bellscoin? by [litecoinunderground](https://www.youtube.com/@litecoinunderground)
 
 {% embed url="https://youtu.be/ILp5KriqlYU?si=ncGN2dox9-cW3yG0" %}
 
-#### The Next Billion Dollar Meme Coin...Bellscoin Interview by [TacticalInvesting](https://www.youtube.com/@TacticalInvesting)
+* The Next Billion Dollar Meme Coin...Bellscoin Interview by [TacticalInvesting](https://www.youtube.com/@TacticalInvesting)
 
 {% embed url="https://youtu.be/2Bl8jMDIZUc?si=yAS33x5wX2wPOE4e" %}
 
-#### Bells Corner with Adam McBride, History of Bells Chain and what comes next!
-
-by [OrdinalRevolution](https://www.youtube.com/@OrdinalRevolution)
+* Bells Corner with Adam McBride, History of Bells Chain and what comes next! by [OrdinalRevolution](https://www.youtube.com/@OrdinalRevolution)
 
 {% embed url="https://youtu.be/BeB4U1SW0A8?si=QxtfqonmMY0pojs2" %}
+
+* BellsCoin price prediction $BEL listed on Binance? Expert Explains! by [TheCryptoLifestyle](https://www.youtube.com/@TheCryptoLifestyle)
+
+{% embed url="https://www.youtube.com/live/Vn5pICqKE64?si=8reLVpkdD6DE9ntt" %}
 
 ### Bellscoin Resources
 
