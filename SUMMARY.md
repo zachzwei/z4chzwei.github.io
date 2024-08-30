@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Read Me First](README.md)
+* [Bellish](bellish.md)
 * [Nodes + Providers](nodes-+-providers/README.md)
   * [Xolana Validator Guide](nodes-+-providers/xolana-validator-guide.md)
   * [Lava](nodes-+-providers/lava/README.md)
