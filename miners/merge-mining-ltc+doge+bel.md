@@ -103,7 +103,7 @@ Place the order and wait for the miners to pick it up. Since this is similar to 
 
 Congratulations, you are now mining Litecoin including Dogecoin and Bellscoin. You can also monitor progress of your miner/worker on ViaBTC and see estimated rewards.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 An estimate of miner rewards for LTC, DOGE and BEL. Take this info with a grain of salt.
 

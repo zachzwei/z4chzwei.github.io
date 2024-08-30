@@ -8,7 +8,7 @@ Disclaimer:
 
 Nothing in this page is to be taken as Financial Advise, please do not.
 
-
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### Introduction
 
@@ -73,6 +73,13 @@ Wallets: \
 Explorers: \
 [https://nintondo.io/explorer](https://nintondo.io/explorer)\
 [https://bells.quark.blue](https://bells.quark.blue/)\
+\
+Bellinal Marketplaces:\
+[https://nintondo.io/market](https://nintondo.io/market)\
+[https://bells.ordinalswallet.com/collect](https://bells.ordinalswallet.com/collect)\
+\
+Inscription Service:\
+[https://bellscribe.com](https://bellscribe.com/)\
 \
 Shameless plug...
 
