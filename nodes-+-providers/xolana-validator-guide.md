@@ -142,7 +142,7 @@ Build Xolana validator
 cargo build --release
 ```
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the build is done, check the version you are running
 
@@ -215,7 +215,7 @@ To check if your node is fully synced, you can run this command:
 solana catchup --our-localhost
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Stake SOL Tokens
 

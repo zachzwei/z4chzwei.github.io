@@ -8,7 +8,7 @@ Disclaimer:
 
 Nothing in this page is to be taken as Financial Advise, please do not.
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Introduction
 
@@ -62,12 +62,9 @@ by [OrdinalRevolution](https://www.youtube.com/@OrdinalRevolution)
 
 ### Bellscoin Resources
 
-Official Site: [https://bellscoin.com](https://bellscoin.com/)\
-\
-Wallets: \
-[Nintondo](https://nintondo.io/)\
-[Ordinals Wallet](https://bells.ordinalswallet.com/)\
-[Core Wallet](https://github.com/Nintondo/bellscoinV3/releases)
+Official Site: [https://bellscoin.com](https://bellscoin.com/)
+
+<figure><img src=".gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 \
 Explorers: \
