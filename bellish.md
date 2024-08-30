@@ -1,5 +1,22 @@
 ---
 description: This is a compilation of Bellscoin ($BEL) related content for Bellish people.
+cover: >-
+  .gitbook/assets/e2c11078f37253403ce7a09c2acd29fc178817cb92ca6baeb25c48e43a784349i0.webp
+coverY: 4
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Bellish
