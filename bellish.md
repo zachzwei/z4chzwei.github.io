@@ -33,6 +33,7 @@ This page shows a countdown based on the block height.
 
 <div id="countdown">Loading block height...</div>
 
+<!-- Start of HTML Block -->
 <script>
   const targetBlockHeight = 188000; // Set your target block height
 
@@ -60,6 +61,7 @@ This page shows a countdown based on the block height.
   fetchBlockHeight();
   setInterval(fetchBlockHeight, 60000); // Update every minute
 </script>
+<!-- End of HTML Block -->
 
 ### Introduction
 
