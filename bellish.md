@@ -21,56 +21,91 @@ layout:
 
 # Bellish
 
+## Bellish
+
 Disclaimer:
 
 Nothing in this page is to be taken as Financial Advise, please do not.
 
 <figure><img src=".gitbook/assets/image (2).png" alt="" width="375"><figcaption></figcaption></figure>
 
-# Taproot Update Countdown
+## Taproot Update Countdown
 
 This page shows a countdown based on the block height.
 
-<div id="countdown">Loading block height...</div>
+\<div id="countdown">Loading block height...\</div>
 
-<!-- Start of HTML Block -->
-<script>
-  const targetBlockHeight = 188000; // Set your target block height
+\
 
-  async function fetchBlockHeight() {
-    try {
-      const response = await fetch('http://213.199.44.225:3000/blockheight');
-      const data = await response.json();
-      const currentBlockHeight = data.blockHeight;
-      const blocksRemaining = targetBlockHeight - currentBlockHeight;
 
-      if (blocksRemaining <= 0) {
-        document.getElementById('countdown').innerText = "The target block height has been reached!";
-      } else {
-        const estimatedTimeRemaining = blocksRemaining * 60; // Assuming average block time is 60 seconds
-        const minutes = Math.floor(estimatedTimeRemaining / 60);
-        const seconds = estimatedTimeRemaining % 60;
-        document.getElementById('countdown').innerText = Time remaining: ${minutes}m ${seconds}s (${blocksRemaining} blocks left);
-      }
-    } catch (error) {
-      console.error('Error fetching block height:', error);
-      document.getElementById('countdown').innerText = 'Error loading block height.';
-    }
-  }
+\<!-- Start of HTML Block -->
 
-  fetchBlockHeight();
-  setInterval(fetchBlockHeight, 60000); // Update every minute
-</script>
-<!-- End of HTML Block -->
+\<script>
 
-### Introduction
+&#x20; const targetBlockHeight = 188000; // Set your target block height
+
+\
+
+
+&#x20; async function fetchBlockHeight() {
+
+&#x20;   try {
+
+&#x20;     const response = await fetch('http://213.199.44.225:3000/blockheight');
+
+&#x20;     const data = await response.json();
+
+&#x20;     const currentBlockHeight = data.blockHeight;
+
+&#x20;     const blocksRemaining = targetBlockHeight - currentBlockHeight;
+
+\
+
+
+&#x20;     if (blocksRemaining <= 0) {
+
+&#x20;       document.getElementById('countdown').innerText = "The target block height has been reached!";
+
+&#x20;     } else {
+
+&#x20;       const estimatedTimeRemaining = blocksRemaining \* 60; // Assuming average block time is 60 seconds
+
+&#x20;       const minutes = Math.floor(estimatedTimeRemaining / 60);
+
+&#x20;       const seconds = estimatedTimeRemaining % 60;
+
+&#x20;       document.getElementById('countdown').innerText = Time remaining: ${minutes}m ${seconds}s (${blocksRemaining} blocks left);
+
+&#x20;     }
+
+&#x20;   } catch (error) {
+
+&#x20;     console.error('Error fetching block height:', error);
+
+&#x20;     document.getElementById('countdown').innerText = 'Error loading block height.';
+
+&#x20;   }
+
+&#x20; }
+
+\
+
+
+&#x20; fetchBlockHeight();
+
+&#x20; setInterval(fetchBlockHeight, 60000); // Update every minute
+
+\</script>
+
+\<!-- End of HTML Block -->
+
+#### Introduction
 
 Here are some content where you can learn more about Bellscoin (BEL). These are public threads, articles and videos that might help you stay Bellish or tell a friend to be Bellish. Kudos to the community for sharing all these valuable insights and education content about Bellscoin.\
 \
-LFG\
+LFG\\
 
-
-### Bellscoin Articles
+#### Bellscoin Articles
 
 * Bellscoin Investment Thesis by [ScryptSupremacy](https://x.com/ScryptSupremacy)
 
@@ -88,7 +123,7 @@ LFG\
 
 {% embed url="https://medium.com/@bellscoin" %}
 
-### Bellscoin Videos
+#### Bellscoin Videos
 
 * What is Bellscoin? by [litecoinunderground](https://www.youtube.com/@litecoinunderground)
 
@@ -106,14 +141,14 @@ LFG\
 
 {% embed url="https://www.youtube.com/live/Vn5pICqKE64?si=8reLVpkdD6DE9ntt" %}
 
-### Bellscoin Resources
+#### Bellscoin Resources
 
 Official Site: [https://bellscoin.com](https://bellscoin.com/)
 
 <figure><img src=".gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 \
-Explorers: \
+Explorers:\
 [https://nintondo.io/explorer](https://nintondo.io/explorer)\
 [https://bells.quark.blue](https://bells.quark.blue/)\
 \
@@ -126,6 +161,6 @@ Inscription Service:\
 \
 Shameless plug...
 
-If this page has helped you anyway, and you want to get some $BEL (NFA as usual) use my referral link  at [NonKYC](https://nonkyc.io/?ref=658045d205279ea14f3a7169) or [CoinEX](https://www.coinex.com/register?refer\_code=38a4q).\
+If this page has helped you anyway, and you want to get some $BEL (NFA as usual) use my referral link at [NonKYC](https://nonkyc.io/?ref=658045d205279ea14f3a7169) or [CoinEX](https://www.coinex.com/register?refer\_code=38a4q).\
 \
-Or if you want to try mining, check out my guide: [Merge mining LTC+DOGE+BEL](https://node.z4ch.xyz/miners/merge-mining-ltc+doge+bel)\
+Or if you want to try mining, check out my guide: [Merge mining LTC+DOGE+BEL](https://node.z4ch.xyz/miners/merge-mining-ltc+doge+bel)\\
