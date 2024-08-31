@@ -27,6 +27,40 @@ Nothing in this page is to be taken as Financial Advise, please do not.
 
 <figure><img src=".gitbook/assets/image (2).png" alt="" width="375"><figcaption></figcaption></figure>
 
+# Taproot Update Countdown
+
+This page shows a countdown based on the block height.
+
+<div id="countdown">Loading block height...</div>
+
+<script>
+  const targetBlockHeight = 188000; // Set your target block height
+
+  async function fetchBlockHeight() {
+    try {
+      const response = await fetch('http://213.199.44.225:3000/blockheight');
+      const data = await response.json();
+      const currentBlockHeight = data.blockHeight;
+      const blocksRemaining = targetBlockHeight - currentBlockHeight;
+
+      if (blocksRemaining <= 0) {
+        document.getElementById('countdown').innerText = "The target block height has been reached!";
+      } else {
+        const estimatedTimeRemaining = blocksRemaining * 60; // Assuming average block time is 60 seconds
+        const minutes = Math.floor(estimatedTimeRemaining / 60);
+        const seconds = estimatedTimeRemaining % 60;
+        document.getElementById('countdown').innerText = Time remaining: ${minutes}m ${seconds}s (${blocksRemaining} blocks left);
+      }
+    } catch (error) {
+      console.error('Error fetching block height:', error);
+      document.getElementById('countdown').innerText = 'Error loading block height.';
+    }
+  }
+
+  fetchBlockHeight();
+  setInterval(fetchBlockHeight, 60000); // Update every minute
+</script>
+
 ### Introduction
 
 Here are some content where you can learn more about Bellscoin (BEL). These are public threads, articles and videos that might help you stay Bellish or tell a friend to be Bellish. Kudos to the community for sharing all these valuable insights and education content about Bellscoin.\
