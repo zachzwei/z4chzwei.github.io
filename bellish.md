@@ -33,71 +33,36 @@ Nothing in this page is to be taken as Financial Advise, please do not.
 
 This page shows a countdown based on the block height.
 
-\<div id="countdown">Loading block height...\</div>
+<div id="countdown">Loading block height...</div>
 
-\
+<!-- Embedding JavaScript -->
+<script type="text/javascript">
+  const targetBlockHeight = 188000; // Set your target block height
 
+  async function fetchBlockHeight() {
+    try {
+      const response = await fetch('http://213.199.44.225:3000/blockheight');
+      const data = await response.json();
+      const currentBlockHeight = data.blockHeight;
+      const blocksRemaining = targetBlockHeight - currentBlockHeight;
 
-\<!-- Start of HTML Block -->
+      if (blocksRemaining <= 0) {
+        document.getElementById('countdown').innerText = "The target block height has been reached!";
+      } else {
+        const estimatedTimeRemaining = blocksRemaining * 60; // Assuming average block time is 60 seconds
+        const minutes = Math.floor(estimatedTimeRemaining / 60);
+        const seconds = estimatedTimeRemaining % 60;
+        document.getElementById('countdown').innerText = Time remaining: ${minutes}m ${seconds}s (${blocksRemaining} blocks left);
+      }
+    } catch (error) {
+      console.error('Error fetching block height:', error);
+      document.getElementById('countdown').innerText = 'Error loading block height.';
+    }
+  }
 
-\<script>
-
-&#x20; const targetBlockHeight = 188000; // Set your target block height
-
-\
-
-
-&#x20; async function fetchBlockHeight() {
-
-&#x20;   try {
-
-&#x20;     const response = await fetch('http://213.199.44.225:3000/blockheight');
-
-&#x20;     const data = await response.json();
-
-&#x20;     const currentBlockHeight = data.blockHeight;
-
-&#x20;     const blocksRemaining = targetBlockHeight - currentBlockHeight;
-
-\
-
-
-&#x20;     if (blocksRemaining <= 0) {
-
-&#x20;       document.getElementById('countdown').innerText = "The target block height has been reached!";
-
-&#x20;     } else {
-
-&#x20;       const estimatedTimeRemaining = blocksRemaining \* 60; // Assuming average block time is 60 seconds
-
-&#x20;       const minutes = Math.floor(estimatedTimeRemaining / 60);
-
-&#x20;       const seconds = estimatedTimeRemaining % 60;
-
-&#x20;       document.getElementById('countdown').innerText = Time remaining: ${minutes}m ${seconds}s (${blocksRemaining} blocks left);
-
-&#x20;     }
-
-&#x20;   } catch (error) {
-
-&#x20;     console.error('Error fetching block height:', error);
-
-&#x20;     document.getElementById('countdown').innerText = 'Error loading block height.';
-
-&#x20;   }
-
-&#x20; }
-
-\
-
-
-&#x20; fetchBlockHeight();
-
-&#x20; setInterval(fetchBlockHeight, 60000); // Update every minute
-
-\</script>
-
-\<!-- End of HTML Block -->
+  fetchBlockHeight();
+  setInterval(fetchBlockHeight, 60000); // Update every minute
+</script>
 
 #### Introduction
 
