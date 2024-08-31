@@ -29,19 +29,17 @@ Nothing in this page is to be taken as Financial Advise, please do not.
 
 <figure><img src=".gitbook/assets/image (2).png" alt="" width="375"><figcaption></figcaption></figure>
 
-## Taproot Update Countdown
+#### Upcoming Milestones
 
-This page shows a countdown based on the block height.
+Go here: [https://bit.ly/bellblocks](https://bit.ly/bellblocks)
 
-<div id="countdown">Loading block height...</div>
 
-<script src="https://github.com/zachzwei/bellscriptions/blob/main/blockheight.js"></script>
 
 #### Introduction
 
 Here are some content where you can learn more about Bellscoin (BEL). These are public threads, articles and videos that might help you stay Bellish or tell a friend to be Bellish. Kudos to the community for sharing all these valuable insights and education content about Bellscoin.\
 \
-LFG\\
+LFG
 
 #### Bellscoin Articles
 
