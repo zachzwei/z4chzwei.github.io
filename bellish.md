@@ -31,9 +31,7 @@ Nothing in this page is to be taken as Financial Advise, please do not.
 
 #### Upcoming Milestones
 
-Go here: [https://bit.ly/bellblocks](https://bit.ly/bellblocks)
-
-
+Go here: [https://z4ch.box/](https://z4ch.box/)
 
 #### Introduction
 
