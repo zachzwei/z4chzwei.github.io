@@ -2,7 +2,7 @@
 
 * [Read Me First](README.md)
 * [Bellish](bellish.md)
-* [Nodes + Providers](nodes-+-providers/README.md)
+* [Nodes](nodes-+-providers/README.md)
   * [Xolana Validator Guide](nodes-+-providers/xolana-validator-guide.md)
   * [Lava](nodes-+-providers/lava/README.md)
     * [Lava Node Setup](nodes-+-providers/lava/lava-node-setup/README.md)
