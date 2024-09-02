@@ -53,23 +53,23 @@ Create a Miner ID in the based on your account name (example: z4ch or z4ch.worke
 
 Register with [NiceHash](https://www.nicehash.com/my/register) and complete the verification.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Fund your NiceHash wallet
 
 Send BTC to your NiceHash wallet. Rentals are all priced in BTC, so it is better to just deposit BTC directly. Wait for confirmation until the balance shows up on your wallet.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Wait for confirmation until the balance shows up on your wallet. It usually takes 3 confirmations.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Setup a Mining Order
 
 Click on the Hashpower Marketplace, and select Scrypt.&#x20;
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 Choose between EU and USA locations. If you are going to use a mining pool that is located in the EU, then it would be best to choose a miner in the same location. Click on + New Order and fill up all the required details. This is where you need to set the information that you got from [ViaBTC](https://www.viabtc.com/signup?refer=1777107).
 
@@ -99,11 +99,11 @@ Input how much BTC you are going to allocate for this order.
 
 Place the order and wait for the miners to pick it up. Since this is similar to an auction, the miners will prioritize orders that would entail them the maximum profit.
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
 
 Congratulations, you are now mining Litecoin including Dogecoin and Bellscoin. You can also monitor progress of your miner/worker on ViaBTC and see estimated rewards.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 An estimate of miner rewards for LTC, DOGE and BEL. Take this info with a grain of salt.
 

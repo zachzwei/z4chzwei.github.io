@@ -142,7 +142,7 @@ Build Xolana validator
 cargo build --release
 ```
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the build is done, check the version you are running
 
@@ -191,7 +191,7 @@ Then airdrop 100 SOL to your main wallet.
 solana airdrop 100
 ```
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Run Read Only Node
 
@@ -215,7 +215,7 @@ To check if your node is fully synced, you can run this command:
 solana catchup --our-localhost
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Stake SOL Tokens
 
@@ -261,7 +261,7 @@ Check your stakes on the vote.json address
 solana stakes <VOTE_PUBKEY>
 ```
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Relaunch Validator and Final Checks
 
@@ -271,7 +271,7 @@ Get ID of the running validator
 ps aux | grep solana-validator
 ```
 
-<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Kill validator
 
@@ -305,7 +305,7 @@ Check list of nodes and validators. Look for your identity and it should match t
 solana gossip
 ```
 
-<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Finally, check validators list
 
@@ -313,7 +313,7 @@ Finally, check validators list
 solana validators
 ```
 
-<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 If your node does not have an exclamation warning, then it is running fine.
 

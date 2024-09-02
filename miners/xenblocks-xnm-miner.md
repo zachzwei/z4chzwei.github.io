@@ -58,6 +58,6 @@ nano onstart.sh
 
 Then paste your commands. Save file. That is it.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Join XENBlocks Telegram here: [https://t.me/+x6000bzbsHg2ZDNj](https://t.me/+x6000bzbsHg2ZDNj)

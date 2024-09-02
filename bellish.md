@@ -27,7 +27,7 @@ Disclaimer:
 
 Nothing in this page is to be taken as Financial Advise, please do not.
 
-<figure><img src=".gitbook/assets/image (2).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 #### Upcoming Milestones
 
@@ -79,7 +79,7 @@ LFG
 
 Official Site: [https://bellscoin.com](https://bellscoin.com/)
 
-<figure><img src=".gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 \
 Explorers:\
