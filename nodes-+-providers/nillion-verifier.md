@@ -143,7 +143,7 @@ sudo apt install jq
 Finally, relaunch the Accuser with this command.
 
 ```
-sudo docker run -v ./nillion/accuser:/var/tmp nillion/retailtoken-accuser:latest accuse --rpc-endpoint "https://nillion-testnet.rpc.kjnodes.com" --block-start "$(curl -s https://testnet-nillion-rpc.lavenderfive.com/abci_info | jq -r '.result.response.last_block_height')"
+sudo docker run -v ./nillion/accuser:/var/tmp nillion/retailtoken-accuser:latest accuse --rpc-endpoint "https://nillion-testnet-rpc.polkachu.com" --block-start "$(curl -s https://nillion-testnet-rpc.polkachu.com/abci_info | jq -r '.result.response.last_block_height')"
 ```
 
 After a few minutes, your Verifier should show some Secret Stores and Challenges sent.
