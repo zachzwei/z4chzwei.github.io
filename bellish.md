@@ -31,7 +31,7 @@ Nothing in this page is to be taken as Financial Advise, please do not.
 
 #### Upcoming Milestones
 
-Go here: [https://z4ch.box/](https://z4ch.box/)
+Go here: [https://bells.wtf/](https://bells.wtf/)
 
 #### Introduction
 
