@@ -12,7 +12,7 @@ This guide is for those running Linux. Nillion verifier can be run on a VPS.
 The instructions you see here is based from the official site: [https://verifier.nillion.com/verifier](https://verifier.nillion.com/verifier). \
 This is a companion guide when setting up your verifier.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 Let's begin.
 
@@ -22,31 +22,31 @@ Downlod Keplr wallet here: [https://www.keplr.app/](https://www.keplr.app/)
 
 Save your seed phrase and keep it secure. Do not share it with anyone else.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Go to [https://verifier.nillion.com/verifier](https://verifier.nillion.com/verifier) then click on Verifier, to add the Nillion Testnet to your Keplr Wallet.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Next, search for NIL then click on Manage.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Put a check mark on NIL to add it to Keplr.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 You should now be able to see your NIL address.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Get NIL Tokens
 
 Go to the [Nillion faucet](https://faucet.testnet.nillion.com/) to get some Testnet NIL tokens. Paste your address and complete the verification.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Install Docker
 

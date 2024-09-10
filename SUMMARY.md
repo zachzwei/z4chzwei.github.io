@@ -17,5 +17,6 @@
 * [Miners](miners/README.md)
   * [Merge Mining LTC+DOGE+BEL](miners/merge-mining-ltc+doge+bel.md)
   * [XENBlocks XNM Miner](miners/xenblocks-xnm-miner.md)
+  * [Tidecoin](miners/tidecoin.md)
   * [SolXEN Miner (Mainnet)](miners/solxen-miner-mainnet.md)
   * [Nimble Network](miners/nimble-network.md)
