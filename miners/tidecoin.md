@@ -113,6 +113,18 @@ You can also see the current progress of your rewards on the same screen.
 
 Note: The miner is also available for MacOS and Windows. If you are using Windows, you can use the same steps above by using Powershell.
 
+Once you reach the minimum payout of 5 $TDC. It will be sent to the address you have setup on the miner.
+
+<figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+
+I would highly recommend using the core wallet to keep your Tidecoin secure.&#x20;
+
+Not your keys, not your crypto.
+
+<figure><img src="../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+
 ### Closing
 
 This coin was created by [YarSawyer](https://github.com/yarsawyer/tidecoin). Please show support for his work by following him on his socials.&#x20;
@@ -120,4 +132,7 @@ This coin was created by [YarSawyer](https://github.com/yarsawyer/tidecoin). Ple
 More details can be found here: [https://tidecoin.co/](https://tidecoin.co/)
 
 If you just want to go ahead and buy Tidecoin, you can go to [Xeggex](https://xeggex.com/?ref=66e05ecdf6dc403d67b9a50e).\
-Not financial advise.
+Not financial advise.\
+\
+Follow my journey mining Tidecoin on X.\
+[https://x.com/ZachZwei/status/1833521016372600953](https://x.com/ZachZwei/status/1833521016372600953)
