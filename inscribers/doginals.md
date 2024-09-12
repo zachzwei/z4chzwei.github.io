@@ -134,7 +134,7 @@ You can get the current fee per kb from [here](https://blockchair.com/).
 
 **⚠️⚠️⚠️ Important ⚠️⚠️⚠️**
 
-Before proceeding, please make sure your node is fully synced. Have fun!
+### Before proceeding, please make sure your node is fully synced. Have fun!
 
 ## Creating a New Core Wallet
 
