@@ -20,8 +20,8 @@ On your Terminal, type the following commands:
 
 ```
 cd
-wget https://github.com/Nintondo/bellscoinV3/releases/download/v3.0.0-rc1/bells-10f6c435087b-x86_64-linux-gnu.tar.gz
-tar -xvzf bells-10f6c435087b-x86_64-linux-gnu.tar.gz
+wget https://github.com/Nintondo/bellscoinV3/releases/download/v3.0.0-rc2/bells-3.0.0-rc2-x86_64-linux-gnu.tar.gz
+tar -xvzf bells-3.0.0-rc2-x86_64-linux-gnu.tar.gz
 ```
 
 **Rename Bells folder**
@@ -29,7 +29,7 @@ tar -xvzf bells-10f6c435087b-x86_64-linux-gnu.tar.gz
 **Will be much easier to navigate thru your folders.**
 
 ```
-mv bells-10f6c435087b bells
+mv bells-3.0.0-rc2 bells
 ```
 
 **Run Bellscoin node**

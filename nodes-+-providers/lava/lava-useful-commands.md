@@ -51,7 +51,7 @@ lavad tx staking redelegate [old_val] [new_val] [amount_tokens]ulava --from [wal
 #### Freeze provider
 
 ```
-lavap tx pairing freeze LAVA --from zach --reason "maintenance" --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
+lavap tx pairing freeze LAVA --from z4ch --reason "maintenance" --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
 ```
 
 #### Unfreeze provider
@@ -77,7 +77,7 @@ lavap test events 200 --event lava_relay_payment --from z4ch
 This command will scan events with "lava\_relay\_payment" from 200 blocks then forward. You can set a different number.
 
 ```
-lavap test 0 --event lava_relay_payment --from z4ch
+lavap test events 0 --event lava_relay_payment --from z4ch
 ```
 
 This command will scan events wit "lava\_relay\_paymnet" from current block then forward. You need to manually stop the command to stop the logs.
