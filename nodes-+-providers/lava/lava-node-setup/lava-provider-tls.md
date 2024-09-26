@@ -148,7 +148,7 @@ This will install v2.2.2 of lavap.
 
 ### Create the Provider Configuration
 
-Copy and run the following to generate a lavaprovider.yml file in your /config folder.
+Copy and run the following to generate a lava.yml file in your /config folder.
 
 The port numbers will be automatically added based on your node configuration. The RPC port will use 26657. You can change this to any port. Just make sure you use the same port you have configured for your domain.
 
@@ -160,7 +160,7 @@ API=$(cat $HOME/.lava/config/app.toml | sed -n '/Address defines the API server 
 echo "RPC:"$RPC "GRPC:"$GRPC "API:"$API
 
 mkdir $HOME/config
-sudo tee << EOF >/dev/null $HOME/config/lavaprovider.yml
+sudo tee << EOF >/dev/null $HOME/config/lava.yml
 endpoints:
   - api-interface: tendermintrpc
     chain-id: LAV1
@@ -249,7 +249,7 @@ Set the geolocation value depending on where your server is located.
 To start the Lava provider process, run the following command
 
 ```
-sudo systemctl start lavap && sudo journalctl -u lavap -f --no-hostname -o cat
+lavap rpcprovider atom.yml --reward-server-storage /.lava/rewardserver --geolocation 2 --from z4ch --chain-id lava-mainnet-1 --keyring-backend file --log_level debug
 ```
 
 Test the Provider Process!
