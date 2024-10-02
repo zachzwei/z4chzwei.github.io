@@ -43,7 +43,7 @@ cd $HOME
 rm -rf lava
 git clone https://github.com/lavanet/lava.git
 cd lava
-git checkout v2.2.0
+git checkout v3.1.0
 ```
 
 Build binaries
@@ -73,7 +73,7 @@ sudo ln -s $HOME/.lava/cosmovisor/current/bin/lavad /usr/local/bin/lavad -f
 Download and install Cosmovisor
 
 ```
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
 ```
 
 Create service `lava.service` and enable it

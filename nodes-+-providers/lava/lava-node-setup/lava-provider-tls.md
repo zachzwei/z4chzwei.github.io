@@ -139,12 +139,12 @@ Since you are already running a node, you just need to configure the `lavap` ser
 
 ```
 cd lava
-git checkout v2.2.2
+git checkout v3.1.0
 export LAVA_BINARY=lavap
 make install
 ```
 
-This will install v2.2.2 of lavap.
+This will install v3.1.0 of lavap.
 
 ### Create the Provider Configuration
 
