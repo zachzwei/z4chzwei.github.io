@@ -82,6 +82,12 @@ lavap test events 0 --event lava_relay_payment --from z4ch
 
 This command will scan events wit "lava\_relay\_paymnet" from current block then forward. You need to manually stop the command to stop the logs.
 
+Check QoS
+
+```
+lavad test events 200 --show-attribute Excellence  --from z4ch
+```
+
 #### Get Provider Rewards
 
 ```
@@ -124,6 +130,24 @@ git checkout <check newest release>
 export LAVA_BINARY=lavap
 make install
 ```
+
+Alias commands
+
+```
+echo "alias gaiapeers='sudo netstat -anp | grep ESTABLISHED | grep gaiad | grep -v \"127.0.0.1\"'" >> ~/.bashrc
+echo "alias lavapeers='sudo netstat -anp | grep ESTABLISHED | grep lavad | grep -v \"127.0.0.1\"'" >> ~/.bashrc
+echo "alias lavasync='lavad status 2>&1 | jq .SyncInfo'" >> ~/.bashrc
+echo "alias gaiasync='gaiad status 2>&1 | jq .sync_info'" >> ~/.bashrc
+echo "alias reward='lavad q pairing provider-monthly-payout z4ch'" >> ~/.bashrc
+echo "alias reward2='lavad q pairing provider-monthly-payout z4ch2'" >> ~/.bashrc
+echo "alias testprovider='lavap test rpcprovider --from z4ch'" >> ~/.bashrc
+echo "alias statsprovider='lavad q pairing account-info --from z4ch'" >> ~/.bashrc
+
+# Source the .bashrc file automatically to apply the changes
+source ~/.bashrc
+```
+
+
 
 Check free space. Need [NCDU](https://ostechnix.com/check-disk-space-usage-linux-using-ncdu/) installed.
 

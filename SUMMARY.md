@@ -10,6 +10,7 @@
       * [Lava Provider Setup](nodes-+-providers/lava/lava-node-setup/lava-provider-tls.md)
     * [Useful Lava CLI](nodes-+-providers/lava/lava-useful-commands.md)
     * [Useful Tools](nodes-+-providers/lava/tools.md)
+  * [Cosmos Hub](nodes-+-providers/cosmos-hub.md)
   * [Nillion Verifier](nodes-+-providers/nillion-verifier.md)
 * [Inscribers](inscribers/README.md)
   * [Doginals](inscribers/doginals.md)

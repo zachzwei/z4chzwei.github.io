@@ -4,7 +4,7 @@
 
 This is an updated guide for Mainnet.
 
-### Setup validator name
+### Set Node name
 
 Change it to anything you like.
 
@@ -22,7 +22,7 @@ sudo apt -qy upgrade
 
 #### Install GO
 
-Required is at least version `1.20.5`
+This will install Go version `1.22.7`
 
 ```
 sudo rm -rf /usr/local/go
@@ -34,51 +34,37 @@ source $HOME/.bash_profile
 go version
 ```
 
-### Download and build binaries
-
-Clone project repository
+### Download and build binaries <a href="#download-and-build-binaries" id="download-and-build-binaries"></a>
 
 ```
+# Clone project repository
 cd $HOME
 rm -rf lava
 git clone https://github.com/lavanet/lava.git
 cd lava
 git checkout v3.1.0
-```
 
-Build binaries
-
-```
+# Build binaries
 export LAVA_BINARY=lavad
 make build
-```
 
-Prepare binaries for Cosmovisor
-
-```
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.lava/cosmovisor/genesis/bin
 mv build/lavad $HOME/.lava/cosmovisor/genesis/bin/
 rm -rf build
-```
 
-Create application symlinks
-
-```
+# Create application symlinks
 sudo ln -s $HOME/.lava/cosmovisor/genesis $HOME/.lava/cosmovisor/current -f
 sudo ln -s $HOME/.lava/cosmovisor/current/bin/lavad /usr/local/bin/lavad -f
 ```
 
-### Create a service
-
-Download and install Cosmovisor
+### Install Cosmovisor and create a service <a href="#install-cosmovisor-and-create-a-service" id="install-cosmovisor-and-create-a-service"></a>
 
 ```
+# Download and install Cosmovisor
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
-```
 
-Create service `lava.service` and enable it
-
-```
+# Create service
 sudo tee /etc/systemd/system/lava.service > /dev/null << EOF
 [Unit]
 Description=lava node service
@@ -101,58 +87,41 @@ sudo systemctl daemon-reload
 sudo systemctl enable lava.service
 ```
 
-### Set node configuration
+### Initialize the node <a href="#initialize-the-node" id="initialize-the-node"></a>
 
 ```
+# Set node configuration
 lavad config chain-id lava-mainnet-1
 lavad config keyring-backend file
 lavad config node tcp://localhost:14457
-```
 
-#### Initialize the node
-
-```
+# Initialize the node
 lavad init $MONIKER --chain-id lava-mainnet-1
-```
 
-#### Download genesis and addrbook
-
-```
+# Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/lava/genesis.json > $HOME/.lava/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/lava/addrbook.json > $HOME/.lava/config/addrbook.json
-```
 
-#### Add seeds
-
-```
+# Add seeds
 sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@lava.rpc.kjnodes.com:14459\"|" $HOME/.lava/config/config.toml
-```
 
-#### Set minimum gas price
-
-```
+# Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.000000001ulava\"|" $HOME/.lava/config/app.toml
-```
 
-#### Set pruning
-
-```
+# Set pruning
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
   $HOME/.lava/config/app.toml
-```
 
-#### Set custom ports
-
-```
+# Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:14458\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:14457\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:14460\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:14456\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":14466\"%" $HOME/.lava/config/config.toml
 sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14417\"%; s%^address = \":8080\"%address = \":14480\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:14490\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:14491\"%; s%:8545%:14445%; s%:8546%:14446%; s%:6065%:14465%" $HOME/.lava/config/app.toml
 ```
 
-#### Update chain-specific configuration <a href="#update-chain-specific-configuration" id="update-chain-specific-configuration"></a>
+### Update chain-specific configuration <a href="#update-chain-specific-configuration" id="update-chain-specific-configuration"></a>
 
 ```
 sed -i \
@@ -167,14 +136,14 @@ sed -i \
   $HOME/.lava/config/config.toml
 ```
 
-### Download latest chain snapshot
+### Download latest chain snapshot <a href="#download-latest-chain-snapshot" id="download-latest-chain-snapshot"></a>
 
 ```
 curl -L https://snapshots.kjnodes.com/lava/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.lava
 [[ -f $HOME/.lava/data/upgrade-info.json ]] && cp $HOME/.lava/data/upgrade-info.json $HOME/.lava/cosmovisor/genesis/upgrade-info.json
 ```
 
-### Verify port configurations
+
 
 Make sure that the port numbers you will assign is not in use.
 
@@ -204,7 +173,7 @@ Navigate to `/.lava/config` and open `app.toml` file. Take note of the URL and P
 
 ![image](https://github.com/zachzwei/z4ch-nodes/assets/35627271/66ec023a-67fc-4fe4-a1b0-5bb9aef426ea)
 
-### Start service and check the logs
+#### Start service and check the logs <a href="#start-service-and-check-the-logs" id="start-service-and-check-the-logs"></a>
 
 ```
 sudo systemctl start lava.service && sudo journalctl -u lava.service -f --no-hostname -o cat
@@ -212,16 +181,36 @@ sudo systemctl start lava.service && sudo journalctl -u lava.service -f --no-hos
 
 ### Check sync status
 
-Open a new terminal window or session. If you get a result `false` that means node is fully synced.
-
-```
-$HOME/.lava/cosmovisor/current/bin/lavad status | jq .SyncInfo.catching_up
-```
-
-See more details about the sync using this command
+Run the following command:
 
 ```
 lavad status 2>&1 | jq .SyncInfo
 ```
 
+&#x20;If you get a result `false` that means node is fully synced.
+
 <figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+Check connected peers:
+
+```
+sudo netstat -anp | grep ESTABLISHED | grep lavad | grep -v \"127.0.0.1\
+```
+
+### Archive Snapshot
+
+If you want to run a full archive node, you can use this snapshot. The following commands will delete the existing /data folder. Make sure you create a backup in case you need it. Set the proper pruning settings to `nothing` before running the node.
+
+```
+sudo systemctl stop lava.service
+cp $HOME/.lava/data/priv_validator_state.json $HOME/.lava/priv_validator_state.json.backup
+rm -rf $HOME/.lava/data
+curl -L https://storage.mellifera.network/lava_mainnet/archive_1463986.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.lava
+mv $HOME/.lava/priv_validator_state.json.backup $HOME/.lava/data/priv_validator_state.json
+```
+
+Start the node and let it sync
+
+```
+sudo systemctl start lava.service && sudo journalctl -u lava.service -f --no-hostname -o cat
+```
