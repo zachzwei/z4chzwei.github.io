@@ -8,7 +8,7 @@ All providers on `lava-mainnet-1` must use a domain name and TLS (1.3). You must
 
 The first step of establishing your Provider is to modify some of the DNS settings on the domain you purchased. In specific, you'll need to change the A Records on your domain.&#x20;
 
-![](<../../../.gitbook/assets/image (19).png>)\
+![](<../../.gitbook/assets/image (19).png>)\
 
 
 ### Configure Nginx
@@ -131,7 +131,7 @@ Visit your site on HTTPS to check. Open a browser and then type `https://your-si
 
 If it shows a padlock or something like this then you are good to go.
 
-<figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption><p>HTTPS enabled</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption><p>HTTPS enabled</p></figcaption></figure>
 
 ### Install Lavap
 
@@ -204,30 +204,6 @@ You can find the following port numbers on the `config.toml` and `app.toml` file
 ![image](https://github.com/zachzwei/z4ch-nodes/assets/35627271/fdc357a1-54a9-4dd7-b64e-bea7ec7725ec)\
 
 
-### Create Lavap Service
-
-```
-tee /etc/systemd/system/lavap.service > /dev/null << EOF
-[Unit]
-Description=Lava provider
-After=network-online.target
-
-[Service]
-User=$USER
-WorkingDirectory=$HOME/config
-ExecStart=$(which lavap) rpcprovider lavaprovider.yml --geolocation 2 --from "wallet-name" --chain-id lava-mainnet-1 --keyring-backend file
-Restart=on-failure
-RestartSec=3
-LimitNOFILE=65535
-
-[Install]
-WantedBy=multi-user.target
-EOF
-
-sudo systemctl daemon-reload
-systemctl enable lavap
-```
-
 #### Note:
 
 Set the geolocation value depending on where your server is located.
@@ -249,7 +225,7 @@ Set the geolocation value depending on where your server is located.
 To start the Lava provider process, run the following command
 
 ```
-lavap rpcprovider atom.yml --reward-server-storage /.lava/rewardserver --geolocation 2 --from z4ch --chain-id lava-mainnet-1 --keyring-backend file --log_level debug
+lavap rpcprovider lava.yml --reward-server-storage /.lava/rewardserver --geolocation 2 --from z4ch --chain-id lava-mainnet-1 --keyring-backend file --log_level debug
 ```
 
 Test the Provider Process!
@@ -289,12 +265,17 @@ MONIKER="Provider Name"
 DOMAIN="Provider Domain URL"
 PORT=443
 echo $MONIKER $DOMAIN $PORT
-lavap tx pairing stake-provider LAVA "5000000000ulava" "$DOMAIN:$PORT,2" 2 [validator] --from [wallet_name] --provider-moniker "$MONIKER"  --delegate-limit "1000000000000ulava" --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
+lavap tx pairing stake-provider LAVA "5000000000ulava" "$DOMAIN:$PORT,[2]" [2] [validator] --from [wallet_name] --provider-moniker "$MONIKER"  --delegate-limit "1000000000000ulava" --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y
 ```
+
+Example:
+
+`lavap tx pairing stake-provider LAVA "5000000000ulava" "lava.z4ch.xyz:443,2" 2 lava@valoper1amkaaut9fs395v3vpuymp6zmggva32mkkvr7rq --from z4ch --provider-moniker "zwei node" --delegate-limit "1000000000000ulava" --gas-prices 0.1ulava --gas-adjustment 1.5 --gas auto -y`
 
 Some notes:
 
 * `[validator]` you need to indicate a validator address, choose here: [https://lava.explorers.guru/validators](https://lava.explorers.guru/validators)
+* `[2]` replace this with the corresponding geolocation of your server
 * `--from` should be followed by the key name of your funded account that you will use to stake your provider
 * `--provider-moniker` will be the name of your provider
 
