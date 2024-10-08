@@ -133,19 +133,30 @@ make install
 
 Alias commands
 
-```
-echo "alias gaiapeers='sudo netstat -anp | grep ESTABLISHED | grep gaiad | grep -v \"127.0.0.1\"'" >> ~/.bashrc
+<pre><code># lava commands
 echo "alias lavapeers='sudo netstat -anp | grep ESTABLISHED | grep lavad | grep -v \"127.0.0.1\"'" >> ~/.bashrc
-echo "alias lavasync='lavad status 2>&1 | jq .SyncInfo'" >> ~/.bashrc
-echo "alias gaiasync='gaiad status 2>&1 | jq .sync_info'" >> ~/.bashrc
+echo "alias lavasync='lavad status 2>&#x26;1 | jq .SyncInfo'" >> ~/.bashrc
+<strong>echo "alias lavalogs='sudo journalctl -u lava.service -f --no-hostname -o cat'" >> ~/.bashrc
+</strong>echo "alias lavastart='sudo systemctl start lava.service'" >> ~/.bashrc
+echo "alias lavastop='sudo systemctl stop lava.service'" >> ~/.bashrc
+
+# gaia commands
+echo "alias gaiapeers='sudo netstat -anp | grep ESTABLISHED | grep gaiad | grep -v \"127.0.0.1\"'" >> ~/.bashrc
+echo "alias gaiasync='gaiad status 2>&#x26;1 | jq .sync_info'" >> ~/.bashrc
+echo "alias gaialogs='sudo journalctl -u cosmoshub.service -f --no-hostname -o cat'" >> ~/.bashrc
+echo "alias gaiastart='sudo systemctl start cosmoshub.service'" >> ~/.bashrc
+echo "alias gaiastop='sudo systemctl stop cosmoshub.service'" >> ~/.bashrc
+
+# general commands
 echo "alias reward='lavad q pairing provider-monthly-payout z4ch'" >> ~/.bashrc
 echo "alias reward2='lavad q pairing provider-monthly-payout z4ch2'" >> ~/.bashrc
 echo "alias testprovider='lavap test rpcprovider --from z4ch'" >> ~/.bashrc
 echo "alias statsprovider='lavad q pairing account-info --from z4ch'" >> ~/.bashrc
 
+
 # Source the .bashrc file automatically to apply the changes
 source ~/.bashrc
-```
+</code></pre>
 
 
 
