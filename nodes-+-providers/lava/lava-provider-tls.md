@@ -163,7 +163,7 @@ mkdir $HOME/config
 sudo tee << EOF >/dev/null $HOME/config/lava.yml
 endpoints:
   - api-interface: tendermintrpc
-    chain-id: LAV1
+    chain-id: LAVA
     network-address:
       address: 0.0.0.0:2224
       disable-tls: true
@@ -171,14 +171,14 @@ endpoints:
       - url: ws://127.0.0.1:$RPC/websocket
       - url: http://127.0.0.1:$RPC
   - api-interface: grpc
-    chain-id: LAV1
+    chain-id: LAVA
     network-address:
       address: 0.0.0.0:2224
       disable-tls: true
     node-urls:
       url: 127.0.0.1:$GRPC
   - api-interface: rest
-    chain-id: LAV1
+    chain-id: LAVA
     network-address:
       address: 0.0.0.0:2224
       disable-tls: true
