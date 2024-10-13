@@ -165,7 +165,7 @@ endpoints:
   - api-interface: tendermintrpc
     chain-id: LAV1
     network-address:
-      address: 0.0.0.0:26657
+      address: 0.0.0.0:2224
       disable-tls: true
     node-urls:
       - url: ws://127.0.0.1:$RPC/websocket
@@ -173,14 +173,14 @@ endpoints:
   - api-interface: grpc
     chain-id: LAV1
     network-address:
-      address: 0.0.0.0:26657
+      address: 0.0.0.0:2224
       disable-tls: true
     node-urls:
       url: 127.0.0.1:$GRPC
   - api-interface: rest
     chain-id: LAV1
     network-address:
-      address: 0.0.0.0:26657
+      address: 0.0.0.0:2224
       disable-tls: true
     node-urls:
       url: http://127.0.0.1:$API

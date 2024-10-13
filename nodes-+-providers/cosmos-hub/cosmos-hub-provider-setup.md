@@ -10,9 +10,9 @@ Follow the steps here for setting up your domain name:\
 After that, use the command below to generate the `.yml` file for Cosmos.
 
 ```
-RPC=$(cat $HOME/.lava/config/config.toml | sed -n '/TCP or UNIX socket address for the RPC server to listen on/{n;p;}' | sed 's/.*://; s/".*//')
-GRPC=$(cat $HOME/.lava/config/app.toml | sed -n '/Address defines the gRPC server address to bind to/{n;p;}' | sed 's/.*://; s/".*//')
-API=$(cat $HOME/.lava/config/app.toml | sed -n '/Address defines the API server to listen on./{n;p;}' | sed 's/.*://; s/".*//')
+RPC=$(cat $HOME/.gaia/config/config.toml | sed -n '/TCP or UNIX socket address for the RPC server to listen on/{n;p;}' | sed 's/.*://; s/".*//')
+GRPC=$(cat $HOME/.gaia/config/app.toml | sed -n '/Address defines the gRPC server address to bind to/{n;p;}' | sed 's/.*://; s/".*//')
+API=$(cat $HOME/.gaia/config/app.toml | sed -n '/Address defines the API server to listen on./{n;p;}' | sed 's/.*://; s/".*//')
 
 echo "RPC:"$RPC "GRPC:"$GRPC "API:"$API
 
@@ -22,7 +22,7 @@ endpoints:
   - api-interface: tendermintrpc
     chain-id: COSMOSHUB
     network-address:
-      address: 0.0.0.0:26658
+      address: 0.0.0.0:2223
       disable-tls: true
     node-urls:
       - url: ws://127.0.0.1:$RPC/websocket
@@ -30,14 +30,14 @@ endpoints:
   - api-interface: grpc
     chain-id: COSMOSHUB
     network-address:
-      address: 0.0.0.0:26658
+      address: 0.0.0.0:2223
       disable-tls: true
     node-urls:
       url: 127.0.0.1:$GRPC
   - api-interface: rest
     chain-id: COSMOSHUB
     network-address:
-      address: 0.0.0.0:26658
+      address: 0.0.0.0:2223
       disable-tls: true
     node-urls:
       url: http://127.0.0.1:$API
