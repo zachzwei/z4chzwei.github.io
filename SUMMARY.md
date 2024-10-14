@@ -8,7 +8,6 @@
     * [Lave Wallet Setup](nodes-+-providers/lava/lava-node-wallet.md)
     * [Lava Provider Setup](nodes-+-providers/lava/lava-provider-tls.md)
     * [Useful Lava CLI](nodes-+-providers/lava/lava-useful-commands.md)
-    * [Useful Tools](nodes-+-providers/lava/tools.md)
   * [Cosmos Hub](nodes-+-providers/cosmos-hub/README.md)
     * [Cosmos Hub Node Setup](nodes-+-providers/cosmos-hub/cosmos-hub-node-setup.md)
     * [Cosmos Hub Provider Setup](nodes-+-providers/cosmos-hub/cosmos-hub-provider-setup.md)
@@ -26,3 +25,5 @@
   * [Tidecoin](miners/tidecoin.md)
   * [SolXEN Miner (Mainnet)](miners/solxen-miner-mainnet.md)
   * [Nimble Network](miners/nimble-network.md)
+* [Useful Tools](tools/README.md)
+  * [Docker and Docker Compose Setup](tools/docker-and-docker-compose-setup.md)
