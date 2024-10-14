@@ -225,7 +225,7 @@ Set the geolocation value depending on where your server is located.
 To start the Lava provider process, run the following command
 
 ```
-lavap rpcprovider lava.yml --reward-server-storage /.lava/rewardserver --geolocation 2 --from z4ch --chain-id lava-mainnet-1 --keyring-backend file --log_level debug
+lavap rpcprovider lava.yml --reward-server-storage $HOME/.lava/rewardserver --geolocation 2 --from z4ch --chain-id lava-mainnet-1 --keyring-backend file --log_level debug
 ```
 
 Test the Provider Process!
@@ -233,7 +233,7 @@ Test the Provider Process!
 Run the following command:
 
 ```
-lavap test rpcprovider --from your_key_name_here --endpoints "your-site:443,LAVA"
+lavap test rpcprovider --from your_wallet_name_here --endpoints "your-site:443,LAVA"
 ```
 
 🖳 Expected output:

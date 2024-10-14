@@ -1,8 +1,21 @@
+---
+description: >-
+  Follow this guide to run your own LavaNet node and use it for your Lava
+  Provider.
+---
+
 # Lava Node Setup
 
-([source](https://services.kjnodes.com/mainnet/lava/installation/))
+This is not financial advise. All information provided here are sourced from the following sites:\
+[https://services.kjnodes.com/mainnet/lava/installation/](https://services.kjnodes.com/mainnet/lava/installation/)\
+[https://services.mellifera.network/Mainnet/lava-network/snapshot\_and\_data](https://services.mellifera.network/Mainnet/lava-network/snapshot\_and\_data)\
 
-This is an updated guide for Mainnet.
+
+Hardware requirements:\
+RAM: 64 GB RAM\
+Storage: 2 TB NVME SSD\
+OS: Linux 22.04\
+Rent a server here (optional): [https://www.interserver.net/r/950716](https://www.interserver.net/r/950716)
 
 ### Set Node name
 
@@ -22,15 +35,14 @@ sudo apt -qy upgrade
 
 #### Install GO
 
-This will install Go version `1.22.7`
+This will install Go version `1.22.8`
 
 ```
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.20.5.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.22.8.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
-echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile
-source $HOME/.bash_profile
+
 go version
 ```
 
@@ -136,6 +148,17 @@ sed -i \
   $HOME/.lava/config/config.toml
 ```
 
+### Set Ports <a href="#download-latest-chain-snapshot" id="download-latest-chain-snapshot"></a>
+
+This is a more simplified command to manually set the Ports of your LavaNet node. You can manually change it depending on your needs. Make sure there are no conflicts as this might cause the node to not run.
+
+```
+CUSTOM_PORT=144
+
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}58\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}57\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}60\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}56\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}66\"%" $HOME/.evmosd/config/config.toml
+sed -i -e "s%^address = \"tcp://localhost:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}17\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}80\"%; s%^address = \"localhost:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}90\"%; s%^address = \"localhost:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}91\"%; s%^address = \"127.0.0.1:8545\"%address = \"0.0.0.0:${CUSTOM_PORT}45\"%; s%^ws-address = \"127.0.0.1:8546\"%ws-address = \"0.0.0.0:${CUSTOM_PORT}46\"%" $HOME/.evmosd/config/app.toml
+```
+
 ### Download latest chain snapshot <a href="#download-latest-chain-snapshot" id="download-latest-chain-snapshot"></a>
 
 ```
@@ -173,13 +196,44 @@ Navigate to `/.lava/config` and open `app.toml` file. Take note of the URL and P
 
 ![image](https://github.com/zachzwei/z4ch-nodes/assets/35627271/66ec023a-67fc-4fe4-a1b0-5bb9aef426ea)
 
-#### Start service and check the logs <a href="#start-service-and-check-the-logs" id="start-service-and-check-the-logs"></a>
+### Setup Firewall <a href="#start-service-and-check-the-logs" id="start-service-and-check-the-logs"></a>
+
+These are just recommended port settings, which I am currently using. \
+Change it depending on your own server settings.
+
+```
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+#ssh port
+sudo ufw allow 22
+
+#webmin port
+sudo ufw allow 10000
+
+#Allowed Ports
+sudo ufw allow 14456/tcp
+sudo ufw allow 14457/tcp
+sudo ufw allow 14460/tcp
+sudo ufw allow 14490/tcp
+sudo ufw allow 14417/tcp
+sudo ufw allow 26666/tcp
+sudo ufw allow 26667/tcp
+sudo ufw allow 26670/tcp
+sudo ufw allow 2224
+sudo ufw allow 443
+sudo ufw allow 80
+
+sudo ufw enable
+```
+
+### Start service and check the logs <a href="#start-service-and-check-the-logs" id="start-service-and-check-the-logs"></a>
 
 ```
 sudo systemctl start lava.service && sudo journalctl -u lava.service -f --no-hostname -o cat
 ```
 
-### Check sync status
+#### Check sync status
 
 Run the following command:
 
@@ -189,7 +243,7 @@ lavad status 2>&1 | jq .SyncInfo
 
 &#x20;If you get a result `false` that means node is fully synced.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Check connected peers:
 

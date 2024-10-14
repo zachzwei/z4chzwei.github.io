@@ -7,7 +7,7 @@ Follow the steps here for setting up your domain name:\
 
 ### Create the Provider file
 
-After that, use the command below to generate the `.yml` file for Cosmos.
+Use the command below to generate the `.yml` file for COSMOSHUB.
 
 ```
 RPC=$(cat $HOME/.gaia/config/config.toml | sed -n '/TCP or UNIX socket address for the RPC server to listen on/{n;p;}' | sed 's/.*://; s/".*//')
@@ -51,7 +51,7 @@ Change the --geolocation value depending on where you server is located.\
 Change the --from value depending on the name of your wallet
 
 ```
-lavap rpcprovider atom.yml --reward-server-storage /.lava/rewardserver --geolocation 2 --from z4ch --chain-id lava-mainnet-1 --keyring-backend file --log_level debug
+lavap rpcprovider atom.yml --reward-server-storage $HOME/.lava/rewardserver --geolocation 2 --from z4ch --chain-id lava-mainnet-1 --keyring-backend file --log_level debug
 ```
 
 ### Test the Provider Process!

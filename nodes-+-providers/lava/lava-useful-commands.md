@@ -131,22 +131,11 @@ export LAVA_BINARY=lavap
 make install
 ```
 
-Alias commands
+#### Alias commands
 
-<pre><code># lava commands
-echo "alias lavapeers='sudo netstat -anp | grep ESTABLISHED | grep lavad | grep -v \"127.0.0.1\"'" >> ~/.bashrc
-echo "alias lavasync='lavad status 2>&#x26;1 | jq .SyncInfo'" >> ~/.bashrc
-<strong>echo "alias lavalogs='sudo journalctl -u lava.service -f --no-hostname -o cat'" >> ~/.bashrc
-</strong>echo "alias lavastart='sudo systemctl start lava.service'" >> ~/.bashrc
-echo "alias lavastop='sudo systemctl stop lava.service'" >> ~/.bashrc
+Wallet Specific
 
-# gaia commands
-echo "alias gaiapeers='sudo netstat -anp | grep ESTABLISHED | grep gaiad | grep -v \"127.0.0.1\"'" >> ~/.bashrc
-echo "alias gaiasync='gaiad status 2>&#x26;1 | jq .sync_info'" >> ~/.bashrc
-echo "alias gaialogs='sudo journalctl -u cosmoshub.service -f --no-hostname -o cat'" >> ~/.bashrc
-echo "alias gaiastart='sudo systemctl start cosmoshub.service'" >> ~/.bashrc
-echo "alias gaiastop='sudo systemctl stop cosmoshub.service'" >> ~/.bashrc
-
+```
 # general commands
 echo "alias reward='lavad q pairing provider-monthly-payout z4ch'" >> ~/.bashrc
 echo "alias reward2='lavad q pairing provider-monthly-payout z4ch2'" >> ~/.bashrc
@@ -156,12 +145,77 @@ echo "alias statsprovider='lavad q pairing account-info --from z4ch'" >> ~/.bash
 
 # Source the .bashrc file automatically to apply the changes
 source ~/.bashrc
-</code></pre>
+```
 
-
-
-Check free space. Need [NCDU](https://ostechnix.com/check-disk-space-usage-linux-using-ncdu/) installed.
+LAVA (lava) commands
 
 ```
-ncdu -x /
+# lava commands
+echo "alias lavapeers='sudo netstat -anp | grep ESTABLISHED | grep lavad | grep -v \"127.0.0.1"'" >> ~/.bashrc
+echo "alias lavasync='lavad status 2>&1 | jq .SyncInfo'" >> ~/.bashrc
+echo "alias lavalogs='sudo journalctl -u lava.service -f --no-hostname -o cat'" >> ~/.bashrc
+echo "alias lavastart='sudo systemctl start lava.service'" >> ~/.bashrc
+echo "alias lavastop='sudo systemctl stop lava.service'" >> ~/.bashrc
+source ~/.bashrc
 ```
+
+Cosmos (gaia) commands
+
+```
+# gaia commands
+echo "alias gaiapeers='sudo netstat -anp | grep ESTABLISHED | grep gaiad | grep -v \"127.0.0.1"'" >> ~/.bashrc
+echo "alias gaiasync='gaiad status 2>&1 | jq .sync_info'" >> ~/.bashrc
+echo "alias gaialogs='sudo journalctl -u cosmoshub.service -f --no-hostname -o cat'" >> ~/.bashrc
+echo "alias gaiastart='sudo systemctl start cosmoshub.service'" >> ~/.bashrc
+echo "alias gaiastop='sudo systemctl stop cosmoshub.service'" >> ~/.bashrc
+source ~/.bashrc
+```
+
+Stargaze (stars) commands
+
+```
+# stars commands
+echo "alias starspeers='sudo netstat -anp | grep ESTABLISHED | grep starsd | grep -v \"127.0.0.1"'" >> ~/.bashrc
+echo "alias starssync='curl -s http://127.0.0.1:16457/status | jq .result.sync_info'" >> ~/.bashrc
+echo "alias starslogs='sudo journalctl -fu stargaze'" >> ~/.bashrc
+echo "alias starsstart='sudo service stargaze start'" >> ~/.bashrc
+echo "alias starsstop='sudo service stargaze stop'" >> ~/.bashrc
+source ~/.bashrc
+```
+
+Evmos (evmos) commands
+
+```
+# evmos commands
+echo "alias starspeers='sudo netstat -anp | grep ESTABLISHED | grep evmosd | grep -v \"127.0.0.1"'" >> ~/.bashrc
+echo "alias starssync='evmosd status 2>&1 | jq .SyncInfo'" >> ~/.bashrc
+echo "alias starslogs='sudo journalctl -u evmosd -f --no-hostname -o cat'" >> ~/.bashrc
+echo "alias starsstart='sudo systemctl start evmosd'" >> ~/.bashrc
+echo "alias starsstop='sudo systemctl stop evmosd'" >> ~/.bashrc
+source ~/.bashrc
+```
+
+Check LISTEN ports
+
+```
+# lava
+netstat -tulpn | grep LISTEN | grep "lavad"
+
+#gaia
+netstat -tulpn | grep LISTEN | grep "gaiad"
+
+#evmos
+netstat -tulpn | grep LISTEN | grep "evmosd"
+
+#stars
+netstat -tulpn | grep LISTEN | grep "starsd"
+```
+
+Check if PORT is open
+
+Replace $PORT with PORT number you want to check
+
+```
+sudo lsof -i:$PORT
+```
+
