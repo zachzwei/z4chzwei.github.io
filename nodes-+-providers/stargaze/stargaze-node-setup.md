@@ -206,7 +206,7 @@ pruning-interval = "10"
 
 Set the following on config.toml file
 
-indexer = "null"
+indexer = "kv"
 
 </code></pre>
 
