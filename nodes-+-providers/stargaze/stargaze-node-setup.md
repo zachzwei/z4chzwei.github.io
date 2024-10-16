@@ -236,7 +236,7 @@ I use the following to replace the long commands above. It might differ dependin
 
 ```
 # stars commands
-echo "alias starspeers='sudo netstat -anp | grep ESTABLISHED | grep starsd | grep -v \"127.0.0.1"'" >> ~/.bashrc
+echo "alias starspeers='sudo netstat -anp | grep ESTABLISHED | grep starsd | grep -v \127.0.0.1'" >> ~/.bashrc
 echo "alias starssync='curl -s http://127.0.0.1:16457/status | jq .result.sync_info'" >> ~/.bashrc
 echo "alias starslogs='sudo journalctl -fu stargaze'" >> ~/.bashrc
 echo "alias starsstart='sudo service stargaze start'" >> ~/.bashrc

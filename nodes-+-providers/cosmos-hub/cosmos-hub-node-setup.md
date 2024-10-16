@@ -255,7 +255,7 @@ I use the following to replace the long commands above. It might differ dependin
 
 ```
 # gaia commands
-echo "alias gaiapeers='sudo netstat -anp | grep ESTABLISHED | grep gaiad | grep -v \"127.0.0.1"'" >> ~/.bashrc
+echo "alias gaiapeers='sudo netstat -anp | grep ESTABLISHED | grep gaiad | grep -v \127.0.0.1'" >> ~/.bashrc
 echo "alias gaiasync='gaiad status 2>&1 | jq .sync_info'" >> ~/.bashrc
 echo "alias gaialogs='sudo journalctl -u cosmoshub.service -f --no-hostname -o cat'" >> ~/.bashrc
 echo "alias gaiastart='sudo systemctl start cosmoshub.service'" >> ~/.bashrc

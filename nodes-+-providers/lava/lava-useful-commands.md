@@ -151,7 +151,7 @@ LAVA (lava) commands
 
 ```
 # lava commands
-echo "alias lavapeers='sudo netstat -anp | grep ESTABLISHED | grep lavad | grep -v \"127.0.0.1"'" >> ~/.bashrc
+echo "alias lavapeers='sudo netstat -anp | grep ESTABLISHED | grep lavad | grep -v \127.0.0.1'" >> ~/.bashrc
 echo "alias lavasync='lavad status 2>&1 | jq .SyncInfo'" >> ~/.bashrc
 echo "alias lavalogs='sudo journalctl -u lava.service -f --no-hostname -o cat'" >> ~/.bashrc
 echo "alias lavastart='sudo systemctl start lava.service'" >> ~/.bashrc
@@ -163,7 +163,7 @@ Cosmos (gaia) commands
 
 ```
 # gaia commands
-echo "alias gaiapeers='sudo netstat -anp | grep ESTABLISHED | grep gaiad | grep -v \"127.0.0.1"'" >> ~/.bashrc
+echo "alias gaiapeers='sudo netstat -anp | grep ESTABLISHED | grep gaiad | grep -v \127.0.0.1'" >> ~/.bashrc
 echo "alias gaiasync='gaiad status 2>&1 | jq .sync_info'" >> ~/.bashrc
 echo "alias gaialogs='sudo journalctl -u cosmoshub.service -f --no-hostname -o cat'" >> ~/.bashrc
 echo "alias gaiastart='sudo systemctl start cosmoshub.service'" >> ~/.bashrc
@@ -175,7 +175,7 @@ Stargaze (stars) commands
 
 ```
 # stars commands
-echo "alias starspeers='sudo netstat -anp | grep ESTABLISHED | grep starsd | grep -v \"127.0.0.1"'" >> ~/.bashrc
+echo "alias starspeers='sudo netstat -anp | grep ESTABLISHED | grep starsd | grep -v \127.0.0.1'" >> ~/.bashrc
 echo "alias starssync='curl -s http://127.0.0.1:16457/status | jq .result.sync_info'" >> ~/.bashrc
 echo "alias starslogs='sudo journalctl -fu stargaze'" >> ~/.bashrc
 echo "alias starsstart='sudo service stargaze start'" >> ~/.bashrc
@@ -187,11 +187,11 @@ Evmos (evmos) commands
 
 ```
 # evmos commands
-echo "alias starspeers='sudo netstat -anp | grep ESTABLISHED | grep evmosd | grep -v \"127.0.0.1"'" >> ~/.bashrc
-echo "alias starssync='evmosd status 2>&1 | jq .SyncInfo'" >> ~/.bashrc
-echo "alias starslogs='sudo journalctl -u evmosd -f --no-hostname -o cat'" >> ~/.bashrc
-echo "alias starsstart='sudo systemctl start evmosd'" >> ~/.bashrc
-echo "alias starsstop='sudo systemctl stop evmosd'" >> ~/.bashrc
+echo "alias evmospeers='sudo netstat -anp | grep ESTABLISHED | grep evmosd | grep -v \127.0.0.1'" >> ~/.bashrc
+echo "alias evmossync='evmosd status 2>&1 | jq .SyncInfo'" >> ~/.bashrc
+echo "alias evmoslogs='sudo journalctl -u evmosd -f --no-hostname -o cat'" >> ~/.bashrc
+echo "alias evmosstart='sudo systemctl start evmosd'" >> ~/.bashrc
+echo "alias evmosstop='sudo systemctl stop evmosd'" >> ~/.bashrc
 source ~/.bashrc
 ```
 
