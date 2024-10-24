@@ -24,7 +24,7 @@
     ```
     cd
     cd go-quai
-    wget https://github.com/zachzwei/z4chzwei.github.io/blob/main/tools/install_quai_balance.sh
+    wget https://raw.githubusercontent.com/zachzwei/z4chzwei.github.io/refs/heads/main/tools/install_quai_balance.sh
     chmod +x install_quai_balance.sh
     ./install_quai_balance.sh
     ```
