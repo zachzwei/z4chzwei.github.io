@@ -18,3 +18,13 @@
     ncdu -x /
     ```
 * [Prometheus](https://prometheus.io/docs/introduction/overview/) is an open-source systems monitoring and alerting toolkit with an active ecosystem. It is the only system directly supported by Kubernetes and the de facto standard across the cloud native ecosystem.
+
+* QUAI CLI balance checker
+
+    ```
+    cd
+    cd go-quai
+    wget https://github.com/zachzwei/z4chzwei.github.io/blob/main/tools/install_quai_balance.sh
+    chmod +x install_quai_balance.sh
+    ./install_quai_balance.sh
+    ```
