@@ -132,7 +132,16 @@ This coin was created by [YarSawyer](https://github.com/yarsawyer/tidecoin). Ple
 More details can be found here: [https://tidecoin.co/](https://tidecoin.co/)
 
 If you just want to go ahead and buy Tidecoin, you can go to [Xeggex](https://xeggex.com/?ref=66e05ecdf6dc403d67b9a50e).\
-Not financial advise.\
+Not financial advise.
+
+
+
+Shameless plug...
+
+If you do not want to mine $SHA, you can get it from exchanges.\
+Here is my referral link for NonKYC: [https://nonkyc.io?ref=658045d205279ea14f3a7169](https://nonkyc.io/?ref=658045d205279ea14f3a7169)
+
+Tidecoin is now on CoinGecko: [https://www.coingecko.com/en/coins/tidecoin](https://www.coingecko.com/en/coins/tidecoin)\
 \
 Follow my journey mining Tidecoin on X.\
 [https://x.com/ZachZwei/status/1833521016372600953](https://x.com/ZachZwei/status/1833521016372600953)

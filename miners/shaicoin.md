@@ -218,6 +218,16 @@ Rewards will automatically be distributed once the coins that the pool receives 
 
 Thanks for reading!
 
+#### Shameless plug...
+
+If you do not want to mine $SHA, you can get it from exchanges.\
+Here is my referral link for NonKYC: [https://nonkyc.io?ref=658045d205279ea14f3a7169](https://nonkyc.io/?ref=658045d205279ea14f3a7169)
+
+CoinGecko is already tracking the price:\
+[https://www.coingecko.com/en/coins/shaicoin](https://www.coingecko.com/en/coins/shaicoin)
+
+<figure><img src="../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
+
 
 
 Follow [@shai\_pow](https://x.com/shai\_pow) on X and go to their Discord: [https://discord.gg/vrfvbrDU](https://t.co/8INwdtdfhf)
