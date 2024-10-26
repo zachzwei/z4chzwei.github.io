@@ -214,6 +214,8 @@ Pool address: [https://blocks.shaicoin.com/address/sh1qa5l9n97jerlwgpd5rrhj8nnqv
 
 Rewards will automatically be distributed once the coins that the pool receives reaches a maturity of a 100 blocks.
 
+<figure><img src="../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
+
 Thanks for reading!
 
 
