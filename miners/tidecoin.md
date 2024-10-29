@@ -31,7 +31,7 @@ wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.41/cpu
 
 This will download the CPU miner files to the directory created.&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Extract Miner
 
@@ -41,7 +41,7 @@ Run the following command to extract the miner on the directory.
 tar -xf cpuminer-opt-linux-5.0.41a.tar.gz
 ```
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Create Miner Profile
 

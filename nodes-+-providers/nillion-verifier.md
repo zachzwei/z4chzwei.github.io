@@ -22,7 +22,7 @@ Downlod Keplr wallet here: [https://www.keplr.app/](https://www.keplr.app/)
 
 Save your seed phrase and keep it secure. Do not share it with anyone else.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Go to [https://verifier.nillion.com/verifier](https://verifier.nillion.com/verifier) then click on Verifier, to add the Nillion Testnet to your Keplr Wallet.
 

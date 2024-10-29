@@ -243,7 +243,7 @@ lavad status 2>&1 | jq .SyncInfo
 
 &#x20;If you get a result `false` that means node is fully synced.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Check connected peers:
 
