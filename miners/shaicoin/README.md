@@ -206,6 +206,29 @@ Make sure to change the address, or else your mining rewards will go to me.&#x20
 
 Run the command and that is it. You are now mining [$SHA](https://x.com/search?q=%24SHA\&src=cashtag\_click).
 
+### Update Miner (Optional)
+
+If you are still using the initial version of the miner, you can update it to get better hash rates. \
+Here are the steps to do so.
+
+Stop your miner, Use CTRL+C. Then run the following commands:
+
+```
+git pull
+```
+
+After downloading the latest version, recompile miner.
+
+```
+cargo rustc --release -- -C opt-level=3 -C target-cpu=native -C codegen-units=1 -C debuginfo=0
+```
+
+Run miner again to see a much better performance.
+
+<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
+
+### Check Miner Status&#x20;
+
 Check your progress here: [https://shaipool.z4ch.xyz/](https://shaipool.z4ch.xyz/)
 
 Pool address: [https://blocks.shaicoin.com/address/sh1qa5l9n97jerlwgpd5rrhj8nnqvvre4qnz0dy2fu](https://blocks.shaicoin.com/address/sh1qa5l9n97jerlwgpd5rrhj8nnqvvre4qnz0dy2fu)
