@@ -211,9 +211,12 @@ Run the command and that is it. You are now mining [$SHA](https://x.com/search?q
 If you are still using the initial version of the miner, you can update it to get better hash rates. \
 Here are the steps to do so.
 
-Stop your miner, Use CTRL+C. Then run the following commands:
+Stop your miner, Use CTRL+C. Make sure you are in the `shaipot` directory.\
+Run the following commands:
 
 ```
+cd
+cd shaipot
 git pull
 ```
 
