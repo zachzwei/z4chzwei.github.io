@@ -94,7 +94,10 @@ Thanks for reading. [Here is picture of Litecoin + Dogecoin and Bells](https://x
 ## Bellscoin Resources
 
 Official Site: [https://bellscoin.com](https://bellscoin.com/)\
-Explorer: [https://nintondo.io/explorer](https://nintondo.io/explorer)
+Explorer: [https://nintondo.io/explorer](https://nintondo.io/explorer)\
+Follow X: [https://x.com/BellsChain](https://x.com/BellsChain)\
+Join Discord: [https://discord.gg/zS5pQTgR](https://discord.gg/zS5pQTgR)\
+Join Telegram: [https://t.me/BellsCoinOfficial](https://t.me/BellsCoinOfficial)
 
 ### How to Buy $BELLS
 
