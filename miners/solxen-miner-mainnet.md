@@ -1,5 +1,6 @@
 ---
 description: Shaking up rusty Solana
+hidden: true
 ---
 
 # SolXEN Miner (Mainnet)
@@ -293,6 +294,6 @@ Then run your miner again.
 
 ## References
 
-* Thanks to [xen\_artist](https://twitter.com/xen\_artist) for his [guide](https://x1.wiki/solxen/).
+* Thanks to [xen\_artist](https://twitter.com/xen_artist) for his [guide](https://x1.wiki/solxen/).
 * Join SoLXEN Telegram: [https://t.me/+rrWU85yki-k3MzRj](https://t.me/+rrWU85yki-k3MzRj)
 * Follow [https://x.com/mrJackLevin](https://x.com/mrJackLevin) on X

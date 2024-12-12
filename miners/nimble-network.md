@@ -2,6 +2,7 @@
 description: >-
   Nimble is building the first-ever decentralized AI framework. This guide is
   for educational purposes only. Use at your own risk.
+hidden: true
 ---
 
 # Nimble Network
@@ -14,7 +15,7 @@ These instructions are targeted towards those who have a bit of command line exp
 
 
 
-You can rent a Cloud GPU running Ubuntu 22.04 by using this link: [https://cloud.vast.ai](https://cloud.vast.ai/?ref\_id=94252\&creator\_id=94252\&name=nvidia%2Fcuda%3A12.4.1-devel-ubuntu22.04)\
+You can rent a Cloud GPU running Ubuntu 22.04 by using this link: [https://cloud.vast.ai](https://cloud.vast.ai/?ref_id=94252\&creator_id=94252\&name=nvidia%2Fcuda%3A12.4.1-devel-ubuntu22.04)\
 Set storage size to at least 250GB and use the following configuration:
 
 <figure><img src="../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
